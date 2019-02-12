@@ -1,6 +1,5 @@
 # HaventecAuthenticate
 
-[![CI Status](https://img.shields.io/travis/htclifford/HaventecAuthenticate.svg?style=flat)](https://travis-ci.org/htclifford/HaventecAuthenticate)
 [![Version](https://img.shields.io/cocoapods/v/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)
 [![License](https://img.shields.io/cocoapods/l/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)
 [![Platform](https://img.shields.io/cocoapods/p/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)

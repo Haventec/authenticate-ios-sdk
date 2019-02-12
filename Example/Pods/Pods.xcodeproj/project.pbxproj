@@ -14,7 +14,7 @@
 		238E419945330D58189CB30A2B563C5E /* Pods-HaventecAuthenticate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6920CCA5F5B927136E9D748BB45ED1 /* Pods-HaventecAuthenticate_Tests-dummy.m */; };
 		3F74BB30539063BCF3C277DB26A80E4E /* Pods-HaventecAuthenticate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 188827D033C3335676A9443E74BB9306 /* Pods-HaventecAuthenticate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46CE084ADFF8A6F0D41F6ACD1F4247FF /* HaventecAuthenticate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1CF8B24013616D767438FC39054FC /* HaventecAuthenticate-dummy.m */; };
-		86507A0AF2A769E5532F9851FC32B00B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61B5A64100C35AC6882E263ECDC25F /* ReplaceMe.swift */; };
+		86507A0AF2A769E5532F9851FC32B00B /* HaventecAuthenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61B5A64100C35AC6882E263ECDC25F /* HaventecAuthenticate.swift */; };
 		89E1C2E9D5CE671D2F95DD0A100D7D94 /* Pods-HaventecAuthenticate_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CA06D75EC6846A42E6523D20E612A2 /* Pods-HaventecAuthenticate_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3AF8D33E42891DAD46B6202D309F643 /* HaventecAuthenticate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2064835B7996A653C6ACA1168B4C88B /* HaventecAuthenticate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -39,9 +39,9 @@
 /* Begin PBXFileReference section */
 		004F6A3B13DC019C56C8C413C2658C18 /* Pods-HaventecAuthenticate_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HaventecAuthenticate_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		07FC6A32EEB92FA678EA6CF4974F9891 /* Pods-HaventecAuthenticate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HaventecAuthenticate_Example.release.xcconfig"; sourceTree = "<group>"; };
-		0F61B5A64100C35AC6882E263ECDC25F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = HaventecAuthenticate/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		0F61B5A64100C35AC6882E263ECDC25F /* HaventecAuthenticate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecAuthenticate.swift; path = HaventecAuthenticate/Classes/HaventecAuthenticate.swift; sourceTree = "<group>"; };
 		0F6920CCA5F5B927136E9D748BB45ED1 /* Pods-HaventecAuthenticate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HaventecAuthenticate_Tests-dummy.m"; sourceTree = "<group>"; };
-		1422B097ED0ABEE939EA9D1D610F0E36 /* HaventecAuthenticate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HaventecAuthenticate.framework; path = HaventecAuthenticate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1422B097ED0ABEE939EA9D1D610F0E36 /* HaventecAuthenticate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaventecAuthenticate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		188827D033C3335676A9443E74BB9306 /* Pods-HaventecAuthenticate_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HaventecAuthenticate_Example-umbrella.h"; sourceTree = "<group>"; };
 		18B974F2303513700542F19E4157B53A /* Pods-HaventecAuthenticate_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Example-Info.plist"; sourceTree = "<group>"; };
 		23DD40492254F7EBFBFADCD0B1DC9BB0 /* Pods-HaventecAuthenticate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HaventecAuthenticate_Tests.modulemap"; sourceTree = "<group>"; };
@@ -49,19 +49,19 @@
 		2E1A4FD98D438692905A6A3535013C23 /* Pods-HaventecAuthenticate_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HaventecAuthenticate_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3BC0AEB057074EC91B5C878C67DE7215 /* Pods-HaventecAuthenticate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		646DD60037A566E37B69045054F8DE7F /* Pods-HaventecAuthenticate_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Tests-Info.plist"; sourceTree = "<group>"; };
-		6C7178AE71D983EBB31CCFB04AEEC22A /* HaventecAuthenticate.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HaventecAuthenticate.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6E66B0CCDC0E76603D765A32BEEB08BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6C7178AE71D983EBB31CCFB04AEEC22A /* HaventecAuthenticate.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HaventecAuthenticate.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6E66B0CCDC0E76603D765A32BEEB08BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6F25CA7356E331CDC6979705ACAA1BFC /* Pods-HaventecAuthenticate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HaventecAuthenticate_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6FBEC19C62DAA8279DDFB948E653D1D7 /* Pods_HaventecAuthenticate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HaventecAuthenticate_Example.framework; path = "Pods-HaventecAuthenticate_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FBEC19C62DAA8279DDFB948E653D1D7 /* Pods_HaventecAuthenticate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CA06D75EC6846A42E6523D20E612A2 /* Pods-HaventecAuthenticate_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HaventecAuthenticate_Tests-umbrella.h"; sourceTree = "<group>"; };
 		938D65E0BC2A48813A5EBA087A657AFA /* HaventecAuthenticate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecAuthenticate-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A6B7925A109C1F7122A87CC87E47DBCB /* Pods_HaventecAuthenticate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HaventecAuthenticate_Tests.framework; path = "Pods-HaventecAuthenticate_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6B7925A109C1F7122A87CC87E47DBCB /* Pods_HaventecAuthenticate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4099333F9A136C759747896538CFFC /* Pods-HaventecAuthenticate_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B086B7858A8624340B6085670479944C /* HaventecAuthenticate-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HaventecAuthenticate-Info.plist"; sourceTree = "<group>"; };
 		C2064835B7996A653C6ACA1168B4C88B /* HaventecAuthenticate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecAuthenticate-umbrella.h"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DE5875E89539234B099B5D93F15214A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DE5875E89539234B099B5D93F15214A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E4D22EBEC11469C6F82D3207371CD5FF /* Pods-HaventecAuthenticate_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HaventecAuthenticate_Example-dummy.m"; sourceTree = "<group>"; };
 		E8199257604A2EFF154B2FFAA7E49F71 /* Pods-HaventecAuthenticate_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HaventecAuthenticate_Example.modulemap"; sourceTree = "<group>"; };
 		E903AAE54CFF70878E43C98D55A190B9 /* Pods-HaventecAuthenticate_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HaventecAuthenticate_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		8BFF4F9A2C69E661811D42DFD0C653A5 /* HaventecAuthenticate */ = {
 			isa = PBXGroup;
 			children = (
-				0F61B5A64100C35AC6882E263ECDC25F /* ReplaceMe.swift */,
+				0F61B5A64100C35AC6882E263ECDC25F /* HaventecAuthenticate.swift */,
 				4BFF2B381EDB98E2017F95E1CED55205 /* Pod */,
 				3DF6F04A32E59BFBE36357CC677F324D /* Support Files */,
 			);
@@ -365,7 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CE084ADFF8A6F0D41F6ACD1F4247FF /* HaventecAuthenticate-dummy.m in Sources */,
-				86507A0AF2A769E5532F9851FC32B00B /* ReplaceMe.swift in Sources */,
+				86507A0AF2A769E5532F9851FC32B00B /* HaventecAuthenticate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,8 +717,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
