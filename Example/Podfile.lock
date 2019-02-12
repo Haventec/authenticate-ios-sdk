@@ -1,0 +1,16 @@
+PODS:
+  - HaventecAuthenticate (0.1.0)
+
+DEPENDENCIES:
+  - HaventecAuthenticate (from `../`)
+
+EXTERNAL SOURCES:
+  HaventecAuthenticate:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HaventecAuthenticate: fbdb975025db986683898cb3c6e54dc42485548d
+
+PODFILE CHECKSUM: 7f2535c01f9ca5628c16ba7181d5772c583c7097
+
+COCOAPODS: 1.6.0.rc.1
