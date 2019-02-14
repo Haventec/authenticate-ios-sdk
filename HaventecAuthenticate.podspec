@@ -17,5 +17,6 @@ Pod::Spec.new do |s|
   s.source_files = 'HaventecAuthenticate/Classes/**/*'
   
   s.dependency 'HaventecCommon'
+  s.dependency 'SwiftKeychainWrapper'
   s.swift_version = '4.2'
 end

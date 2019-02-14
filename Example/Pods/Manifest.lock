@@ -1,16 +1,29 @@
 PODS:
-  - HaventecAuthenticate (0.1.0)
+  - HaventecAuthenticate (0.1.0):
+    - HaventecCommon
+    - SwiftKeychainWrapper
+  - HaventecCommon (0.0.1)
+  - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
   - HaventecAuthenticate (from `../`)
+  - HaventecCommon (from `../../common-ios-sdk`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftKeychainWrapper
 
 EXTERNAL SOURCES:
   HaventecAuthenticate:
     :path: "../"
+  HaventecCommon:
+    :path: "../../common-ios-sdk"
 
 SPEC CHECKSUMS:
-  HaventecAuthenticate: fbdb975025db986683898cb3c6e54dc42485548d
+  HaventecAuthenticate: d90202a310a58564d3e26155423e6a0dc8d9345f
+  HaventecCommon: dde5d6001dcad48435b9f76f663b6f63a852d1b8
+  SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 7f2535c01f9ca5628c16ba7181d5772c583c7097
+PODFILE CHECKSUM: 4d99d34ecdeb3b7f20705c50fe40908cf082867f
 
-COCOAPODS: 1.6.0.rc.1
+COCOAPODS: 1.6.0

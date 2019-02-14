@@ -1,32 +1,37 @@
 import Foundation
-import CommonCrypto
 
 public class HaventecAuthenticate {
     
-    enum HaventecAuthenticateException: Error {
-        case generateSalt(String)
-        case hashPin(String)
+    public static func initialiseStorage(username: String) {
+        StorageHelper.initialise(username: username);
     }
     
-    public static func initialiseStorage(username: String) {}
+    public static func updateStorage(data: Data) {
+        StorageHelper.updateStorage(data: data);
+    }
     
-    public static func updateStorage(username: String) {}
+    public static func getDeviceName() -> String? {
+        return StorageHelper.getData().deviceName;
+    }
     
-    public static func getDeviceName() {}
+    public static func getAccessToken() -> String? {
+        if let thisToken = StorageHelper.getData().token {
+            return thisToken.accessToken;
+        }
+        
+        return nil;
+    }
+    public static func getUsername() -> String? {
+        return StorageHelper.getData().username;
+    }
     
-    public static func clearAccessToken() {}
-    
-    public static func getAccessToken() {}
-    
-    public static func getUsername() {}
-    
-    public static func getDeviceUuid() {}
-    
-    public static func getUserUuid() {}
-    
-    public static func getAuthKey() {}
-    
-    public static func getConfiguredUsernames() {}
-    
-    public static func clearUserStorage(username: String) {}
+    public static func getDeviceUuid() -> String? {
+        return StorageHelper.getData().deviceUuid;
+    }
+    public static func getUserUuid() -> String? {
+        return StorageHelper.getData().userUuid;
+    }
+    public static func getAuthKey() -> String? {
+        return StorageHelper.getData().authKey;
+    }
 }
