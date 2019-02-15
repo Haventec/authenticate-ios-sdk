@@ -18,37 +18,96 @@ This class has the following methods:
 ```
 public class HaventecAuthenticate {
 
-    public static func initialiseStorage(username: String) {
-    }
+  /**
+   It creates a Hash of the pin, along with the salt that is in Storage
 
-    public static func updateStorage(data: Data) {
-    }
+   - Parameter pin: The PIN code.
 
-    public static func getDeviceName() -> String? {
-    }
+   - Throws: `HaventecAuthenticateError.initialiseError`
+   if the initialiseStorage function has not been called.
 
-    public static func getAccessToken() -> String? {
-    }
-    public static func getUsername() -> String? {
-    }
+   - Returns: String Base64-encoded representation of the SHA-512 hashed `pin` and stored salt.
+  */
+  public static func hashPin(pin: String) throws -> String? {
+  }
 
-    public static func getDeviceUuid() -> String? {
-    }
-    public static func getUserUuid() -> String? {
-    }
-    public static func getAuthKey() -> String? {
-    }
+  /**
+   It initialises Haventec data storage for the username
+
+   - Parameter username
+
+   - Throws: `HaventecAuthenticateError.storageError`
+   if there was an error persisting to storage.
+  */
+  public static func initialiseStorage(username: String) throws {
+  }
+
+
+  /**
+   It updates Haventec data storage for the username with the JSON data
+
+   - Parameter username
+
+   - Throws: `HaventecAuthenticateError.jsonError`
+   if there was an error parsing the Data as JSON.
+   - Throws: `HaventecAuthenticateError.storageError`
+   if there was an error persisting to storage.
+  */
+  public static func updateStorage(data: Data) throws {
+  }
+
+  /**
+   It retrieves the Haventec authKey
+
+   - Throws: `HaventecAuthenticateError.initialiseError`
+   if the initialiseStorage function has not been called.
+
+   - Returns: String Haventec authKey
+   */
+  public static func getAuthKey() throws -> String? {
+  }
+
+  /**
+   It retrieves the Haventec JWT token
+
+   - Throws: `HaventecAuthenticateError.initialiseError`
+   if the initialiseStorage function has not been called.
+
+   - Returns: String Haventec Authenticate JWT token
+   */
+  public static func getAccessToken() throws -> String? {
+  }
+
+
+  /**
+   It retrieves the Haventec username
+
+   - Throws: `HaventecAuthenticateError.initialiseError`
+   if the initialiseStorage function has not been called.
+
+   - Returns: String Haventec username
+   */
+  public static func getUsername() throws -> String? {
+  }
+
+  /**
+   It retrieves the Haventec deviceUuid
+
+   - Throws: `HaventecAuthenticateError.initialiseError`
+   if the initialiseStorage function has not been called.
+
+   - Returns: String Haventec deviceUuid
+   */
+  public static func getDeviceUuid() throws -> String? {
+  }
 }
 ```
-
-Note, all of the methods require the Android Context as input.
 
 To initialise, call the initialiseStorage method. This provisions the device persisted storage for the username.
 
 Whenever you invoke a method that changes the authentication state of the device - add user, add device, activate user,
 activate device, login - you must update the Haventec SDK storage, using updateStorage.
-This can accept the JSONObject directly returned from any of these endpoints.
-There is an alternative implementation of this function that accepts an object that implements the HaventecAuthenticateResponse interface, for more custom interfacing.
+This can accept the NSData object directly returned from any of these endpoints.
 
 In order to authenticate with Haventec endpoints, a hashed version of the pincode is required, so the hashPin method is used for that.
 

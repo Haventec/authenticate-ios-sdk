@@ -24,6 +24,7 @@ class HaventecAuthenticateTest: XCTestCase {
     }
     
     func testInitialiseStorage() throws {
+        
         try HaventecAuthenticate.initialiseStorage(username: username1);
         
         guard let thisUsername: String = try HaventecAuthenticate.getUsername() else {

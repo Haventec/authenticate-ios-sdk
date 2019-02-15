@@ -1,7 +1,6 @@
 import Foundation
 import HaventecCommon
 
-
 public class HaventecAuthenticate {
     
     public enum HaventecAuthenticateError: Error {
