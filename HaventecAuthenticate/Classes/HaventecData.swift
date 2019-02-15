@@ -16,7 +16,7 @@ public class HaventecData: Decodable {
     var deviceName: String?;
     var deviceUuid: String?;
     var authKey: String?;
-    var token: Token?;
+    var accessToken: Token?;
 
     init() {
         self.salt = nil;
@@ -26,6 +26,6 @@ public class HaventecData: Decodable {
         self.deviceName = nil;
         self.deviceUuid = nil;
         self.authKey = nil;
-        self.token = Token();
+        self.accessToken = Token();
     }
 }

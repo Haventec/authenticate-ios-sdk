@@ -1,8 +1,8 @@
 PODS:
-  - HaventecAuthenticate (0.1.0):
+  - HaventecAuthenticate (0.0.1):
     - HaventecCommon
     - SwiftKeychainWrapper
-  - HaventecCommon (0.0.1)
+  - HaventecCommon (0.0.3)
   - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
     :path: "../../common-ios-sdk"
 
 SPEC CHECKSUMS:
-  HaventecAuthenticate: d90202a310a58564d3e26155423e6a0dc8d9345f
-  HaventecCommon: dde5d6001dcad48435b9f76f663b6f63a852d1b8
+  HaventecAuthenticate: 8479cce906fe2665fe7d2b800eafbbcd79232abe
+  HaventecCommon: ed384a049e05193d29674e62bbe8c2807b7b7f7a
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
 PODFILE CHECKSUM: 4d99d34ecdeb3b7f20705c50fe40908cf082867f

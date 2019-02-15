@@ -9,15 +9,15 @@ import Foundation
 
 public class Token : Decodable {
     var type: String?;
-    var accessToken: String?;
+    var token: String?;
     
     init() {
         self.type = nil;
-        self.accessToken = nil;
+        self.token = nil;
     }
 
-    init(type: String, accessToken: String) {
+    init(type: String, token: String) {
         self.type = type;
-        self.accessToken = accessToken;
+        self.token = token;
     }
 }

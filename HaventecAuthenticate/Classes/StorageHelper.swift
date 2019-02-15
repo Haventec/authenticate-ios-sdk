@@ -18,7 +18,7 @@ public class StorageHelper {
         try persist(key: "haventec_current_user", value: username);
         try persist(key: "haventec_username_" + username, value: username);
 
-        let salt: [UInt8] = HaventecCommon.generateSalt();
+        let salt: [UInt8] = try HaventecCommon.generateSalt();
         
         let saltBase64String = Data(salt).base64EncodedString();
 
@@ -37,11 +37,11 @@ public class StorageHelper {
             haventecData.deviceUuid = thisData.deviceUuid;
             haventecData.authKey = thisData.authKey;
             
-            if let thisToken = thisData.token {
-                if let thisHaventecDataToken = haventecData.token {
+            if let thisToken = thisData.accessToken {
+                if let thisHaventecDataToken = haventecData.accessToken {
                     thisHaventecDataToken.type = thisToken.type;
-                    thisHaventecDataToken.accessToken = thisToken.accessToken;
-                    haventecData.token = thisHaventecDataToken;
+                    thisHaventecDataToken.token = thisToken.token;
+                    haventecData.accessToken = thisHaventecDataToken;
                 }
             }
             
@@ -57,9 +57,9 @@ public class StorageHelper {
             try persist(key: "haventec_deviceUuid_" + username, value: haventecData.deviceUuid);
             try persist(key: "haventec_authKey_" + username, value: haventecData.authKey);
             
-            if let thisToken = haventecData.token {
+            if let thisToken = haventecData.accessToken {
                 try persist(key: "haventec_tokenType_" + username, value: thisToken.type);
-                try persist(key: "haventec_accessToken_" + username, value: thisToken.accessToken);
+                try persist(key: "haventec_accessToken_" + username, value: thisToken.token);
             }
         } else {
             throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
@@ -82,10 +82,10 @@ public class StorageHelper {
             haventecData.deviceUuid = KeychainWrapper.standard.string(forKey: "haventec_deviceUuid_" + username);
             haventecData.authKey = KeychainWrapper.standard.string(forKey: "haventec_authKey_" + username);
             
-            if let thisToken = haventecData.token {
+            if let thisToken = haventecData.accessToken {
                 thisToken.type = KeychainWrapper.standard.string(forKey: "haventec_tokenType_" + username);
-                thisToken.accessToken = KeychainWrapper.standard.string(forKey: "haventec_accessToken_" + username);
-                haventecData.token = thisToken;
+                thisToken.token = KeychainWrapper.standard.string(forKey: "haventec_accessToken_" + username);
+                haventecData.accessToken = thisToken;
             }
         } else {
             throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
