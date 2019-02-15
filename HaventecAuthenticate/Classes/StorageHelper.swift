@@ -54,10 +54,6 @@ public class StorageHelper {
     public static func updateStorage(data: HaventecData) throws {
         if let username = KeychainWrapper.standard.string(forKey: "haventec_current_user") {
 
-            try persist(key: "haventec_applicationUuid_" + username, value: haventecData.applicationUuid);
-            try persist(key: "haventec_username_" + username, value: haventecData.username);
-            try persist(key: "haventec_userUuid_" + username, value: haventecData.userUuid);
-            try persist(key: "haventec_deviceName_" + username, value: haventecData.deviceName);
             try persist(key: "haventec_deviceUuid_" + username, value: haventecData.deviceUuid);
             try persist(key: "haventec_authKey_" + username, value: haventecData.authKey);
             

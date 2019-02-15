@@ -22,8 +22,8 @@ public class HaventecAuthenticate {
     */
     public static func hashPin(pin: String) throws -> String? {
         
-        if let salt = try StorageHelper.getData().salt {
-            return HaventecCommon.hashPin(saltBytes: salt, pin: pin);
+        if let saltBytes = try StorageHelper.getData().salt {
+            return HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
             throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
         }
