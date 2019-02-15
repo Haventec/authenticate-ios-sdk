@@ -21,10 +21,10 @@ class HaventecAuthenticateTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testInitialiseStorage() {
-        HaventecAuthenticate.initialiseStorage(username: username1);
+    func testInitialiseStorage() throws {
+        try HaventecAuthenticate.initialiseStorage(username: username1);
         
-        guard let thisUsername: String = HaventecAuthenticate.getUsername() else {
+        guard let thisUsername: String = try HaventecAuthenticate.getUsername() else {
             XCTFail("getUsername() didn't return"); return;
         }
         
@@ -32,54 +32,54 @@ class HaventecAuthenticateTest: XCTestCase {
     }
     
     
-    func testUpdateStorage() {
-        HaventecAuthenticate.initialiseStorage(username: username1);
+    func testUpdateStorage() throws {
+        try HaventecAuthenticate.initialiseStorage(username: username1);
         
         if let addDeviceResponseJsonData = addDeviceResponseJson.data(using: .utf8) {
-            HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData);
+            try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData);
         } else {
             XCTFail("JSON Parse fail");
         }
         
-        guard let thisDeviceUuid: String = HaventecAuthenticate.getDeviceUuid() else {
+        guard let thisDeviceUuid: String = try HaventecAuthenticate.getDeviceUuid() else {
             XCTFail("thisDeviceUuid() didn't return"); return;
         }
         
         XCTAssertEqual(thisDeviceUuid, "c4acafff-f4be-4d06-b7f6-ab3f16deb50b");
     }
     
-    func testTwtoUsersSwitch() {
-        HaventecAuthenticate.initialiseStorage(username: username1);
+    func testTwtoUsersSwitch() throws {
+        try HaventecAuthenticate.initialiseStorage(username: username1);
         
         if let addDeviceResponseJsonData = addDeviceResponseJson.data(using: .utf8) {
-            HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData);
+            try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData);
         } else {
             XCTFail("JSON Parse fail");
         }
         
-        guard let thisDeviceUuid: String = HaventecAuthenticate.getDeviceUuid() else {
+        guard let thisDeviceUuid: String = try HaventecAuthenticate.getDeviceUuid() else {
             XCTFail("thisDeviceUuid() didn't return"); return;
         }
         
         XCTAssertEqual(thisDeviceUuid, "c4acafff-f4be-4d06-b7f6-ab3f16deb50b");
         
-        HaventecAuthenticate.initialiseStorage(username: username2);
+        try HaventecAuthenticate.initialiseStorage(username: username2);
         
         if let addDeviceResponseJsonData2 = addDeviceResponseJson2.data(using: .utf8) {
-            HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData2);
+            try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData2);
         } else {
             XCTFail("JSON Parse fail");
         }
         
-        guard let thisDeviceUuid2: String = HaventecAuthenticate.getDeviceUuid() else {
+        guard let thisDeviceUuid2: String = try HaventecAuthenticate.getDeviceUuid() else {
             XCTFail("thisDeviceUuid() didn't return"); return;
         }
         
         XCTAssertEqual(thisDeviceUuid2, "c4acafff-f4be-4d06-b7f6-ab3f16deb51a");
         
-        HaventecAuthenticate.initialiseStorage(username: username1);
+        try HaventecAuthenticate.initialiseStorage(username: username1);
         
-        guard let thisDeviceUuid3: String = HaventecAuthenticate.getDeviceUuid() else {
+        guard let thisDeviceUuid3: String = try HaventecAuthenticate.getDeviceUuid() else {
             XCTFail("thisDeviceUuid() didn't return"); return;
         }
         

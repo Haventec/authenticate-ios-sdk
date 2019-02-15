@@ -13,19 +13,19 @@ public class StorageHelper {
     
     static let haventecData: HaventecData = HaventecData();
     
-    public static func initialise(username: String) {
+    public static func initialise(username: String) throws {
         
-        persist(key: "haventec_current_user", value: username);
-        persist(key: "haventec_username_" + username, value: username);
+        try persist(key: "haventec_current_user", value: username);
+        try persist(key: "haventec_username_" + username, value: username);
 
         let salt: [UInt8] = HaventecCommon.generateSalt();
         
         let saltBase64String = Data(salt).base64EncodedString();
 
-        persist(key: "haventec_salt_" + username, value: saltBase64String);
+        try persist(key: "haventec_salt_" + username, value: saltBase64String);
     }
     
-    public static func updateStorage(data: Data) {
+    public static func updateStorage(data: Data) throws {
         do {
             let decoder = JSONDecoder()
             let thisData: HaventecData = try decoder.decode(HaventecData.self, from: data);
@@ -45,34 +45,33 @@ public class StorageHelper {
                 }
             }
             
-            updateStorage(data: haventecData);
+            try updateStorage(data: haventecData);
         } catch {
             print(error);
             preconditionFailure("Error parsing data as JSON");
         }
     }
     
-    public static func updateStorage(data: HaventecData) {
+    public static func updateStorage(data: HaventecData) throws {
         if let username = KeychainWrapper.standard.string(forKey: "haventec_current_user") {
 
-            persist(key: "haventec_applicationUuid_" + username, value: haventecData.applicationUuid);
-            persist(key: "haventec_username_" + username, value: haventecData.username);
-            persist(key: "haventec_userUuid_" + username, value: haventecData.userUuid);
-            persist(key: "haventec_deviceName_" + username, value: haventecData.deviceName);
-            persist(key: "haventec_deviceUuid_" + username, value: haventecData.deviceUuid);
-            persist(key: "haventec_authKey_" + username, value: haventecData.authKey);
+            try persist(key: "haventec_applicationUuid_" + username, value: haventecData.applicationUuid);
+            try persist(key: "haventec_username_" + username, value: haventecData.username);
+            try persist(key: "haventec_userUuid_" + username, value: haventecData.userUuid);
+            try persist(key: "haventec_deviceName_" + username, value: haventecData.deviceName);
+            try persist(key: "haventec_deviceUuid_" + username, value: haventecData.deviceUuid);
+            try persist(key: "haventec_authKey_" + username, value: haventecData.authKey);
             
             if let thisToken = haventecData.token {
-                persist(key: "haventec_tokenType_" + username, value: thisToken.type);
-                persist(key: "haventec_accessToken_" + username, value: thisToken.accessToken);
+                try persist(key: "haventec_tokenType_" + username, value: thisToken.type);
+                try persist(key: "haventec_accessToken_" + username, value: thisToken.accessToken);
             }
-
         } else {
-            preconditionFailure("Storage has not been initialised. Please run initialise.");
+            throw HaventecAuthenticateError.runtimeError(AuthenticateErrorCodes.NOT_INITIALISED.rawValue);
         }
     }
     
-    public static func getData() -> HaventecData {
+    public static func getData() throws -> HaventecData {
         if let username = KeychainWrapper.standard.string(forKey: "haventec_current_user") {
             
             if let saltBase64Str = KeychainWrapper.standard.string(forKey: "haventec_salt_" + username) {
@@ -94,18 +93,18 @@ public class StorageHelper {
                 haventecData.token = thisToken;
             }
         } else {
-            preconditionFailure("Storage has not been initialised. Please run initialise.");
+            throw HaventecAuthenticateError.runtimeError(AuthenticateErrorCodes.NOT_INITIALISED.rawValue);
         }
  
         return haventecData;
     }
     
-    private static func persist(key: String, value: String?) {
+    private static func persist(key: String, value: String?) throws {
         if let value = value {
             let saveSuccessful: Bool = KeychainWrapper.standard.set(value, forKey: key);
             
             if ( !saveSuccessful ) {
-                preconditionFailure("Failed to save to storage");
+                throw HaventecAuthenticateError.runtimeError(AuthenticateErrorCodes.STORAGE_ERROR.rawValue);
             }
         }
     }
