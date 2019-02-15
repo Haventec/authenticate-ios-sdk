@@ -47,8 +47,7 @@ public class StorageHelper {
             
             try updateStorage(data: haventecData);
         } catch {
-            print(error);
-            preconditionFailure("Error parsing data as JSON");
+            throw HaventecAuthenticate.HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.json_error.rawValue);
         }
     }
     
@@ -67,7 +66,7 @@ public class StorageHelper {
                 try persist(key: "haventec_accessToken_" + username, value: thisToken.accessToken);
             }
         } else {
-            throw HaventecAuthenticateError.runtimeError(AuthenticateErrorCodes.NOT_INITIALISED.rawValue);
+            throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
         }
     }
     
@@ -93,7 +92,7 @@ public class StorageHelper {
                 haventecData.token = thisToken;
             }
         } else {
-            throw HaventecAuthenticateError.runtimeError(AuthenticateErrorCodes.NOT_INITIALISED.rawValue);
+            throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
         }
  
         return haventecData;
@@ -104,7 +103,7 @@ public class StorageHelper {
             let saveSuccessful: Bool = KeychainWrapper.standard.set(value, forKey: key);
             
             if ( !saveSuccessful ) {
-                throw HaventecAuthenticateError.runtimeError(AuthenticateErrorCodes.STORAGE_ERROR.rawValue);
+                throw HaventecAuthenticate.HaventecAuthenticateError.storageError(AuthenticateErrorCodes.not_initialised_error.rawValue);
             }
         }
     }

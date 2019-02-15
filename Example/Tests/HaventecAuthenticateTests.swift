@@ -8,6 +8,8 @@ class HaventecAuthenticateTest: XCTestCase {
     let addDeviceResponseJson2: String = "{\"userEmail\":\"justincrosbie2@gmail.com\",\"activationToken\":\"493554\",\"deviceUuid\":\"c4acafff-f4be-4d06-b7f6-ab3f16deb51a\",\"mobileNumber\":null,\"responseStatus\":{\"status\":\"SUCCESS\",\"message\":\"Created\",\"code\":\"\"}}";
     let activateDeviceResponseJson2: String = "{\"responseStatus\":{\"status\":\"SUCCESS\",\"message\":\"Changed\",\"code\":\"\"},\"authKey\":\"AX4xNhyVoY7lFzmOLmfFo1PbgZYz2oN4THu5/CgDikwg3epdy5a3cIqn2Xk8sHqG3YyQricznA7RZINwxmC2llcmppwn9gx9C0MSmGld7Fs/WtDWRqHQzW5kvBPkyYoArON4cdP5kga4Bbi97Jx4aR/w0EQ6sxD8gL35kM6wdA39oxzeTt5lhBqLzhXshxOBd4cUVQtBCGV9fFM0YPmMDa76kQtiP6ed2PdPJ/sowBpAGBgxiFyxGoPg1PqQ4FJEq0P4rhYwR02WU3sS6nqg4Ql/nrCj1bWl97kHHFhrAZJxEaQwMoffQzY1XfjhS2zKCWjYpHLeZ7zvZi8caR0T/gjCYaBx9egdM3wzkyftIRbpLo4iGJj9HUbjKitjFqL1Q7jiqQTXYwJins8XVmh/007jft2K3l7tLCI8M0wsXQqhP5i7kf6jS6UIhtuI5vlx6LWyw4ywOJjEuQxRrbS8GA==\",\"accessToken\":{\"type\":\"JWT\",\"token\":\"eyJhbGciOiJFUzM4NCJ9.eyJpc3MiOiJ0ZXN0IGFwcCIsImV4cCI6MTU0OTk0ODk2NiwiaWF0IjoxNTQ5OTQ0NDY2LCJuYmYiOjE1NDk5NDQzNDYsInN1YiI6ImpjaGFwaTE4XzIiLCJyb2xlIjpbIkhUX0FOX1VTRVIiXSwiYXBwbGljYXRpb25VVUlEIjoiYzA5ZGQ4ZWYtODIzYi00NGU1LWFhNTUtZTQ4YzM5ZjFiMzJkIiwidXNlclVVSUQiOiIzZTIzM2JiYS02NDlhLTRlMjgtYTE0ZS1kYTIyYjIxOTIyNzMiLCJqdGkiOiIyMmc1Z0Q0X3ctc2t0Z1J3V19pVm9BIn0.MSD3kQdVGsAvS3RiRJN5QOP_h6va4Ww6YdHXkS-uls4qxbqcBoTCskL06GWgA5gIY3dqakqlwd9kAYACG4QpphvP0Zu5FEc7_eDhoWE7UesrtJmB5Me8VVlPoxkpDl3x\"}}";
 
+    let badJson = "uh-oh";
+    
     let exceptionThrown = "Haventec Exception was thrown from this call"
     
     let username1 = "testuser1"
@@ -31,12 +33,32 @@ class HaventecAuthenticateTest: XCTestCase {
         XCTAssertEqual(thisUsername, username1);
     }
     
-    
     func testUpdateStorage() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1);
         
         if let addDeviceResponseJsonData = addDeviceResponseJson.data(using: .utf8) {
             try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData);
+        } else {
+            XCTFail("JSON Parse fail");
+        }
+        
+        guard let thisDeviceUuid: String = try HaventecAuthenticate.getDeviceUuid() else {
+            XCTFail("thisDeviceUuid() didn't return"); return;
+        }
+        
+        XCTAssertEqual(thisDeviceUuid, "c4acafff-f4be-4d06-b7f6-ab3f16deb50b");
+    }
+    
+    func testUpdateStorage_Fail_Bad_Json() throws {
+        try HaventecAuthenticate.initialiseStorage(username: username1);
+        
+        if let addDeviceResponseJsonData = badJson.data(using: .utf8) {
+            do {
+                try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData);
+                XCTFail("haventecAuthenticate.jsonError expected");
+            } catch HaventecAuthenticate.HaventecAuthenticateError.jsonError(let errorMsg) {
+                XCTAssertEqual(AuthenticateErrorCodes.json_error.rawValue, errorMsg);
+            }
         } else {
             XCTFail("JSON Parse fail");
         }
@@ -84,9 +106,5 @@ class HaventecAuthenticateTest: XCTestCase {
         }
         
         XCTAssertEqual(thisDeviceUuid3, "c4acafff-f4be-4d06-b7f6-ab3f16deb50b");
-        
-
     }
-    
-
 }

@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum AuthenticateErrorCodes :String { // enum with type
-    case NOT_INITIALISED = "The SDK has not been initialised. Please run the initialise function"
-    case HAVENTEC_COMMON = "Haventec Common Error"
-    case STORAGE_ERROR = "Storage Error"
-    case JSON_ERROR = "JSON Error"
+public enum AuthenticateErrorCodes :String {
+    case not_initialised_error = "The SDK has not been initialised. Please run the initialise function"
+    case haventec_common_error = "Haventec Common Error"
+    case storage_error = "Storage Error"
+    case json_error = "JSON Error"
 }
