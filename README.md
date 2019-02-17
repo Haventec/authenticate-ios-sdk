@@ -4,104 +4,43 @@
 [![License](https://img.shields.io/cocoapods/l/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)
 [![Platform](https://img.shields.io/cocoapods/p/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)
 
+A collection of functions for native Android apps to facilitate the integration with Haventec Authenticate
+
+## Installation
+
+HaventecAuthenticate is available through [CocoaPods](https://cocoapods.org/pods/HaventecAuthenticate). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'HaventecAuthenticate'
+```
+
+Afterwards, make sure to run pod install in your working project directory.
+
 ## Usage
 
-The main functionality provided relates to the SHA-512 Hashing of the PIN that is required by Haventec Authenticate endpoints,
-so these SDK functions provide a convenient and consistent way of implementing these functions in an Android app.
+Import the main class HaventecAuthenticate:
 
-To use the SDK, import the following class and its dependencies:
 ```
-import com.haventec.authenticate.android.sdk.api.HaventecAuthenticate;
-```
+import HaventecAuthenticate;
+```    
+
 
 This class has the following methods:
-```
-public class HaventecAuthenticate {
 
-  /**
-   It creates a Hash of the pin, along with the salt that is in Storage
+* **initialiseStorage:** It initilises the Android Storage for a specific Haventec Authenticate user. Your app has to call this method once you know the username of the user.
 
-   - Parameter pin: The PIN code.
+* **updateStorage:** It updates the Android Storage with the new user details. Whenever your app invokes a method that changes the authentication state (add user, add device, activate user, activate device, or login), your app must update the Haventec SDK storage using this method.
 
-   - Throws: `HaventecAuthenticateError.initialiseError`
-   if the initialiseStorage function has not been called.
+* **hashPin:** It returns a SHA-512 Hashing of the PIN passed as argument. 
 
-   - Returns: String Base64-encoded representation of the SHA-512 hashed `pin` and stored salt.
-  */
-  public static func hashPin(pin: String) throws -> String? {
-  }
+* **getAccessToken:** It returns the session access token of the current authenticated user from the Android Storage
 
-  /**
-   It initialises Haventec data storage for the username
+* **getAuthKey:** It returns the current authKey of the current user from the Android Storage
 
-   - Parameter username
+* **getUsername:** It returns the username of the current user from the Android Storage.
 
-   - Throws: `HaventecAuthenticateError.storageError`
-   if there was an error persisting to storage.
-  */
-  public static func initialiseStorage(username: String) throws {
-  }
-
-
-  /**
-   It updates Haventec data storage for the username with the JSON data
-
-   - Parameter username
-
-   - Throws: `HaventecAuthenticateError.jsonError`
-   if there was an error parsing the Data as JSON.
-   - Throws: `HaventecAuthenticateError.storageError`
-   if there was an error persisting to storage.
-  */
-  public static func updateStorage(data: Data) throws {
-  }
-
-  /**
-   It retrieves the Haventec authKey
-
-   - Throws: `HaventecAuthenticateError.initialiseError`
-   if the initialiseStorage function has not been called.
-
-   - Returns: String Haventec authKey
-   */
-  public static func getAuthKey() throws -> String? {
-  }
-
-  /**
-   It retrieves the Haventec JWT token
-
-   - Throws: `HaventecAuthenticateError.initialiseError`
-   if the initialiseStorage function has not been called.
-
-   - Returns: String Haventec Authenticate JWT token
-   */
-  public static func getAccessToken() throws -> String? {
-  }
-
-
-  /**
-   It retrieves the Haventec username
-
-   - Throws: `HaventecAuthenticateError.initialiseError`
-   if the initialiseStorage function has not been called.
-
-   - Returns: String Haventec username
-   */
-  public static func getUsername() throws -> String? {
-  }
-
-  /**
-   It retrieves the Haventec deviceUuid
-
-   - Throws: `HaventecAuthenticateError.initialiseError`
-   if the initialiseStorage function has not been called.
-
-   - Returns: String Haventec deviceUuid
-   */
-  public static func getDeviceUuid() throws -> String? {
-  }
-}
-```
+* **getDeviceUuid:** It returns the deviceUuid of the current user from the Android Storage
 
 To initialise, call the initialiseStorage method. This provisions the device persisted storage for the username.
 
