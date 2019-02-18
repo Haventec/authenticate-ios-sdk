@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)
 [![Platform](https://img.shields.io/cocoapods/p/HaventecAuthenticate.svg?style=flat)](https://cocoapods.org/pods/HaventecAuthenticate)
 
-A collection of functions for native Android apps to facilitate the integration with Haventec Authenticate
+A collection of functions for native iOS apps to facilitate the integration with Haventec Authenticate
 
 ## Installation
 
