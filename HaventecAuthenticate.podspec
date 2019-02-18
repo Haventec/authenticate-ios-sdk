@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HaventecAuthenticate'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'SDK providing functions for interacting with the Authenticate API.'
 
   s.description      = <<-DESC

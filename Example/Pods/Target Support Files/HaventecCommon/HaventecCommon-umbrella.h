@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double HaventecAuthenticateVersionNumber;
-FOUNDATION_EXPORT const unsigned char HaventecAuthenticateVersionString[];
+FOUNDATION_EXPORT double HaventecCommonVersionNumber;
+FOUNDATION_EXPORT const unsigned char HaventecCommonVersionString[];
 
