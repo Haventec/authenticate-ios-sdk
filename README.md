@@ -65,17 +65,6 @@ To run the example project, you need to perform the following:
 
 No dependencies are required for this SDK.
 
-## Installation
-
-HaventecAuthenticate is available through [CocoaPods](https://cocoapods.org/pods/HaventecAuthenticate). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'HaventecAuthenticate'
-```
-
-Afterwards, make sure to update and install the podfile in your working project directory.
-
 ## Author
 
 Haventec - (https://www.haventec.com/)
