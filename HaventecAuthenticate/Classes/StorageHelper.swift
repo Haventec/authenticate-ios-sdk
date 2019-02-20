@@ -11,18 +11,17 @@ import HaventecCommon
 
 public class StorageHelper {
     
-    static let haventecData: HaventecData = HaventecData();
+    static var haventecDataCache: HaventecData = HaventecData();
     
     public static func initialise(username: String) throws {
         
-        try persist(key: "haventec_current_user", value: username);
-        try persist(key: "haventec_username_" + username, value: username);
-
-        let salt: [UInt8] = try HaventecCommon.generateSalt();
+        let normalisedUsername = username.lowercased()
         
-        let saltBase64String = Data(salt).base64EncodedString();
-
-        try persist(key: "haventec_salt_" + username, value: saltBase64String);
+        try setCurrentUser(normalisedUsername: normalisedUsername)
+        
+        try initialiseUserPersistedData(normalisedUsername: normalisedUsername)
+        
+        try initialiseUserCacheData(normalisedUsername: normalisedUsername)
     }
     
     public static func updateStorage(data: Data) throws {
@@ -30,68 +29,70 @@ public class StorageHelper {
             let decoder = JSONDecoder()
             let thisData: HaventecData = try decoder.decode(HaventecData.self, from: data);
             
-            haventecData.applicationUuid = thisData.applicationUuid;
-            haventecData.username = thisData.username;
-            haventecData.userUuid = thisData.userUuid;
-            haventecData.deviceName = thisData.deviceName;
-            haventecData.deviceUuid = thisData.deviceUuid;
-            haventecData.authKey = thisData.authKey;
-            
-            if let thisToken = thisData.accessToken {
-                if let thisHaventecDataToken = haventecData.accessToken {
-                    thisHaventecDataToken.type = thisToken.type;
-                    thisHaventecDataToken.token = thisToken.token;
-                    haventecData.accessToken = thisHaventecDataToken;
+            if let thisDeviceUuid = thisData.deviceUuid {
+                if ( !thisDeviceUuid.isEmpty ) {
+                    haventecDataCache.deviceUuid = thisData.deviceUuid;
+                    try updateKeychainStorage(field: Constants.KEY_DEVICEUUID, value: thisDeviceUuid)
                 }
             }
             
-            try updateStorage(data: haventecData);
+            if let thisAuthKey = thisData.authKey {
+                if ( !thisAuthKey.isEmpty ) {
+                    haventecDataCache.authKey = thisData.authKey;
+                    try updateKeychainStorage(field: Constants.KEY_AUTHKEY, value: thisAuthKey)
+                }
+            }
+            
+            if let thisToken = thisData.accessToken {
+                if let thisHaventecDataCacheToken = haventecDataCache.accessToken {
+                    thisHaventecDataCacheToken.type = thisToken.type;
+                    thisHaventecDataCacheToken.token = thisToken.token;
+                    haventecDataCache.accessToken = thisHaventecDataCacheToken;
+                }
+            }
+            
         } catch {
             throw HaventecAuthenticate.HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.json_error.rawValue);
         }
     }
     
-    public static func updateStorage(data: HaventecData) throws {
-        if let username = KeychainWrapper.standard.string(forKey: "haventec_current_user") {
-
-            try persist(key: "haventec_deviceUuid_" + username, value: haventecData.deviceUuid);
-            try persist(key: "haventec_authKey_" + username, value: haventecData.authKey);
-            
-            if let thisToken = haventecData.accessToken {
-                try persist(key: "haventec_tokenType_" + username, value: thisToken.type);
-                try persist(key: "haventec_accessToken_" + username, value: thisToken.token);
-            }
+    public static func updateKeychainStorage(field: String, value: String) throws {
+        if let username = KeychainWrapper.standard.string(forKey: Constants.KEY_LAST_USER) {
+            try persist(key: field + username, value: value);
         } else {
             throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
         }
     }
     
-    public static func getData() throws -> HaventecData {
-        if let username = KeychainWrapper.standard.string(forKey: "haventec_current_user") {
-            
-            if let saltBase64Str = KeychainWrapper.standard.string(forKey: "haventec_salt_" + username) {
-                if let saltData: Data = Data(base64Encoded: saltBase64Str) {
-                    haventecData.salt = [UInt8](saltData);
-                };
-            }
-            
-            haventecData.applicationUuid = KeychainWrapper.standard.string(forKey: "haventec_applicationUuid_" + username);
-            haventecData.username = KeychainWrapper.standard.string(forKey: "haventec_username_" + username);
-            haventecData.userUuid = KeychainWrapper.standard.string(forKey: "haventec_userUuid_" + username);
-            haventecData.deviceName = KeychainWrapper.standard.string(forKey: "haventec_deviceName_" + username);
-            haventecData.deviceUuid = KeychainWrapper.standard.string(forKey: "haventec_deviceUuid_" + username);
-            haventecData.authKey = KeychainWrapper.standard.string(forKey: "haventec_authKey_" + username);
-            
-            if let thisToken = haventecData.accessToken {
-                thisToken.type = KeychainWrapper.standard.string(forKey: "haventec_tokenType_" + username);
-                thisToken.token = KeychainWrapper.standard.string(forKey: "haventec_accessToken_" + username);
-                haventecData.accessToken = thisToken;
-            }
-        } else {
-            throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
+    public static func getData() -> HaventecData {
+        return haventecDataCache;
+    }
+    
+    private static func initialiseUserCacheData(normalisedUsername: String) throws {
+        haventecDataCache = HaventecData()
+        haventecDataCache.username = normalisedUsername
+        haventecDataCache.deviceUuid = KeychainWrapper.standard.string(forKey: Constants.KEY_DEVICEUUID + normalisedUsername)
+        haventecDataCache.authKey = KeychainWrapper.standard.string(forKey: Constants.KEY_AUTHKEY + normalisedUsername)
+
+        if let saltBase64Str = KeychainWrapper.standard.string(forKey: Constants.KEY_SALT + normalisedUsername) {
+            if let saltData: Data = Data(base64Encoded: saltBase64Str) {
+                haventecDataCache.salt = [UInt8](saltData);
+            };
         }
- 
-        return haventecData;
+    }
+    
+    private static func initialiseUserPersistedData(normalisedUsername: String) throws {
+        try persist(key: Constants.KEY_USERNAME + normalisedUsername, value: normalisedUsername);
+        
+        let salt: [UInt8] = try HaventecCommon.generateSalt();
+        
+        let saltBase64String = Data(salt).base64EncodedString();
+        
+        try persist(key: Constants.KEY_SALT + normalisedUsername, value: saltBase64String);
+    }
+    
+    private static func setCurrentUser(normalisedUsername: String) throws {
+        try persist(key: Constants.KEY_LAST_USER, value: normalisedUsername)
     }
     
     private static func persist(key: String, value: String?) throws {
