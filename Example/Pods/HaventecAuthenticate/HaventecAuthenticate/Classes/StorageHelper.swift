@@ -82,8 +82,22 @@ public class StorageHelper {
     }
     
     private static func initialiseUserPersistedData(normalisedUsername: String) throws {
+
         try persist(key: Constants.KEY_USERNAME + normalisedUsername, value: normalisedUsername);
         
+        let saltOpt: String? = KeychainWrapper.standard.string(forKey: Constants.KEY_LAST_USER);
+
+        if let salt = saltOpt {
+            
+            if ( salt.isEmpty ) {
+                try persistNewSalt(normalisedUsername: normalisedUsername)
+            }
+        } else {
+            try persistNewSalt(normalisedUsername: normalisedUsername)
+        }
+    }
+    
+    private static func persistNewSalt(normalisedUsername: String) throws {
         let salt: [UInt8] = try HaventecCommon.generateSalt();
         
         let saltBase64String = Data(salt).base64EncodedString();

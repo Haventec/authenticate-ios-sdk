@@ -147,8 +147,13 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     
     @IBAction func activateDevice() {
         guard let hashedPinOptional = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
+        guard let hashedPinOptional2 = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
         guard let hashedPin: String = hashedPinOptional else { return }
-        
+        guard let hashedPin2: String = hashedPinOptional2 else { return }
+
+        if ( hashedPin != hashedPin2 ) {
+            print("******* hashPin is broke")
+        }
         let url = URL(string: serverUrl + "/authentication/activate/device")!
         
         let jsonString: String = "{"

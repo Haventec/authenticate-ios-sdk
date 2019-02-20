@@ -22,7 +22,7 @@ public class HaventecAuthenticate {
     */
     public static func hashPin(pin: String) throws -> String? {
         
-        if let saltBytes = try StorageHelper.getData().salt {
+        if let saltBytes = StorageHelper.getData().salt {
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
             throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
@@ -59,49 +59,37 @@ public class HaventecAuthenticate {
     /**
      It retrieves the Haventec authKey
      
-     - Throws: `HaventecAuthenticateError.initialiseError`
-     if the initialiseStorage function has not been called.
-     
      - Returns: String Haventec authKey
      */
-    public static func getAuthKey() throws -> String? {
-        return try StorageHelper.getData().authKey;
+    public static func getAuthKey() -> String? {
+        return StorageHelper.getData().authKey;
     }
 
     /**
      It retrieves the Haventec JWT token
      
-     - Throws: `HaventecAuthenticateError.initialiseError`
-     if the initialiseStorage function has not been called.
-     
      - Returns: String Haventec Authenticate JWT token
      */
-    public static func getAccessToken() throws -> String? {
-        return try StorageHelper.getData().accessToken?.token;
+    public static func getAccessToken() -> String? {
+        return StorageHelper.getData().accessToken?.token;
     }
 
     
     /**
      It retrieves the Haventec username
      
-     - Throws: `HaventecAuthenticateError.initialiseError`
-     if the initialiseStorage function has not been called.
-     
      - Returns: String Haventec username
      */
-    public static func getUsername() throws -> String? {
-        return try StorageHelper.getData().username;
+    public static func getUsername() -> String? {
+        return StorageHelper.getData().username;
     }
     
     /**
      It retrieves the Haventec deviceUuid
      
-     - Throws: `HaventecAuthenticateError.initialiseError`
-     if the initialiseStorage function has not been called.
-     
      - Returns: String Haventec deviceUuid
      */
-    public static func getDeviceUuid() throws -> String? {
-        return try StorageHelper.getData().deviceUuid;
+    public static func getDeviceUuid() -> String? {
+        return StorageHelper.getData().deviceUuid;
     }
 }
