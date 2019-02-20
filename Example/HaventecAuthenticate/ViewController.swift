@@ -132,7 +132,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
                     self.addDeviceCode.text = "Response Code: " + response.responseStatus.code
                     self.addDeviceMessage.text = "Response Message: " + response.responseStatus.message
                     self.addDeviceStatus.text = "Response Status: " + response.responseStatus.status
-                    self.addDeviceDeviceUuid.text = "Device UUID: " + self.deviceUuid
+                    self.addDeviceDeviceUuid.text = try "Device UUID: " + HaventecAuthenticate.getDeviceUuid()!
                     self.addDeviceActivationToken.text = "Activation Token: " +  self.activationToken
                 } catch {
                     print("Unexpected error: \(error)")
