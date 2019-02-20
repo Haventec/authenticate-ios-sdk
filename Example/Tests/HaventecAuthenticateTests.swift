@@ -46,7 +46,36 @@ class HaventecAuthenticateTest: XCTestCase {
         
         XCTAssertEqual(thisUsername, username1)
     }
+
+    func testHashPin_AlwaysProducesSameHashForPIN() throws {
+        
+        try HaventecAuthenticate.initialiseStorage(username: username1)
+
+        let hashPIN1 = try HaventecAuthenticate.hashPin(pin: "1234")
+        let hashPIN2 = try HaventecAuthenticate.hashPin(pin: "1234")
+
+        XCTAssertEqual(hashPIN1, hashPIN2)
+        
+        try HaventecAuthenticate.initialiseStorage(username: username1)
+        
+        let hashPIN3 = try HaventecAuthenticate.hashPin(pin: "1234")
+
+        XCTAssertEqual(hashPIN1, hashPIN3)
+        
+        try HaventecAuthenticate.initialiseStorage(username: username2)
+        
+        let hashPIN4 = try HaventecAuthenticate.hashPin(pin: "1234")
+
+        XCTAssertNotEqual(hashPIN1, hashPIN4)
+        
+        try HaventecAuthenticate.initialiseStorage(username: username1)
+        
+        let hashPIN5 = try HaventecAuthenticate.hashPin(pin: "1234")
+        
+        XCTAssertEqual(hashPIN1, hashPIN5)
+    }
     
+
     func testUpdateStorage() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1)
         
@@ -179,6 +208,8 @@ class HaventecAuthenticateTest: XCTestCase {
         try XCTAssertEqual(firstAuthKey, HaventecAuthenticate.getAuthKey())
         try XCTAssertNil(HaventecAuthenticate.getAccessToken())
     }
+    
+    
     
     func destroyTestKeychainData() {
         var removeSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: username1)

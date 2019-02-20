@@ -85,7 +85,7 @@ public class StorageHelper {
 
         try persist(key: Constants.KEY_USERNAME + normalisedUsername, value: normalisedUsername);
         
-        let saltOpt: String? = KeychainWrapper.standard.string(forKey: Constants.KEY_LAST_USER);
+        let saltOpt: String? = KeychainWrapper.standard.string(forKey: Constants.KEY_SALT + normalisedUsername);
 
         if let salt = saltOpt {
             
