@@ -1,8 +1,7 @@
 use_frameworks!
 
 target 'HaventecAuthenticate_Example' do
-  pod 'HaventecAuthenticate', :path => '../'
-  pod 'HaventecCommon'
+  pod 'HaventecAuthenticate'
 
   target 'HaventecAuthenticate_Tests' do
     inherit! :search_paths

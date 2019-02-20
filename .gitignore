@@ -2,7 +2,7 @@
 .DS_Store
 
 # Config
-/Example/HaventecAuthenticate/App.plist
+./Example/HaventecAuthenticate/App.plist
 
 # Xcode
 build/
