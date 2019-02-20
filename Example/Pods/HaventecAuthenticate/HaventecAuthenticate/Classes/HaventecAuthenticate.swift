@@ -22,7 +22,7 @@ public class HaventecAuthenticate {
     */
     public static func hashPin(pin: String) throws -> String? {
         
-        if let saltBytes = try StorageHelper.getData().salt {
+        if let saltBytes = StorageHelper.getData().salt {
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
             throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
@@ -81,7 +81,7 @@ public class HaventecAuthenticate {
      - Returns: String Haventec username
      */
     public static func getUsername() -> String? {
-        return try StorageHelper.getData().username;
+        return StorageHelper.getData().username;
     }
     
     /**
