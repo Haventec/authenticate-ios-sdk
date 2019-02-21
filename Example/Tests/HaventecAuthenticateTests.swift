@@ -9,6 +9,13 @@ class HaventecAuthenticateTest: XCTestCase {
     let addDeviceResponseJson2: String = "{\"userEmail\":\"justincrosbie2@gmail.com\",\"activationToken\":\"493554\",\"deviceUuid\":\"c4acafff-f4be-4d06-b7f6-ab3f16deb51a\",\"mobileNumber\":null,\"responseStatus\":{\"status\":\"SUCCESS\",\"message\":\"Created\",\"code\":\"\"}}";
     let activateDeviceResponseJson2: String = "{\"responseStatus\":{\"status\":\"SUCCESS\",\"message\":\"Changed\",\"code\":\"\"},\"authKey\":\"AX4xNhyVoY7lFzmOLmfFo1PbgZYz2oN4THu5/CgDikwg3epdy5a3cIqn2Xk8sHqG3YyQricznA7RZINwxmC2llcmppwn9gx9C0MSmGld7Fs/WtDWRqHQzW5kvBPkyYoArON4cdP5kga4Bbi97Jx4aR/w0EQ6sxD8gL35kM6wdA39oxzeTt5lhBqLzhXshxOBd4cUVQtBCGV9fFM0YPmMDa76kQtiP6ed2PdPJ/sowBpAGBgxiFyxGoPg1PqQ4FJEq0P4rhYwR02WU3sS6nqg4Ql/nrCj1bWl97kHHFhrAZJxEaQwMoffQzY1XfjhS2zKCWjYpHLeZ7zvZi8caR0T/gjCYaBx9egdM3wzkyftIRbpLo4iGJj9HUbjKitjFqL1Q7jiqQTXYwJins8XVmh/007jft2K3l7tLCI8M0wsXQqhP5i7kf6jS6UIhtuI5vlx6LWyw4ywOJjEuQxRrbS8GA==\",\"accessToken\":{\"type\":\"JWT\",\"token\":\"eyJhbGciOiJFUzM4NCJ9.eyJpc3MiOiJ0ZXN0IGFwcCIsImV4cCI6MTU0OTk0ODk2NiwiaWF0IjoxNTQ5OTQ0NDY2LCJuYmYiOjE1NDk5NDQzNDYsInN1YiI6ImpjaGFwaTE4XzIiLCJyb2xlIjpbIkhUX0FOX1VTRVIiXSwiYXBwbGljYXRpb25VVUlEIjoiYzA5ZGQ4ZWYtODIzYi00NGU1LWFhNTUtZTQ4YzM5ZjFiMzJkIiwidXNlclVVSUQiOiIzZTIzM2JiYS02NDlhLTRlMjgtYTE0ZS1kYTIyYjIxOTIyNzMiLCJqdGkiOiIyMmc1Z0Q0X3ctc2t0Z1J3V19pVm9BIn0.MSD3kQdVGsAvS3RiRJN5QOP_h6va4Ww6YdHXkS-uls4qxbqcBoTCskL06GWgA5gIY3dqakqlwd9kAYACG4QpphvP0Zu5FEc7_eDhoWE7UesrtJmB5Me8VVlPoxkpDl3x\"}}";
 
+    let deviceUuid1 = "c4acafff-f4be-4d06-b7f6-ab3f16deb50b";
+    let authKey1 = "OX4xNhyVoY7lFzmOLmfFo1PbgZYz2oN4THu5/CgDikwg3epdy5a3cIqn2Xk8sHqG3YyQricznA7RZINwxmC2llcmppwn9gx9C0MSmGld7Fs/WtDWRqHQzW5kvBPkyYoArON4cdP5kga4Bbi97Jx4aR/w0EQ6sxD8gL35kM6wdA39oxzeTt5lhBqLzhXshxOBd4cUVQtBCGV9fFM0YPmMDa76kQtiP6ed2PdPJ/sowBpAGBgxiFyxGoPg1PqQ4FJEq0P4rhYwR02WU3sS6nqg4Ql/nrCj1bWl97kHHFhrAZJxEaQwMoffQzY1XfjhS2zKCWjYpHLeZ7zvZi8caR0T/gjCYaBx9egdM3wzkyftIRbpLo4iGJj9HUbjKitjFqL1Q7jiqQTXYwJins8XVmh/007jft2K3l7tLCI8M0wsXQqhP5i7kf6jS6UIhtuI5vlx6LWyw4ywOJjEuQxRrbS8GQ==";
+    let accessToken1 = "eyJhbGciOiJFUzM4NCJ9.eyJpc3MiOiJ0ZXN0IGFwcCIsImV4cCI6MTU0OTk0ODk2NiwiaWF0IjoxNTQ5OTQ0NDY2LCJuYmYiOjE1NDk5NDQzNDYsInN1YiI6ImpjaGFwaTE4XzIiLCJyb2xlIjpbIkhUX0FOX1VTRVIiXSwiYXBwbGljYXRpb25VVUlEIjoiYzA5ZGQ4ZWYtODIzYi00NGU1LWFhNTUtZTQ4YzM5ZjFiMzJkIiwidXNlclVVSUQiOiIzZTIzM2JiYS02NDlhLTRlMjgtYTE0ZS1kYTIyYjIxOTIyNzMiLCJqdGkiOiIyMmc1Z0Q0X3ctc2t0Z1J3V19pVm9BIn0.MSD3kQdVGsAvS3RiRJN5QOP_h6va4Ww6YdHXkS-uls4qxbqcBoTCskL06GWgA5gIY3dqakqlwd9kAYACG4QpphvP0Zu5FEc7_eDhoWE7UesrtJmB5Me8VVlPoxkpDl3t";
+    let deviceUuid2 = "c4acafff-f4be-4d06-b7f6-ab3f16deb51a";
+    let authKey2 = "AX4xNhyVoY7lFzmOLmfFo1PbgZYz2oN4THu5/CgDikwg3epdy5a3cIqn2Xk8sHqG3YyQricznA7RZINwxmC2llcmppwn9gx9C0MSmGld7Fs/WtDWRqHQzW5kvBPkyYoArON4cdP5kga4Bbi97Jx4aR/w0EQ6sxD8gL35kM6wdA39oxzeTt5lhBqLzhXshxOBd4cUVQtBCGV9fFM0YPmMDa76kQtiP6ed2PdPJ/sowBpAGBgxiFyxGoPg1PqQ4FJEq0P4rhYwR02WU3sS6nqg4Ql/nrCj1bWl97kHHFhrAZJxEaQwMoffQzY1XfjhS2zKCWjYpHLeZ7zvZi8caR0T/gjCYaBx9egdM3wzkyftIRbpLo4iGJj9HUbjKitjFqL1Q7jiqQTXYwJins8XVmh/007jft2K3l7tLCI8M0wsXQqhP5i7kf6jS6UIhtuI5vlx6LWyw4ywOJjEuQxRrbS8GA==";
+    let accessToken2 = "eyJhbGciOiJFUzM4NCJ9.eyJpc3MiOiJ0ZXN0IGFwcCIsImV4cCI6MTU0OTk0ODk2NiwiaWF0IjoxNTQ5OTQ0NDY2LCJuYmYiOjE1NDk5NDQzNDYsInN1YiI6ImpjaGFwaTE4XzIiLCJyb2xlIjpbIkhUX0FOX1VTRVIiXSwiYXBwbGljYXRpb25VVUlEIjoiYzA5ZGQ4ZWYtODIzYi00NGU1LWFhNTUtZTQ4YzM5ZjFiMzJkIiwidXNlclVVSUQiOiIzZTIzM2JiYS02NDlhLTRlMjgtYTE0ZS1kYTIyYjIxOTIyNzMiLCJqdGkiOiIyMmc1Z0Q0X3ctc2t0Z1J3V19pVm9BIn0.MSD3kQdVGsAvS3RiRJN5QOP_h6va4Ww6YdHXkS-uls4qxbqcBoTCskL06GWgA5gIY3dqakqlwd9kAYACG4QpphvP0Zu5FEc7_eDhoWE7UesrtJmB5Me8VVlPoxkpDl3x";
+
     let badJson = "uh-oh";
     
     let exceptionThrown = "Haventec Exception was thrown from this call"
@@ -98,7 +105,7 @@ class HaventecAuthenticateTest: XCTestCase {
         thisAccessToken = try HaventecAuthenticate.getAccessToken()
         
         XCTAssertEqual(username1, thisUsername)
-        XCTAssertEqual("c4acafff-f4be-4d06-b7f6-ab3f16deb50b", thisDeviceUuid)
+        XCTAssertEqual(deviceUuid1, thisDeviceUuid)
         XCTAssertNil(thisAuthKey)
         XCTAssertNil(thisAccessToken)
         
@@ -111,9 +118,9 @@ class HaventecAuthenticateTest: XCTestCase {
         thisAccessToken = try HaventecAuthenticate.getAccessToken()
         
         XCTAssertEqual(username1, thisUsername)
-        XCTAssertEqual("c4acafff-f4be-4d06-b7f6-ab3f16deb50b", thisDeviceUuid)
-        XCTAssertNotNil(thisAuthKey)
-        XCTAssertNotNil(thisAccessToken)
+        XCTAssertEqual(deviceUuid1, thisDeviceUuid)
+        XCTAssertEqual(authKey1, thisAuthKey)
+        XCTAssertEqual(accessToken1, thisAccessToken)
     }
     
     func testUpdateStorage_Fail_Bad_Json() throws {
@@ -161,9 +168,9 @@ class HaventecAuthenticateTest: XCTestCase {
         firstAccessToken = try HaventecAuthenticate.getAccessToken()
         
         XCTAssertEqual(username1, firstUsername)
-        XCTAssertEqual("c4acafff-f4be-4d06-b7f6-ab3f16deb50b", firstDeviceUuid)
-        XCTAssertNotNil(firstAuthKey)
-        XCTAssertNotNil(firstAccessToken)
+        XCTAssertEqual(deviceUuid1, firstDeviceUuid)
+        XCTAssertEqual(authKey1, firstAuthKey)
+        XCTAssertEqual(accessToken1, firstAccessToken)
 
         
         //
@@ -192,11 +199,11 @@ class HaventecAuthenticateTest: XCTestCase {
         secondAuthKey = try HaventecAuthenticate.getAuthKey()
         secondAccessToken = try HaventecAuthenticate.getAccessToken()
         
-        XCTAssertEqual(username2, secondUsername)
-        XCTAssertEqual("c4acafff-f4be-4d06-b7f6-ab3f16deb51a", secondDeviceUuid)
-        XCTAssertNotNil(secondAuthKey)
-        XCTAssertNotNil(secondAccessToken)
-        
+        XCTAssertEqual(username2, firstUsername)
+        XCTAssertEqual(deviceUuid2, firstDeviceUuid)
+        XCTAssertEqual(authKey2, firstAuthKey)
+        XCTAssertEqual(accessToken2, firstAccessToken)
+
         //
         // Now test that switching back to the first user retains the context, so we haven't lost any data
         //
