@@ -199,10 +199,10 @@ class HaventecAuthenticateTest: XCTestCase {
         secondAuthKey = try HaventecAuthenticate.getAuthKey()
         secondAccessToken = try HaventecAuthenticate.getAccessToken()
         
-        XCTAssertEqual(username2, firstUsername)
-        XCTAssertEqual(deviceUuid2, firstDeviceUuid)
-        XCTAssertEqual(authKey2, firstAuthKey)
-        XCTAssertEqual(accessToken2, firstAccessToken)
+        XCTAssertEqual(username2, secondUsername)
+        XCTAssertEqual(deviceUuid2, secondDeviceUuid)
+        XCTAssertEqual(authKey2, secondAuthKey)
+        XCTAssertEqual(accessToken2, secondAccessToken)
 
         //
         // Now test that switching back to the first user retains the context, so we haven't lost any data
