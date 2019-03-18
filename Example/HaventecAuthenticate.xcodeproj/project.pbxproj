@@ -340,6 +340,7 @@
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/HaventecAuthenticate/HaventecAuthenticate.framework",
 				"${BUILT_PRODUCTS_DIR}/HaventecCommon/HaventecCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -349,6 +350,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HaventecAuthenticate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HaventecCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

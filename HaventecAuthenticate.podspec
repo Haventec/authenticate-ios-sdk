@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
   
   s.dependency 'HaventecCommon'
   s.dependency 'SwiftKeychainWrapper'
+  s.dependency 'JWTDecode', '~> 2.2'
   s.swift_version = '4.2'
 end
