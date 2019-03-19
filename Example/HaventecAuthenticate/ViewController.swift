@@ -32,6 +32,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var addDeviceButton: UIButton!
     @IBOutlet weak var activateDeviceButton: UIButton!
     
+    @IBOutlet weak var deviceName: UILabel!
     @IBOutlet weak var addDeviceStatus: UILabel!
     @IBOutlet weak var addDeviceMessage: UILabel!
     @IBOutlet weak var addDeviceCode: UILabel!
@@ -44,6 +45,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var activateDeviceAuthKey: UILabel!
     @IBOutlet weak var activateDeviceAccessTokenValue: UILabel!
     @IBOutlet weak var activateDeviceAccessTokenType: UILabel!
+    @IBOutlet weak var activateDeviceUserUuid: UILabel!
     
     private func loadPropertyFile() {
         guard let fileUrl = Bundle.main.url(forResource: "App", withExtension: "plist") else { return }
@@ -62,6 +64,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         
         loadPropertyFile()
         // Do any additional setup after loading the view, typically from a nib.
+        deviceName.font = deviceName.font.withSize(10)
         addDeviceStatus.font = addDeviceStatus.font.withSize(10)
         addDeviceMessage.font = addDeviceStatus.font.withSize(10)
         addDeviceCode.font = addDeviceStatus.font.withSize(10)
@@ -74,6 +77,9 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         activateDeviceAuthKey.font = activateDeviceAuthKey.font.withSize(10)
         activateDeviceAccessTokenValue.font = activateDeviceAccessTokenValue.font.withSize(10)
         activateDeviceAccessTokenType.font = activateDeviceAccessTokenType.font.withSize(10)
+        activateDeviceUserUuid.font = activateDeviceUserUuid.font.withSize(10)
+
+        self.deviceName.text = "Device name: " + HaventecAuthenticate.getDeviceName()
         
         do {
             try HaventecAuthenticate.initialiseStorage(username: haventecUsername)
@@ -201,6 +207,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
                     self.activateDeviceAuthKey.text = try "Auth key: " + HaventecAuthenticate.getAuthKey()!
                     self.activateDeviceAccessTokenValue.text = try "Token: " + HaventecAuthenticate.getAccessToken()!
                     self.activateDeviceAccessTokenType.text = "Token Type: " + self.accessToken.type
+                    self.activateDeviceUserUuid.text = try "User Uuid: " + HaventecAuthenticate.getUserUuid()!
                 } catch {
                     print("Unexpected error: \(error)")
                     return
@@ -212,4 +219,28 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         task.resume()
     }
     
+    @IBAction func clearAccessToken() {
+        
+        HaventecAuthenticate.clearAccessToken();
+        
+        do {
+            self.activateDeviceAuthKey.text = try "Auth key: " + HaventecAuthenticate.getAuthKey()!
+            
+            if let accessToken = HaventecAuthenticate.getAccessToken() {
+                self.activateDeviceAccessTokenValue.text = "Token: " + accessToken
+            } else {
+                self.activateDeviceAccessTokenValue.text = "Token has been cleared"
+            }
+            
+            if let userUuid = try HaventecAuthenticate.getUserUuid() {
+                self.activateDeviceUserUuid.text = try "User Uuid: " + userUuid
+            } else {
+                self.activateDeviceUserUuid.text = "accessToken no longer valid, cannot get userUuid"
+            }
+        } catch {
+            print("Unexpected error: \(error)")
+            return
+        }
+    }
+
 }
