@@ -131,7 +131,7 @@ class HaventecAuthenticateTest: XCTestCase {
             try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData)
             XCTFail("haventecAuthenticate.jsonError expected")
         } catch HaventecAuthenticate.HaventecAuthenticateError.jsonError(let errorMsg) {
-            XCTAssertEqual(AuthenticateErrorCodes.json_error.rawValue, errorMsg)
+            XCTAssertEqual(AuthenticateErrorCodes.jsonError.rawValue, errorMsg)
         }
         
         let thisDeviceUuid: String? = try HaventecAuthenticate.getDeviceUuid()
