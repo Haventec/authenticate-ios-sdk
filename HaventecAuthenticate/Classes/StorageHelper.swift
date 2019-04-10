@@ -52,7 +52,7 @@ public class StorageHelper {
             }
             
         } catch {
-            throw HaventecAuthenticate.HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.json_error.rawValue);
+            throw HaventecAuthenticate.HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.jsonError.rawValue);
         }
     }
     
@@ -60,12 +60,16 @@ public class StorageHelper {
         if let username = KeychainWrapper.standard.string(forKey: Constants.KEY_LAST_USER) {
             try persist(key: field + username, value: value);
         } else {
-            throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
+            throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.notInitialisedError.rawValue);
         }
     }
     
     public static func getData() -> HaventecData {
         return haventecDataCache;
+    }
+    
+    public static func clearAccessToken() {
+        return haventecDataCache.accessToken = nil;
     }
     
     private static func initialiseUserCacheData(normalisedUsername: String) throws {
@@ -114,7 +118,7 @@ public class StorageHelper {
             let saveSuccessful: Bool = KeychainWrapper.standard.set(value, forKey: key);
             
             if ( !saveSuccessful ) {
-                throw HaventecAuthenticate.HaventecAuthenticateError.storageError(AuthenticateErrorCodes.not_initialised_error.rawValue);
+                throw HaventecAuthenticate.HaventecAuthenticateError.storageError(AuthenticateErrorCodes.notInitialisedError.rawValue);
             }
         }
     }

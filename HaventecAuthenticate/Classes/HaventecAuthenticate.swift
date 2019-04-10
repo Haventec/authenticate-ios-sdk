@@ -8,6 +8,7 @@ public class HaventecAuthenticate {
         case storageError(String)
         case initialiseError(String)
         case jsonError(String)
+        case jwtError(String)
     }
     
     /**
@@ -25,7 +26,7 @@ public class HaventecAuthenticate {
         if let saltBytes = StorageHelper.getData().salt {
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
-            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.not_initialised_error.rawValue);
+            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.notInitialisedError.rawValue);
         }
     }
 
@@ -73,7 +74,33 @@ public class HaventecAuthenticate {
     public static func getAccessToken() -> String? {
         return StorageHelper.getData().accessToken?.token;
     }
+    
+    /**
+     It nulls the JWT accessToken data. This can be executed as part of a logout user flow,
+     to ensure no further transactions can be executed.
+     A subsequent updateStorage invocation on the response of a successful login will update the data.
+     */
+    public static func clearAccessToken() {
+        return StorageHelper.clearAccessToken();
+    }
+    
 
+    /**
+     It retrieves the Haventec userUuid from the current accessToken
+     
+     - Returns: String Haventec userUuid
+     */
+    public static func getUserUuid() throws -> String? {
+        if let accessToken = getAccessToken() {
+            do {
+                return try TokenHelper.getUserUuidFromJWT(jwtToken: accessToken);
+            } catch {
+                throw HaventecAuthenticateError.jwtError(AuthenticateErrorCodes.jwtDecodeError.rawValue);
+            }
+        } else {
+            return nil;
+        }
+    }
     
     /**
      It retrieves the Haventec username
@@ -91,5 +118,14 @@ public class HaventecAuthenticate {
      */
     public static func getDeviceUuid() -> String? {
         return StorageHelper.getData().deviceUuid;
+    }
+    
+    /**
+     It retrieves the device name, as defined by the UIDevice.current.name value.
+     
+     - Returns: String Haventec device name
+     */
+    public static func getDeviceName() -> String {
+        return DeviceHelper.getDeviceName();
     }
 }

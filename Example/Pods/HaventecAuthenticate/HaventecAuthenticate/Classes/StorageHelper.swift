@@ -68,6 +68,10 @@ public class StorageHelper {
         return haventecDataCache;
     }
     
+    public static func clearAccessToken() {
+         haventecDataCache.accessToken?.token = nil;
+    }
+    
     private static func initialiseUserCacheData(normalisedUsername: String) throws {
         haventecDataCache = HaventecData()
         haventecDataCache.username = normalisedUsername
