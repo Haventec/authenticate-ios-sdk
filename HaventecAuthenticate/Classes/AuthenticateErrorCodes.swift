@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AuthenticateErrorCodes :String {
+public enum AuthenticateErrorCodes: String {
     case notInitialisedError = "The SDK has not been initialised. Please run the initialise function"
     case haventecCommonError = "Haventec Common Error"
     case storageError = "Storage Error"

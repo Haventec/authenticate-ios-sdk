@@ -10,6 +10,6 @@ import Foundation
 public class DeviceHelper {
     
     public static func getDeviceName() -> String {
-        return UIDevice.current.name;
+        return UIDevice.current.name
     }
 }

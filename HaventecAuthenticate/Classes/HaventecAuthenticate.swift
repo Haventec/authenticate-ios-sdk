@@ -22,7 +22,6 @@ public class HaventecAuthenticate {
      - Returns: String Base64-encoded representation of the SHA-512 hashed `pin` and stored salt.
     */
     public static func hashPin(pin: String) throws -> String? {
-        
         if let saltBytes = StorageHelper.getData().salt {
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
@@ -91,14 +90,12 @@ public class HaventecAuthenticate {
      - Returns: String Haventec userUuid
      */
     public static func getUserUuid() throws -> String? {
-        if let accessToken = getAccessToken() {
-            do {
-                return try TokenHelper.getUserUuidFromJWT(jwtToken: accessToken);
-            } catch {
-                throw HaventecAuthenticateError.jwtError(AuthenticateErrorCodes.jwtDecodeError.rawValue);
-            }
-        } else {
-            return nil;
+        guard let accessToken = getAccessToken() else { return nil }
+        
+        do {
+            return try TokenHelper.getUserUuidFromJWT(jwtToken: accessToken);
+        } catch {
+            throw HaventecAuthenticateError.jwtError(AuthenticateErrorCodes.jwtDecodeError.rawValue);
         }
     }
     

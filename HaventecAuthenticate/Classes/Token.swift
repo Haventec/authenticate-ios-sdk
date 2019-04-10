@@ -7,17 +7,14 @@
 
 import Foundation
 
-public class Token : Decodable {
-    var type: String?;
-    var token: String?;
+public class Token: Decodable {
+    var type: String!
+    var token: String!
     
-    init() {
-        self.type = nil;
-        self.token = nil;
-    }
+    init() {}
 
     init(type: String, token: String) {
-        self.type = type;
-        self.token = token;
+        self.type = type
+        self.token = token
     }
 }

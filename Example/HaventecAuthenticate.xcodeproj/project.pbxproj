@@ -12,7 +12,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		918A1E4A3349D1A050AE7ADB /* Pods_HaventecAuthenticate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADD183BD19AFD9A753F368F /* Pods_HaventecAuthenticate_Tests.framework */; };
 		D44C4597221B7DE3001A94F0 /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = D44C4596221B7DE2001A94F0 /* App.plist */; };
 		D44D711822167B3D0062B54A /* ActivateDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D711722167B3D0062B54A /* ActivateDeviceResponse.swift */; };
@@ -48,7 +47,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* HaventecAuthenticate_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaventecAuthenticate_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		88D1D0DBD39DC1BBD8501E79 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9ADD183BD19AFD9A753F368F /* Pods_HaventecAuthenticate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44C4596221B7DE2001A94F0 /* App.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				D473520E2214DE220027C462 /* HaventecAuthenticateTests.swift */,
 			);
@@ -379,7 +376,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D473520F2214DE220027C462 /* HaventecAuthenticateTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
