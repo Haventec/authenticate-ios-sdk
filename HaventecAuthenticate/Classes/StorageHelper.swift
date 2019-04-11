@@ -24,26 +24,26 @@ public class StorageHelper {
     }
     
     public static func updateStorage(data: Data) throws {
-        guard let thisData = try? JSONDecoder().decode(HaventecData.self, from: data) else {
-            throw HaventecAuthenticateError.storageHelper("Error decoding storage JSON")
+        guard let jsonObject = try? JSONDecoder().decode(HaventecData.self, from: data) else {
+            throw HaventecAuthenticateError.invalidData("Unable to decode and deserialize the data given into a JSON object")
         }
         
         do {
-            if let deviceUuid = thisData.deviceUuid, !deviceUuid.isEmpty {
-                haventecDataCache.deviceUuid = deviceUuid
+            if let deviceUuid = jsonObject.deviceUuid, !deviceUuid.isEmpty {
                 try updateKeychainStorage(field: Constants.keyDeviceUuid, value: deviceUuid)
+                haventecDataCache.deviceUuid = deviceUuid
             }
             
-            if let authKey = thisData.authKey, !authKey.isEmpty {
-                haventecDataCache.authKey = authKey
+            if let authKey = jsonObject.authKey, !authKey.isEmpty {
                 try updateKeychainStorage(field: Constants.keyAuthKey, value: authKey)
+                haventecDataCache.authKey = authKey
             }
             
-            if let accessToken = thisData.accessToken {
+            if let accessToken = jsonObject.accessToken {
                 haventecDataCache.accessToken = accessToken
             }
         } catch {
-            throw HaventecAuthenticateError.storageHelper("Error updating the keychain with the data given")
+            throw HaventecAuthenticateError.invalidStorageKey("Error updating the KeyChain with the keys given")
         }
     }
     
@@ -51,7 +51,7 @@ public class StorageHelper {
         if let username = KeychainWrapper.standard.string(forKey: Constants.keyLastUser) {
             try persist(key: field + username, value: value)
         } else {
-            throw HaventecAuthenticateError.storageHelper("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
         }
     }
     
@@ -63,7 +63,7 @@ public class StorageHelper {
         if let salt = haventecDataCache.salt {
             return salt
         } else {
-            throw HaventecAuthenticateError.storageHelper("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
         }
     }
     
@@ -71,7 +71,7 @@ public class StorageHelper {
         if let accessToken = haventecDataCache.accessToken {
             return accessToken.token
         } else {
-            throw HaventecAuthenticateError.storageHelper("No access token set")
+            throw HaventecAuthenticateError.uninitialisedStorageKey("No access token set")
         }
     }
     
@@ -83,7 +83,7 @@ public class StorageHelper {
         if let accessToken = haventecDataCache.accessToken, let value = accessToken.token {
             return try TokenHelper.getUserUuidFromJWT(jwtToken: value)
         } else {
-            throw HaventecAuthenticateError.storageHelper("No access token set")
+            throw HaventecAuthenticateError.uninitialisedStorageKey("No access token set")
         }
     }
     
@@ -91,13 +91,13 @@ public class StorageHelper {
         if let deviceUuid = haventecDataCache.deviceUuid {
             return deviceUuid
         } else {
-            throw HaventecAuthenticateError.storageHelper("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
         }
     }
     
     private static func initialiseUserCacheData(normalisedUsername: String) throws {
         guard let salt = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername) else {
-            throw HaventecAuthenticateError.storageHelper("No salt value set in the keyChain for the given user")
+            throw HaventecAuthenticateError.uninitialisedStorageKey("No salt value set in the keyChain for the given user")
         }
         
         haventecDataCache = HaventecData()
@@ -113,7 +113,7 @@ public class StorageHelper {
         let salt: String? = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername)
         
         if let salt = salt, !salt.isEmpty {
-            throw HaventecAuthenticateError.storageHelper("User storage is already initalised")
+            throw HaventecAuthenticateError.initialisedStorage("User storage is already initalised")
         }
         
         try persistNewSalt(normalisedUsername: normalisedUsername)
@@ -133,11 +133,11 @@ public class StorageHelper {
     
     private static func persist(key: String, value: String?) throws {
         guard let value = value else {
-            throw HaventecAuthenticateError.storageHelper("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
         }
         
         if !KeychainWrapper.standard.set(value, forKey: key) {
-            throw HaventecAuthenticateError.storageHelper("Error setting the key pair value in KeyChain")
+            throw HaventecAuthenticateError.invalidUpdate("Error setting the key pair value in KeyChain")
         }
     }
 }

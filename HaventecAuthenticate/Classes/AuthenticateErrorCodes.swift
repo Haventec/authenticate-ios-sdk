@@ -8,15 +8,13 @@
 import Foundation
 
 public enum HaventecAuthenticateError: Error {
-    case deviceHelper(String)
-    case tokenHelper(String)
-    case storageHelper(String)
-    case haventecData(String)
-//    case commonSDK(String)
-//    case storageHelper(String)
-//    case initialisation(String)
-//    case json(String)
-//    case jwt(String)
+    case invalidJwt(String)
+    case uninitialisedStorage(String)
+    case invalidData(String)
+    case invalidStorageKey(String)
+    case uninitialisedStorageKey(String)
+    case initialisedStorage(String)
+    case invalidUpdate(String)
 }
 
 //public enum AuthenticateErrorCodes: String {
