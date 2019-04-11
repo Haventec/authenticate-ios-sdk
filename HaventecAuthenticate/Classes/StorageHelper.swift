@@ -113,7 +113,7 @@ public class StorageHelper {
         let salt: String? = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername)
         
         if let salt = salt, !salt.isEmpty {
-            throw HaventecAuthenticateError.initialisedStorage("User storage is already initalised")
+            return
         }
         
         try persistNewSalt(normalisedUsername: normalisedUsername)

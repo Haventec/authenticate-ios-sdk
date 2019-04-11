@@ -226,7 +226,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         do {
             self.activateDeviceAuthKey.text = try "Auth key: " + HaventecAuthenticate.getAuthKey()!
             
-            if let accessToken = HaventecAuthenticate.getAccessToken() {
+            if let result = try? HaventecAuthenticate.getAccessToken(), let accessToken = result {
                 self.activateDeviceAccessTokenValue.text = "Token: " + accessToken
             } else {
                 self.activateDeviceAccessTokenValue.text = "Token has been cleared"

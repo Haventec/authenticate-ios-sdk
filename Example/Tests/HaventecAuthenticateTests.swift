@@ -18,7 +18,7 @@ class HaventecAuthenticateTest: XCTestCase {
 
     let userUuid1 = "3e233bba-649a-4e28-a14e-da22b2192273";
     let userUuid2 = "eabbe40e-c45c-4b55-bb36-cd7d0fc0671c";
-    let badJson = "uh-oh";
+    let invalidJsonResponse = "uh-oh";
     
     let exceptionThrown = "Haventec Exception was thrown from this call"
     
@@ -27,272 +27,220 @@ class HaventecAuthenticateTest: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        destroyTestKeychainData()
-
-        do {
-            try HaventecAuthenticate.initialiseStorage(username: "")
-        } catch {
-            XCTFail()
-        }
+        KeychainWrapper.standard.removeAllKeys()
+        guard (try? HaventecAuthenticate.initialiseStorage(username: "")) != nil else { XCTFail(); return }
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        
-        destroyTestKeychainData()
+        KeychainWrapper.standard.removeAllKeys()
     }
     
-    func testInitialiseStorage() throws {
+    func testInitialiseStorage_success() throws {
+        // Test user initialised from setup
+        XCTAssertNotNil(HaventecAuthenticate.getDeviceName())
+        assertAgainstUsername(username: "")
         
-        let deviceName = HaventecAuthenticate.getDeviceName();
-        
-        XCTAssertNotNil(deviceName);
-
-        var thisUsername: String? = try HaventecAuthenticate.getUsername()
-
-        XCTAssertEqual(thisUsername, "")
-
+        // Initialise to new user
         try HaventecAuthenticate.initialiseStorage(username: username1)
+        XCTAssertNotNil(HaventecAuthenticate.getDeviceName())
+        assertAgainstUsername(username: username1)
         
-        thisUsername = try HaventecAuthenticate.getUsername()
-        
-        XCTAssertEqual(thisUsername, username1)
+        // Initialise to new user
+        try HaventecAuthenticate.initialiseStorage(username: username2)
+        XCTAssertNotNil(HaventecAuthenticate.getDeviceName())
+        assertAgainstUsername(username: username2)
     }
 
-    func testClearAccessToken() throws {
+    func testClearAccessToken_success() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1)
-        let addDeviceResponseJsonData = addDeviceResponseJson.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData)
-        let activateDeviceResponseJsonData = activateDeviceResponseJson.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJsonData)
-
+        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJson.data(using: .utf8)!)
+        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJson.data(using: .utf8)!)
         
-        XCTAssertEqual(username1, HaventecAuthenticate.getUsername())
-        XCTAssertEqual(deviceUuid1, HaventecAuthenticate.getDeviceUuid())
-        XCTAssertEqual(authKey1, HaventecAuthenticate.getAuthKey())
-        XCTAssertEqual(accessToken1, HaventecAuthenticate.getAccessToken())
-        XCTAssertEqual(userUuid1, try HaventecAuthenticate.getUserUuid())
+        // Check optionals and throws and values
+        assertAgainstUsername(username: username1)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid1)
+        assertAgainstAuthKey(authKey: authKey1)
+        assertAgainstAccessToken(accessToken: accessToken1)
+        assertAgainstUserUuid(userUuid: userUuid1)
 
-        let deviceName = HaventecAuthenticate.getDeviceName();
+        let deviceName = HaventecAuthenticate.getDeviceName()
         XCTAssertNotNil(deviceName);
 
-        HaventecAuthenticate.clearAccessToken();
+        HaventecAuthenticate.clearAccessToken()
         
-        XCTAssertEqual(username1, HaventecAuthenticate.getUsername())
-        XCTAssertEqual(deviceUuid1, HaventecAuthenticate.getDeviceUuid())
-        XCTAssertEqual(authKey1, HaventecAuthenticate.getAuthKey())
-        XCTAssertNil(try HaventecAuthenticate.getUserUuid())
+        assertAgainstUsername(username: username1)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid1)
+        assertAgainstAuthKey(authKey: authKey1)
+
         XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
-        XCTAssertNil(HaventecAuthenticate.getAccessToken())
-
-    }
-    
-    func testHashPin_AlwaysProducesSameHashForPIN() throws {
         
+        // Shoudl throw errors since the access token is nil
+        XCTAssertThrowsError(try HaventecAuthenticate.getAccessToken())
+        XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
+    }
+
+    func testHashPin_sameHashWithSamePin() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1)
 
         let hashPIN1 = try HaventecAuthenticate.hashPin(pin: "1234")
         let hashPIN2 = try HaventecAuthenticate.hashPin(pin: "1234")
 
         XCTAssertEqual(hashPIN1, hashPIN2)
-        
+
         try HaventecAuthenticate.initialiseStorage(username: username1)
-        
+
         let hashPIN3 = try HaventecAuthenticate.hashPin(pin: "1234")
 
         XCTAssertEqual(hashPIN1, hashPIN3)
-        
+//
         try HaventecAuthenticate.initialiseStorage(username: username2)
-        
+
         let hashPIN4 = try HaventecAuthenticate.hashPin(pin: "1234")
 
         XCTAssertNotEqual(hashPIN1, hashPIN4)
-        
+
         try HaventecAuthenticate.initialiseStorage(username: username1)
-        
+
         let hashPIN5 = try HaventecAuthenticate.hashPin(pin: "1234")
-        
+
         XCTAssertEqual(hashPIN1, hashPIN5)
     }
     
-
-    func testUpdateStorage() throws {
+    func testUpdateStorage_success() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1)
+
+        assertAgainstUsername(username: username1)
         
-        var thisUsername: String? = try HaventecAuthenticate.getUsername()
-        var thisDeviceUuid: String? = try HaventecAuthenticate.getDeviceUuid()
-        var thisAuthKey: String? = try HaventecAuthenticate.getAuthKey()
-        var thisAccessToken: String? = try HaventecAuthenticate.getAccessToken()
-        var thisUserUuid: String? = try HaventecAuthenticate.getUserUuid()
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid())
+        XCTAssertNil(HaventecAuthenticate.getAuthKey())
+        XCTAssertNil(try HaventecAuthenticate.getAccessToken())
+        XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
 
-        XCTAssertEqual(username1, thisUsername)
-        XCTAssertNil(thisDeviceUuid)
-        XCTAssertNil(thisAuthKey)
-        XCTAssertNil(thisAccessToken)
-        XCTAssertNil(thisUserUuid)
-
-        let addDeviceResponseJsonData = addDeviceResponseJson.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData)
+        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJson.data(using: .utf8)!)
         
-        thisUsername = try HaventecAuthenticate.getUsername()
-        thisDeviceUuid = try HaventecAuthenticate.getDeviceUuid()
-        thisAuthKey = try HaventecAuthenticate.getAuthKey()
-        thisAccessToken = try HaventecAuthenticate.getAccessToken()
-        thisUserUuid = try HaventecAuthenticate.getUserUuid()
-
-        XCTAssertEqual(username1, thisUsername)
-        XCTAssertEqual(deviceUuid1, thisDeviceUuid)
-        XCTAssertNil(thisAuthKey)
-        XCTAssertNil(thisAccessToken)
-        XCTAssertNil(thisUserUuid)
-
-        let activateDeviceResponseJsonData = activateDeviceResponseJson.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJsonData)
+        assertAgainstUsername(username: username1)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid1)
         
-        thisUsername = try HaventecAuthenticate.getUsername()
-        thisDeviceUuid = try HaventecAuthenticate.getDeviceUuid()
-        thisAuthKey = try HaventecAuthenticate.getAuthKey()
-        thisAccessToken = try HaventecAuthenticate.getAccessToken()
-        thisUserUuid = try HaventecAuthenticate.getUserUuid()
+        XCTAssertNil(HaventecAuthenticate.getAuthKey())
+        XCTAssertNil(try HaventecAuthenticate.getAccessToken())
+        XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
 
-        XCTAssertEqual(username1, thisUsername)
-        XCTAssertEqual(deviceUuid1, thisDeviceUuid)
-        XCTAssertEqual(authKey1, thisAuthKey)
-        XCTAssertEqual(accessToken1, thisAccessToken)
-        XCTAssertEqual(userUuid1, thisUserUuid)
+        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJson.data(using: .utf8)!)
+        
+        assertAgainstUsername(username: username1)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid1)
+        assertAgainstAuthKey(authKey: authKey1)
+        assertAgainstAccessToken(accessToken: accessToken1)
+        assertAgainstUserUuid(userUuid: userUuid1)
     }
-    
-    func testUpdateStorage_Fail_Bad_Json() throws {
+
+    func testUpdateStorage_invalidJsonResponse() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1)
+        let expectedErrorMessage = "Unable to decode and deserialize the data given into a JSON object"
         
-        let addDeviceResponseJsonData = badJson.data(using: .utf8)!
         do {
-            try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData)
+            try HaventecAuthenticate.updateStorage(data: invalidJsonResponse.data(using: .utf8)!)
             XCTFail("haventecAuthenticate.jsonError expected")
-        } catch HaventecAuthenticate.HaventecAuthenticateError.jsonError(let errorMsg) {
-            XCTAssertEqual(AuthenticateErrorCodes.jsonError.rawValue, errorMsg)
+        } catch HaventecAuthenticateError.invalidData(let errorMsg) {
+            XCTAssertEqual(expectedErrorMessage, errorMsg)
+        } catch {
+            XCTFail("Wrong error thrown")
         }
-        
-        let thisDeviceUuid: String? = try HaventecAuthenticate.getDeviceUuid()
-        
-        XCTAssertNil(thisDeviceUuid);
-    }
-    
-    func testTwoUsersSwitch() throws {
 
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid());
+    }
+
+    func testTwoUsersSwitch() throws {
+        let deviceName = HaventecAuthenticate.getDeviceName()
+        XCTAssertNotNil(deviceName)
+        
         //
         // First, test that values get set appropriately for username1
         //
         
-        let deviceName = HaventecAuthenticate.getDeviceName();
-        XCTAssertNotNil(deviceName);
-
         try HaventecAuthenticate.initialiseStorage(username: username1)
         
-        var firstUsername: String? = try HaventecAuthenticate.getUsername()
-        var firstDeviceUuid: String? = try HaventecAuthenticate.getDeviceUuid()
-        var firstAuthKey: String? = try HaventecAuthenticate.getAuthKey()
-        var firstAccessToken: String? = try HaventecAuthenticate.getAccessToken()
-        var firstDeviceName: String? = try HaventecAuthenticate.getDeviceName()
-        var firstUserUuid: String? = try HaventecAuthenticate.getUserUuid()
-
-        XCTAssertEqual(username1, firstUsername)
-        XCTAssertEqual(deviceName, firstDeviceName)
-        XCTAssertNil(firstDeviceUuid)
-        XCTAssertNil(firstAuthKey)
-        XCTAssertNil(firstAccessToken)
-        XCTAssertNil(firstUserUuid)
-
-        let addDeviceResponseJsonData = addDeviceResponseJson.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData)
-        let activateDeviceResponseJsonData = activateDeviceResponseJson.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJsonData)
-
-        firstUsername = try HaventecAuthenticate.getUsername()
-        firstDeviceUuid = try HaventecAuthenticate.getDeviceUuid()
-        firstDeviceName = try HaventecAuthenticate.getDeviceName()
-        firstAuthKey = try HaventecAuthenticate.getAuthKey()
-        firstAccessToken = try HaventecAuthenticate.getAccessToken()
-        firstUserUuid = try HaventecAuthenticate.getUserUuid()
-
-        XCTAssertEqual(username1, firstUsername)
-        XCTAssertEqual(deviceName, firstDeviceName)
-        XCTAssertEqual(deviceUuid1, firstDeviceUuid)
-        XCTAssertEqual(userUuid1, firstUserUuid)
-        XCTAssertEqual(authKey1, firstAuthKey)
-        XCTAssertEqual(accessToken1, firstAccessToken)
-
+        assertAgainstUsername(username: username1)
+        XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid())
+        XCTAssertNil(HaventecAuthenticate.getAuthKey())
+        XCTAssertNil(try HaventecAuthenticate.getAccessToken())
+        XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
         
+        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJson.data(using: .utf8)!)
+        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJson.data(using: .utf8)!)
+        
+        XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
+        assertAgainstUsername(username: username1)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid1)
+        assertAgainstAuthKey(authKey: authKey1)
+        assertAgainstAccessToken(accessToken: accessToken1)
+        assertAgainstUserUuid(userUuid: userUuid1)
+
+
         //
         // Now test onboarding a second user
         //
-        
+
         try HaventecAuthenticate.initialiseStorage(username: username2);
         
-        var secondUsername: String? = try HaventecAuthenticate.getUsername()
-        var secondUserUuid: String? = try HaventecAuthenticate.getUserUuid()
-        var secondDeviceUuid: String? = try HaventecAuthenticate.getDeviceUuid()
-        var secondDeviceName: String? = try HaventecAuthenticate.getDeviceName()
-        var secondAuthKey: String? = try HaventecAuthenticate.getAuthKey()
-        var secondAccessToken: String? = try HaventecAuthenticate.getAccessToken()
+        assertAgainstUsername(username: username2)
+        XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid())
+        XCTAssertNil(HaventecAuthenticate.getAuthKey())
+        XCTAssertNil(try HaventecAuthenticate.getAccessToken())
+        XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
         
-        XCTAssertEqual(username2, secondUsername)
-        XCTAssertEqual(deviceName, secondDeviceName)
-        XCTAssertNil(secondDeviceUuid)
-        XCTAssertNil(secondUserUuid)
-        XCTAssertNil(secondAuthKey)
-        XCTAssertNil(secondAccessToken)
+        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJson2.data(using: .utf8)!);
+        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJson2.data(using: .utf8)!)
         
-        let addDeviceResponseJsonData2 = addDeviceResponseJson2.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJsonData2);
-        let activateDeviceResponseJsonData2 = activateDeviceResponseJson2.data(using: .utf8)!
-        try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJsonData2)
-        
-        secondUsername = try HaventecAuthenticate.getUsername()
-        secondDeviceUuid = try HaventecAuthenticate.getDeviceUuid()
-        secondUserUuid = try HaventecAuthenticate.getUserUuid()
-        secondDeviceName = try HaventecAuthenticate.getDeviceName()
-        secondAuthKey = try HaventecAuthenticate.getAuthKey()
-        secondAccessToken = try HaventecAuthenticate.getAccessToken()
-        
-        XCTAssertEqual(deviceName, secondDeviceName)
-        XCTAssertEqual(userUuid2, secondUserUuid)
-        XCTAssertEqual(username2, secondUsername)
-        XCTAssertEqual(deviceUuid2, secondDeviceUuid)
-        XCTAssertEqual(authKey2, secondAuthKey)
-        XCTAssertEqual(accessToken2, secondAccessToken)
+        XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
+        assertAgainstUsername(username: username2)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid2)
+        assertAgainstAuthKey(authKey: authKey2)
+        assertAgainstAccessToken(accessToken: accessToken2)
+        assertAgainstUserUuid(userUuid: userUuid2)
 
         //
         // Now test that switching back to the first user retains the context, so we haven't lost any data
         //
+
+        try HaventecAuthenticate.initialiseStorage(username: username1)
         
-        try HaventecAuthenticate.initialiseStorage(username: username1);
-        
-        try XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
-        try XCTAssertEqual(username1, HaventecAuthenticate.getUsername())
-        try XCTAssertEqual(firstDeviceUuid, HaventecAuthenticate.getDeviceUuid())
-        try XCTAssertEqual(firstAuthKey, HaventecAuthenticate.getAuthKey())
-        try XCTAssertNil(HaventecAuthenticate.getAccessToken())
-        try XCTAssertNil(HaventecAuthenticate.getUserUuid())
+        XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
+        assertAgainstUsername(username: username1)
+        assertAgainstDeviceUuid(deviceUuid: deviceUuid1)
+        assertAgainstAuthKey(authKey: authKey1)
+        XCTAssertNil(try HaventecAuthenticate.getAccessToken())
+        XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
     }
     
+    // Helper methods to test unwrapping of optionals and throwables
+    private func assertAgainstUsername(username: String?) {
+        XCTAssertNotNil(HaventecAuthenticate.getUsername())
+        XCTAssertEqual(HaventecAuthenticate.getUsername()!, username)
+    }
     
+    private func assertAgainstDeviceUuid(deviceUuid: String?) {
+        XCTAssertNotNil(HaventecAuthenticate.getDeviceUuid())
+        XCTAssertEqual(deviceUuid, HaventecAuthenticate.getDeviceUuid())
+    }
     
-    func destroyTestKeychainData() {
-        var removeSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: username1)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_username_" + username1)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_salt_" + username1)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_deviceUuid_" + username1)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_authKey_" + username1)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_tokenType_" + username1)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_accessToken_" + username1)
-        
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: username2)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_username_" + username2)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_salt_" + username2)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_deviceUuid_" + username2)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_authKey_" + username2)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_tokenType_" + username2)
-        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_accessToken_" + username2)
+    private func assertAgainstAuthKey(authKey: String?) {
+        XCTAssertNotNil(HaventecAuthenticate.getAuthKey())
+        XCTAssertEqual(authKey, HaventecAuthenticate.getAuthKey())
+    }
+    
+    private func assertAgainstAccessToken(accessToken: String?) {
+        XCTAssertNoThrow(try HaventecAuthenticate.getAccessToken())
+        XCTAssertNotNil(try! HaventecAuthenticate.getAccessToken())
+        XCTAssertEqual(accessToken, try! HaventecAuthenticate.getAccessToken()!)
+    }
+    
+    private func assertAgainstUserUuid(userUuid: String?) {
+        XCTAssertNoThrow(try HaventecAuthenticate.getUserUuid())
+        XCTAssertNotNil(try! HaventecAuthenticate.getUserUuid())
+        XCTAssertEqual(userUuid, try! HaventecAuthenticate.getUserUuid()!)
     }
 }
