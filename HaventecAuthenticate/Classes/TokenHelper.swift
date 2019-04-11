@@ -11,6 +11,10 @@ import JWTDecode
 public class TokenHelper {
     
     public static func getUserUuidFromJWT(jwtToken: String) throws -> String? {
-        return try decode(jwt: jwtToken).claim(name: "userUUID").string
+        if let token = try? decode(jwt: jwtToken) {
+            return token.claim(name: "userUUID").string
+        } else {
+            throw HaventecAuthenticateError.tokenHelper("Error decoding the JWT value given")
+        }
     }
 }
