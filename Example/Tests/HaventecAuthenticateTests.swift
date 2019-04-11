@@ -65,7 +65,7 @@ class HaventecAuthenticateTest: XCTestCase {
         assertAgainstUserUuid(userUuid: userUuid1)
 
         let deviceName = HaventecAuthenticate.getDeviceName()
-        XCTAssertNotNil(deviceName);
+        XCTAssertNotNil(deviceName)
 
         HaventecAuthenticate.clearAccessToken()
         
@@ -148,7 +148,7 @@ class HaventecAuthenticateTest: XCTestCase {
             XCTFail("Wrong error thrown")
         }
 
-        XCTAssertNil(HaventecAuthenticate.getDeviceUuid());
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid())
     }
 
     func testTwoUsersSwitch() throws {
@@ -183,7 +183,7 @@ class HaventecAuthenticateTest: XCTestCase {
         // Now test onboarding a second user
         //
 
-        try HaventecAuthenticate.initialiseStorage(username: username2);
+        try HaventecAuthenticate.initialiseStorage(username: username2)
         
         assertAgainstUsername(username: username2)
         XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())
@@ -192,7 +192,7 @@ class HaventecAuthenticateTest: XCTestCase {
         XCTAssertNil(try HaventecAuthenticate.getAccessToken())
         XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
         
-        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJson2.data(using: .utf8)!);
+        try HaventecAuthenticate.updateStorage(data: addDeviceResponseJson2.data(using: .utf8)!)
         try HaventecAuthenticate.updateStorage(data: activateDeviceResponseJson2.data(using: .utf8)!)
         
         XCTAssertEqual(deviceName, HaventecAuthenticate.getDeviceName())

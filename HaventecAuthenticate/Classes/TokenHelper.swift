@@ -15,7 +15,6 @@ public class TokenHelper {
             return token.claim(name: "userUUID").string
         } else {
             throw HaventecAuthenticateError.invalidJwt("Error decoding the JWT value given")
-//            throw HaventecAuthenticateError.tokenHelper("Error decoding the JWT value given")
         }
     }
 }
