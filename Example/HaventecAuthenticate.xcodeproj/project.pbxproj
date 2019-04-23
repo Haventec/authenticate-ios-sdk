@@ -13,7 +13,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		918A1E4A3349D1A050AE7ADB /* Pods_HaventecAuthenticate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADD183BD19AFD9A753F368F /* Pods_HaventecAuthenticate_Tests.framework */; };
-		D44C4597221B7DE3001A94F0 /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = D44C4596221B7DE2001A94F0 /* App.plist */; };
 		D44D711822167B3D0062B54A /* ActivateDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D711722167B3D0062B54A /* ActivateDeviceResponse.swift */; };
 		D44D711A22167BB00062B54A /* AddDeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D711922167BB00062B54A /* AddDeviceRequest.swift */; };
 		D44D711C22167C310062B54A /* AddDeviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D711B22167C310062B54A /* AddDeviceResponse.swift */; };
@@ -49,7 +48,6 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D1D0DBD39DC1BBD8501E79 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9ADD183BD19AFD9A753F368F /* Pods_HaventecAuthenticate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D44C4596221B7DE2001A94F0 /* App.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		D44D711722167B3D0062B54A /* ActivateDeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateDeviceResponse.swift; sourceTree = "<group>"; };
 		D44D711922167BB00062B54A /* AddDeviceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceRequest.swift; sourceTree = "<group>"; };
 		D44D711B22167C310062B54A /* AddDeviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceResponse.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D44C4596221B7DE2001A94F0 /* App.plist */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -244,6 +241,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -266,7 +264,6 @@
 				D44D712222168F360062B54A /* App.example.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				D44C4597221B7DE3001A94F0 /* App.plist in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
