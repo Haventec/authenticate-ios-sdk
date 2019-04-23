@@ -8,8 +8,8 @@
 import Foundation
 
 public class Token: Decodable {
-    var type: String!
-    var token: String!
+    var type: String?
+    var token: String?
     
     init() {}
 
