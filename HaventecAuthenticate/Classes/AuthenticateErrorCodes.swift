@@ -16,3 +16,13 @@ public enum HaventecAuthenticateError: Error {
     case initialisedStorage(String)
     case invalidUpdate(String)
 }
+
+public enum ErrorMessage: String {
+    case invalidJSONObject = "Unable to decode and deserialize the data given into a JSON object"
+    case failedKeyChainUpdate = "Error updating the KeyChain with the keys given"
+    case uninitialisedSDK = "The SDK has not been initialised. Please run the initialise function"
+    case noAccessTokenInKeyChain = "No access token set"
+    case noSaltInKeyChain = "No salt value set in the keyChain for the given user"
+}
+
+

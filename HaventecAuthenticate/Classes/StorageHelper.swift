@@ -25,7 +25,7 @@ public class StorageHelper {
     
     public static func updateStorage(data: Data) throws {
         guard let jsonObject = try? JSONDecoder().decode(HaventecData.self, from: data) else {
-            throw HaventecAuthenticateError.invalidData("Unable to decode and deserialize the data given into a JSON object")
+            throw HaventecAuthenticateError.invalidData(ErrorMessage.invalidJSONObject.rawValue)
         }
         
         do {
@@ -43,7 +43,7 @@ public class StorageHelper {
                 haventecDataCache.accessToken = accessToken
             }
         } catch {
-            throw HaventecAuthenticateError.invalidStorageKey("Error updating the KeyChain with the keys given")
+            throw HaventecAuthenticateError.invalidStorageKey(ErrorMessage.failedKeyChainUpdate.rawValue)
         }
     }
     
@@ -51,7 +51,7 @@ public class StorageHelper {
         if let username = KeychainWrapper.standard.string(forKey: Constants.keyLastUser) {
             try persist(key: field + username, value: value)
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
         }
     }
     
@@ -63,7 +63,7 @@ public class StorageHelper {
         if let salt = haventecDataCache.salt {
             return salt
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
         }
     }
     
@@ -71,7 +71,7 @@ public class StorageHelper {
         if let accessToken = haventecDataCache.accessToken {
             return accessToken.token
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorageKey("No access token set")
+            throw HaventecAuthenticateError.uninitialisedStorageKey(ErrorMessage.noAccessTokenInKeyChain.rawValue)
         }
     }
     
@@ -83,7 +83,7 @@ public class StorageHelper {
         if let accessToken = haventecDataCache.accessToken, let value = accessToken.token {
             return try TokenHelper.getUserUuidFromJWT(jwtToken: value)
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorageKey("No access token set")
+            throw HaventecAuthenticateError.uninitialisedStorageKey(ErrorMessage.noAccessTokenInKeyChain.rawValue)
         }
     }
     
@@ -91,13 +91,13 @@ public class StorageHelper {
         if let deviceUuid = haventecDataCache.deviceUuid {
             return deviceUuid
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
         }
     }
     
     private static func initialiseUserCacheData(normalisedUsername: String) throws {
         guard let salt = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername) else {
-            throw HaventecAuthenticateError.uninitialisedStorageKey("No salt value set in the keyChain for the given user")
+            throw HaventecAuthenticateError.uninitialisedStorageKey(ErrorMessage.noSaltInKeyChain.rawValue)
         }
         
         haventecDataCache = HaventecData()
@@ -133,11 +133,11 @@ public class StorageHelper {
     
     private static func persist(key: String, value: String?) throws {
         guard let value = value else {
-            throw HaventecAuthenticateError.uninitialisedStorage("The SDK has not been initialised. Please run the initialise function")
+            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
         }
         
         if !KeychainWrapper.standard.set(value, forKey: key) {
-            throw HaventecAuthenticateError.invalidUpdate("Error setting the key pair value in KeyChain")
+            throw HaventecAuthenticateError.invalidUpdate(ErrorMessage.failedKeyChainUpdate)
         }
     }
 }
