@@ -27,13 +27,13 @@ class HaventecAuthenticateTest: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        KeychainWrapper.standard.removeAllKeys()
+        destroyTestKeychainData()
         guard (try? HaventecAuthenticate.initialiseStorage(username: "")) != nil else { XCTFail(); return }
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        KeychainWrapper.standard.removeAllKeys()
+        destroyTestKeychainData()
     }
     
     func testInitialiseStorage_success() throws {
@@ -242,5 +242,23 @@ class HaventecAuthenticateTest: XCTestCase {
         XCTAssertNoThrow(try HaventecAuthenticate.getUserUuid())
         XCTAssertNotNil(try! HaventecAuthenticate.getUserUuid())
         XCTAssertEqual(userUuid, try! HaventecAuthenticate.getUserUuid()!)
+    }
+    
+    private func destroyTestKeychainData() {
+        var removeSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: username1)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_username_" + username1)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_salt_" + username1)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_deviceUuid_" + username1)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_authKey_" + username1)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_tokenType_" + username1)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_accessToken_" + username1)
+        
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: username2)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_username_" + username2)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_salt_" + username2)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_deviceUuid_" + username2)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_authKey_" + username2)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_tokenType_" + username2)
+        removeSuccessful = KeychainWrapper.standard.removeObject(forKey: "haventec_accessToken_" + username2)
     }
 }
