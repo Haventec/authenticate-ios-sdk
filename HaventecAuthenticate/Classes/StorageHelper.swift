@@ -11,7 +11,7 @@ import HaventecCommon
 
 public class StorageHelper {
     
-    private static var haventecDataCache: HaventecData!
+    static var haventecDataCache: HaventecData = HaventecData();
     
     public static func initialise(username: String) throws {
         let normalisedUsername = username.lowercased()
