@@ -20,6 +20,7 @@
 		D44D712222168F360062B54A /* App.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = D44D712122168F360062B54A /* App.example.plist */; };
 		D473520F2214DE220027C462 /* HaventecAuthenticateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D473520E2214DE220027C462 /* HaventecAuthenticateTests.swift */; };
 		DF3C8EFCDC997883C6344F00 /* Pods_HaventecAuthenticate_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA0B5AE9F3233CC0466EB4F /* Pods_HaventecAuthenticate_Example.framework */; };
+		E36340D8226FF93700C9FD3A /* App.plist in Resources */ = {isa = PBXBuildFile; fileRef = E36340D7226FF93700C9FD3A /* App.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D44D711D22167C720062B54A /* ResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
 		D44D712122168F360062B54A /* App.example.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.example.plist; sourceTree = "<group>"; };
 		D473520E2214DE220027C462 /* HaventecAuthenticateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaventecAuthenticateTests.swift; sourceTree = "<group>"; };
+		E36340D7226FF93700C9FD3A /* App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App.plist; sourceTree = "<group>"; };
 		EDA0B5AE9F3233CC0466EB4F /* Pods_HaventecAuthenticate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26C0A7676F72B8B9668168A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FB404DBB36AA6526AC1B1B01 /* HaventecAuthenticate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HaventecAuthenticate.podspec; path = ../HaventecAuthenticate.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				E36340D7226FF93700C9FD3A /* App.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				D44D712222168F360062B54A /* App.example.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				E36340D8226FF93700C9FD3A /* App.plist in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

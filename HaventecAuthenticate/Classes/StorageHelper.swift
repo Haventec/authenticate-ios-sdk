@@ -110,9 +110,11 @@ public class StorageHelper {
     private static func initialiseUserPersistedData(normalisedUsername: String) throws {
         try persist(key: Constants.keyUsername + normalisedUsername, value: normalisedUsername)
         
-        let salt: String? = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername)
+        let saltOpt: String? = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername)
         
-        if let salt = salt, !salt.isEmpty {
+        guard let salt = saltOpt else { try persistNewSalt(normalisedUsername: normalisedUsername); return }
+        
+        if (!salt.isEmpty) {
             return
         }
         
@@ -137,7 +139,7 @@ public class StorageHelper {
         }
         
         if !KeychainWrapper.standard.set(value, forKey: key) {
-            throw HaventecAuthenticateError.invalidUpdate(ErrorMessage.failedKeyChainUpdate)
+            throw HaventecAuthenticateError.invalidUpdate(ErrorMessage.failedKeyChainUpdate.rawValue)
         }
     }
 }
