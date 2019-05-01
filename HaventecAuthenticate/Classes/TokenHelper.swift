@@ -14,7 +14,7 @@ public class TokenHelper {
         if let token = try? decode(jwt: jwtToken) {
             return token.claim(name: "userUUID").string
         } else {
-            throw HaventecAuthenticateError.invalidJwt("Error decoding the JWT value given")
+            throw HaventecAuthenticateError.jwtError(ErrorMessage.invalidJWT)
         }
     }
 }

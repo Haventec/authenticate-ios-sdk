@@ -25,7 +25,7 @@ public class StorageHelper {
     
     public static func updateStorage(data: Data) throws {
         guard let jsonObject = try? JSONDecoder().decode(HaventecData.self, from: data) else {
-            throw HaventecAuthenticateError.invalidData(ErrorMessage.invalidJSONObject.rawValue)
+            throw HaventecAuthenticateError.jsonError(ErrorMessage.invalidJSONObject.rawValue)
         }
         
         do {
@@ -43,7 +43,7 @@ public class StorageHelper {
                 haventecDataCache.accessToken = accessToken
             }
         } catch {
-            throw HaventecAuthenticateError.invalidStorageKey(ErrorMessage.failedKeyChainUpdate.rawValue)
+            throw HaventecAuthenticateError.jsonError(ErrorMessage.failedKeyChainUpdate.rawValue)
         }
     }
     
@@ -51,7 +51,7 @@ public class StorageHelper {
         if let username = KeychainWrapper.standard.string(forKey: Constants.keyLastUser) {
             try persist(key: field + username, value: value)
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
+            throw HaventecAuthenticateError.initialiseError(ErrorMessage.uninitialisedSDK.rawValue)
         }
     }
     
@@ -63,7 +63,7 @@ public class StorageHelper {
         if let salt = haventecDataCache.salt {
             return salt
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
+            throw HaventecAuthenticateError.initialiseError(ErrorMessage.uninitialisedSDK.rawValue)
         }
     }
     
@@ -71,7 +71,7 @@ public class StorageHelper {
         if let accessToken = haventecDataCache.accessToken {
             return accessToken.token
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorageKey(ErrorMessage.noAccessTokenInKeyChain.rawValue)
+            throw HaventecAuthenticateError.initialiseError(ErrorMessage.noAccessTokenInKeyChain.rawValue)
         }
     }
     
@@ -83,7 +83,7 @@ public class StorageHelper {
         if let accessToken = haventecDataCache.accessToken, let value = accessToken.token {
             return try TokenHelper.getUserUuidFromJWT(jwtToken: value)
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorageKey(ErrorMessage.noAccessTokenInKeyChain.rawValue)
+            throw HaventecAuthenticateError.storageError(ErrorMessage.noAccessTokenInKeyChain.rawValue)
         }
     }
     
@@ -91,13 +91,13 @@ public class StorageHelper {
         if let deviceUuid = haventecDataCache.deviceUuid {
             return deviceUuid
         } else {
-            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
+            throw HaventecAuthenticateError.storageError(ErrorMessage.uninitialisedSDK.rawValue)
         }
     }
     
     private static func initialiseUserCacheData(normalisedUsername: String) throws {
         guard let salt = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername) else {
-            throw HaventecAuthenticateError.uninitialisedStorageKey(ErrorMessage.noSaltInKeyChain.rawValue)
+            throw HaventecAuthenticateError.storageError(ErrorMessage.noSaltInKeyChain.rawValue)
         }
         
         haventecDataCache = HaventecData()
@@ -135,11 +135,11 @@ public class StorageHelper {
     
     private static func persist(key: String, value: String?) throws {
         guard let value = value else {
-            throw HaventecAuthenticateError.uninitialisedStorage(ErrorMessage.uninitialisedSDK.rawValue)
+            throw HaventecAuthenticateError.storageError(ErrorMessage.uninitialisedSDK.rawValue)
         }
         
         if !KeychainWrapper.standard.set(value, forKey: key) {
-            throw HaventecAuthenticateError.invalidUpdate(ErrorMessage.failedKeyChainUpdate.rawValue)
+            throw HaventecAuthenticateError.storageError(ErrorMessage.failedKeyChainUpdate.rawValue)
         }
     }
 }

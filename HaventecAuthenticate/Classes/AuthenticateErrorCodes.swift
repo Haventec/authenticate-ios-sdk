@@ -8,13 +8,11 @@
 import Foundation
 
 public enum HaventecAuthenticateError: Error {
-    case invalidJwt(String)
-    case uninitialisedStorage(String)
-    case invalidData(String)
-    case invalidStorageKey(String)
-    case uninitialisedStorageKey(String)
-    case initialisedStorage(String)
-    case invalidUpdate(String)
+    case commonError(String)
+    case storageError(String)
+    case initialiseError(String)
+    case jsonError(String)
+    case jwtError(String)
 }
 
 public enum ErrorMessage: String {
@@ -23,6 +21,5 @@ public enum ErrorMessage: String {
     case uninitialisedSDK = "The SDK has not been initialised. Please run the initialise function"
     case noAccessTokenInKeyChain = "No access token set"
     case noSaltInKeyChain = "No salt value set in the keyChain for the given user"
+    case invalidJWT = "Error decoding the JWT value given" 
 }
-
-
