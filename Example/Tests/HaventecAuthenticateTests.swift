@@ -142,7 +142,7 @@ class HaventecAuthenticateTest: XCTestCase {
         do {
             try HaventecAuthenticate.updateStorage(data: invalidJsonResponse.data(using: .utf8)!)
             XCTFail("haventecAuthenticate.jsonError expected")
-        } catch HaventecAuthenticateError.invalidData(let errorMsg) {
+        } catch HaventecAuthenticateError.jsonError(let errorMsg) {
             XCTAssertEqual(expectedErrorMessage, errorMsg)
         } catch {
             XCTFail("Wrong error thrown")

@@ -138,7 +138,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
                     self.addDeviceCode.text = "Response Code: " + response.responseStatus.code
                     self.addDeviceMessage.text = "Response Message: " + response.responseStatus.message
                     self.addDeviceStatus.text = "Response Status: " + response.responseStatus.status
-                    self.addDeviceDeviceUuid.text = try "Device UUID: " + HaventecAuthenticate.getDeviceUuid()!
+                    self.addDeviceDeviceUuid.text = "Device UUID: " + HaventecAuthenticate.getDeviceUuid()!
                     self.addDeviceActivationToken.text = "Activation Token: " +  self.activationToken
                 } catch {
                     print("Unexpected error: \(error)")
@@ -204,7 +204,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
                     self.activateDeviceCode.text = "Response Code: " + response.responseStatus.code
                     self.activateDeviceMessage.text = "Response Message: " + response.responseStatus.message
                     self.activateDeviceStatus.text = "Response Status: " + response.responseStatus.status
-                    self.activateDeviceAuthKey.text = try "Auth key: " + HaventecAuthenticate.getAuthKey()!
+                    self.activateDeviceAuthKey.text = "Auth key: " + HaventecAuthenticate.getAuthKey()!
                     self.activateDeviceAccessTokenValue.text = try "Token: " + HaventecAuthenticate.getAccessToken()!
                     self.activateDeviceAccessTokenType.text = "Token Type: " + self.accessToken.type
                     self.activateDeviceUserUuid.text = try "User Uuid: " + HaventecAuthenticate.getUserUuid()!
@@ -222,24 +222,19 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBAction func clearAccessToken() {
         
         HaventecAuthenticate.clearAccessToken();
+    
+        self.activateDeviceAuthKey.text = "Auth key: " + HaventecAuthenticate.getAuthKey()!
         
-        do {
-            self.activateDeviceAuthKey.text = try "Auth key: " + HaventecAuthenticate.getAuthKey()!
-            
-            if let result = try? HaventecAuthenticate.getAccessToken(), let accessToken = result {
-                self.activateDeviceAccessTokenValue.text = "Token: " + accessToken
-            } else {
-                self.activateDeviceAccessTokenValue.text = "Token has been cleared"
-            }
-            
-            if let userUuid = try HaventecAuthenticate.getUserUuid() {
-                self.activateDeviceUserUuid.text = try "User Uuid: " + userUuid
-            } else {
-                self.activateDeviceUserUuid.text = "accessToken no longer valid, cannot get userUuid"
-            }
-        } catch {
-            print("Unexpected error: \(error)")
-            return
+        if let result = try? HaventecAuthenticate.getAccessToken(), let accessToken = result {
+            self.activateDeviceAccessTokenValue.text = "Token: " + accessToken
+        } else {
+            self.activateDeviceAccessTokenValue.text = "Token has been cleared"
+        }
+        
+        if let userUuidOpt = try? HaventecAuthenticate.getUserUuid(), let userUuid = userUuidOpt {
+            self.activateDeviceUserUuid.text = "User Uuid: " + userUuid
+        } else {
+            self.activateDeviceUserUuid.text = "accessToken no longer valid, cannot get userUuid"
         }
     }
 

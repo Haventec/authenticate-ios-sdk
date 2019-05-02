@@ -136,12 +136,19 @@
                                     <action selector="clearAccessToken" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kSx-FP-SMA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVF-BS-V2n">
+                                <rect key="frame" x="112" y="530" width="151" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="activateDeviceAccessTokenType" destination="Tji-1d-FAZ" id="cua-g9-PEm"/>
-                        <outlet property="activateDeviceAccessTokenValue" destination="KXL-3E-Yow" id="Zfh-HQ-y7e"/>
+                        <outlet property="activateDeviceAccessTokenValue" destination="vVF-BS-V2n" id="nzW-v3-Uvs"/>
                         <outlet property="activateDeviceAuthKey" destination="5Fa-BH-ciR" id="5ds-7n-Q0V"/>
                         <outlet property="activateDeviceButton" destination="mnS-eq-Yuz" id="mtY-TK-NN3"/>
                         <outlet property="activateDeviceCode" destination="0mv-RW-6k6" id="Kyt-sT-Kjj"/>
