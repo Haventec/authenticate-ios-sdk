@@ -13,7 +13,11 @@ public class HaventecAuthenticate {
      - Returns: String Base64-encoded representation of the SHA-512 hashed `pin` and stored salt.
     */
     public static func hashPin(pin: String) throws -> String? {
-        return try HaventecCommon.hashPin(saltBytes: StorageHelper.getSalt(), pin: pin)
+        if let saltBytes = StorageHelper.getData().salt {
+            return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
+        } else {
+            throw HaventecAuthenticateError.initialiseError(ErrorMessage.uninitialisedSDK.rawValue)
+        }
     }
 
     /**
