@@ -15,7 +15,7 @@ public enum HaventecAuthenticateError: Error {
     case jwtError(String)
 }
 
-public enum ErrorMessage: String {
+public enum AuthenticateErrorCodes: String {
     case invalidJSONObject = "Unable to decode and deserialize the data given into a JSON object"
     case failedKeyChainUpdate = "Error updating the KeyChain with the keys given"
     case uninitialisedSDK = "The SDK has not been initialised. Please run the initialise function"

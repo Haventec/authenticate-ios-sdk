@@ -16,7 +16,7 @@ public class HaventecAuthenticate {
         if let saltBytes = StorageHelper.getData().salt {
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
-            throw HaventecAuthenticateError.initialiseError(ErrorMessage.uninitialisedSDK.rawValue)
+            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.uninitialisedSDK.rawValue)
         }
     }
 
