@@ -104,7 +104,11 @@ public class StorageHelper {
         haventecDataCache.username = normalisedUsername
         haventecDataCache.deviceUuid = KeychainWrapper.standard.string(forKey: Constants.keyDeviceUuid + normalisedUsername)
         haventecDataCache.authKey = KeychainWrapper.standard.string(forKey: Constants.keyAuthKey + normalisedUsername)
-        haventecDataCache.salt = Data(base64Encoded: salt)?.bytes
+        
+        let saltOpt = Data(base64Encoded: salt)
+        if let salt = saltOpt {
+            haventecDataCache.salt = salt.bytes
+        }
     }
     
     private static func initialiseUserPersistedData(normalisedUsername: String) throws {
