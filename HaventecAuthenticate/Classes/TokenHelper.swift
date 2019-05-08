@@ -11,8 +11,10 @@ import JWTDecode
 public class TokenHelper {
     
     public static func getUserUuidFromJWT(jwtToken: String) throws -> String? {
-        let jwt = try decode(jwt: jwtToken);
-        
-        return jwt.claim(name: "userUUID").string;
+        if let token = try? decode(jwt: jwtToken) {
+            return token.claim(name: "userUUID").string
+        } else {
+            throw HaventecAuthenticateError.jwtError(AuthenticateErrorCodes.invalidJWT.rawValue)
+        }
     }
 }

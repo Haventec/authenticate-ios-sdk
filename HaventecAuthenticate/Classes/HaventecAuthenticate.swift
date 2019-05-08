@@ -2,15 +2,6 @@ import Foundation
 import HaventecCommon
 
 public class HaventecAuthenticate {
-    
-    public enum HaventecAuthenticateError: Error {
-        case commonError(String)
-        case storageError(String)
-        case initialiseError(String)
-        case jsonError(String)
-        case jwtError(String)
-    }
-    
     /**
      It creates a Hash of the pin, along with the salt that is in Storage
      
@@ -22,11 +13,10 @@ public class HaventecAuthenticate {
      - Returns: String Base64-encoded representation of the SHA-512 hashed `pin` and stored salt.
     */
     public static func hashPin(pin: String) throws -> String? {
-        
         if let saltBytes = StorageHelper.getData().salt {
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
-            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.notInitialisedError.rawValue);
+            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.uninitialisedSDK.rawValue)
         }
     }
 
@@ -71,8 +61,8 @@ public class HaventecAuthenticate {
      
      - Returns: String Haventec Authenticate JWT token
      */
-    public static func getAccessToken() -> String? {
-        return StorageHelper.getData().accessToken?.token;
+    public static func getAccessToken() throws -> String? {
+        return try StorageHelper.getAccessToken()
     }
     
     /**
@@ -81,7 +71,7 @@ public class HaventecAuthenticate {
      A subsequent updateStorage invocation on the response of a successful login will update the data.
      */
     public static func clearAccessToken() {
-        return StorageHelper.clearAccessToken();
+        StorageHelper.clearAccessToken()
     }
     
 
@@ -91,15 +81,7 @@ public class HaventecAuthenticate {
      - Returns: String Haventec userUuid
      */
     public static func getUserUuid() throws -> String? {
-        if let accessToken = getAccessToken() {
-            do {
-                return try TokenHelper.getUserUuidFromJWT(jwtToken: accessToken);
-            } catch {
-                throw HaventecAuthenticateError.jwtError(AuthenticateErrorCodes.jwtDecodeError.rawValue);
-            }
-        } else {
-            return nil;
-        }
+        return try StorageHelper.getCurrentUserUuid()
     }
     
     /**
@@ -117,7 +99,7 @@ public class HaventecAuthenticate {
      - Returns: String Haventec deviceUuid
      */
     public static func getDeviceUuid() -> String? {
-        return StorageHelper.getData().deviceUuid;
+        return StorageHelper.getData().deviceUuid
     }
     
     /**
@@ -126,6 +108,6 @@ public class HaventecAuthenticate {
      - Returns: String Haventec device name
      */
     public static func getDeviceName() -> String {
-        return DeviceHelper.getDeviceName();
+        return DeviceHelper.getDeviceName()
     }
 }
