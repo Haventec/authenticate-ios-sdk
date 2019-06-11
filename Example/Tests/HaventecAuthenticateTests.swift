@@ -54,6 +54,31 @@ class HaventecAuthenticateTest: XCTestCase {
         XCTAssertEqual(thisUsername, username1)
     }
 
+    func testEdgeCases() throws {
+        
+        //
+        
+        XCTAssertNil(HaventecAuthenticate.getAccessToken());
+        XCTAssertNil(HaventecAuthenticate.getAuthKey());
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid());
+        XCTAssertEqual("", HaventecAuthenticate.getUsername());
+
+        let hashPIN1 = try HaventecAuthenticate.hashPin(pin: "1234")
+        XCTAssertNotNil(hashPIN1)
+
+        try HaventecAuthenticate.initialiseStorage(username: username1)
+        
+        let hashPIN2 = try HaventecAuthenticate.hashPin(pin: "1234")
+
+        XCTAssertNotNil(hashPIN2)
+
+        let hashPIN4 = try HaventecAuthenticate.hashPin(pin: "")
+
+        XCTAssertNotNil(hashPIN4)
+    }
+    
+    
+    
     func testHashPin_AlwaysProducesSameHashForPIN() throws {
         
         try HaventecAuthenticate.initialiseStorage(username: username1)

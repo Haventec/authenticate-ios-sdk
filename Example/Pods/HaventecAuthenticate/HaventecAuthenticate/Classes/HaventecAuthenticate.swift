@@ -22,7 +22,10 @@ public class HaventecAuthenticate {
     */
     public static func hashPin(pin: String) throws -> String? {
         
+        let hd = StorageHelper.getData();
+        
         if let saltBytes = StorageHelper.getData().salt {
+            let sb = saltBytes;
             return try HaventecCommon.hashPin(saltBytes: saltBytes, pin: pin);
         } else {
             throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.notInitialisedError.rawValue);
