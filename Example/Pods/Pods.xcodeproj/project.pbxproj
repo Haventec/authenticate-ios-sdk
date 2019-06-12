@@ -7,166 +7,192 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0092307089FBD98A71D7B653DDBD7F14 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F635F8AB13FCC106EB1703B747AA21 /* String+FoundationExtension.swift */; };
-		06713FF88455D723DE2980EB886C3301 /* HaventecCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D424216CBABFAF7FA3D71C4766635 /* HaventecCommon.swift */; };
-		06EF892F7CC66E0D615023E6E255341A /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9C5C26FF838DD7D7CEED5F5ABB8D7 /* HKDF.swift */; };
-		09B053A4402717C0A4E82D7E72460508 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC723F4DEDAE9C2F904F330008AD081D /* CMAC.swift */; };
-		0A0AF2F06870AB6D6B67B62AFD1D149D /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6338DE2B0899D06E468D25B84A7A4E /* NoPadding.swift */; };
-		0D4EABF3D2EEA627AE76701A351ED149 /* HaventecData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B8629B30F4D0A38A0036A0D18DAB6 /* HaventecData.swift */; };
-		0F081F9394ABEF8626B9818599064296 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C3956DD21C663823DC8E138A4A9AD4 /* Cryptor.swift */; };
-		11766D909DAC3E05BA50932D6B67BCD0 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC619C5717BD16D9AD839D2134BC148 /* CFB.swift */; };
-		1559402D8E4CC2A81ED2A81F8E018DAF /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CAD384BCD38832F594A9258770416 /* Rabbit.swift */; };
-		15DC1B095402AF093E967210D88B0036 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0D35BC11DC24EEB8FDE17CCC34FE8 /* SHA3.swift */; };
-		1B4A15E0503D707D7510FF24E82F6494 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE841D80F0214A916A7D38D407813228 /* AES.swift */; };
-		1BE04E501A54AF8669E68C83CEEEF206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */; };
-		1F2EF2C7A5642B78085A06894A8C609E /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8A671D0F99659D24337795AE91C44 /* CBCMAC.swift */; };
-		21D7917E96CEAE2AD6934F4F255F62FE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61FA530FEB03EF38BEDA4BDD1FC1A2 /* Int+Extension.swift */; };
-		21F686EDB26D8B3E1377A8FDCEFE2123 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028CE7DED67B1800A56E839187801BB /* UInt8+Extension.swift */; };
-		2213063EBB5DCD096EC14292CBDB9953 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB12670ED33F17FA80C583B50117409 /* KeychainItemAccessibility.swift */; };
+		0092307089FBD98A71D7B653DDBD7F14 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7EBFBC4A860FDEC4931289BA73C53E /* String+FoundationExtension.swift */; };
+		06EF892F7CC66E0D615023E6E255341A /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C847A4F3C3246F5A029EEC009CE9F2FF /* HKDF.swift */; };
+		075C542E2A21057E6087933F96EFD923 /* TokenValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9B1117F391B2C1B19FF793B172D8A3 /* TokenValidators.swift */; };
+		09B053A4402717C0A4E82D7E72460508 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C283CF3B4E16CFE88789DFC54CE442 /* CMAC.swift */; };
+		0A0AF2F06870AB6D6B67B62AFD1D149D /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553FF4E92193D8DE682A4128577D65D /* NoPadding.swift */; };
+		0B3388D5630849170C4CCE54A3E2CA93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
+		0C92E6B5C241B2B4843A54E3F001F299 /* HaventecCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C970996F97F75DDB61E72AC217B3F3C5 /* HaventecCommon-dummy.m */; };
+		0F081F9394ABEF8626B9818599064296 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5BEFBF7A605D7EBE52684E42E5D37 /* Cryptor.swift */; };
+		11766D909DAC3E05BA50932D6B67BCD0 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BFD323A8C345AA9EB24D5B93479E8 /* CFB.swift */; };
+		140DBF75AD3964C7AD767BAD4E64F089 /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB78FAB924F7EFDAB80DBA7535736A4 /* StorageHelper.swift */; };
+		1559402D8E4CC2A81ED2A81F8E018DAF /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42EAA521A2639F81D1CB5426737B35 /* Rabbit.swift */; };
+		15DC1B095402AF093E967210D88B0036 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E511B589980BB1EB1F5DACC1A8317 /* SHA3.swift */; };
+		196EDB0CE73094FDCB24F042A025B951 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1FD545A426E8DB39D4AB4FCA2C147D /* JWTDecode.framework */; };
+		1B4A15E0503D707D7510FF24E82F6494 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0230481AA9B73EC2929D0B206164B1BC /* AES.swift */; };
+		1BE04E501A54AF8669E68C83CEEEF206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
+		1F2EF2C7A5642B78085A06894A8C609E /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CCCC985F30F563281A34230D7F4F47 /* CBCMAC.swift */; };
+		1F4095AB5ABFD6791DF4179A2D2AA16E /* A0JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60865C419AD34EE82E705E8B6D65317 /* A0JWT.swift */; };
+		21D7917E96CEAE2AD6934F4F255F62FE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E08C64E0EE231C01BE2E69B9EA9FB /* Int+Extension.swift */; };
+		21F686EDB26D8B3E1377A8FDCEFE2123 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B49BCEBB8558BDE3898DD31723A3E9 /* UInt8+Extension.swift */; };
+		230DF1D475AD1F886E3CD8706AF0C45C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
 		238E419945330D58189CB30A2B563C5E /* Pods-HaventecAuthenticate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6920CCA5F5B927136E9D748BB45ED1 /* Pods-HaventecAuthenticate_Tests-dummy.m */; };
-		2A752C2CA3F15E48E4BB08DF66D1AE53 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C7D1A91AEE11826A21A3F69DA06A8 /* CCM.swift */; };
-		3008C3723630F52FC8A7E2D4709D8EFD /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAD84DA415DF4C605FA0E12AD769A5 /* Cipher.swift */; };
-		30DACCB74ACF5C78C69A2ED748D9ECB4 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64CA7055E58F879B49A3DBC298BE475 /* StreamEncryptor.swift */; };
-		31B72529D5E8A3B275261E945982B1E2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A2F7CCFA3F3AD611F3A7C0622A224 /* Data+Extension.swift */; };
-		35B3838F0F8E692B99BCB6C2D0C7A6DC /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D704A07CCEB686DBA3F1FD9A9177B70E /* HMAC.swift */; };
-		387494F4526323036EB20484905A2182 /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D671AB525823D0D0A04CA78C38EFF8E /* SwiftKeychainWrapper.framework */; };
-		3E83AE1E8D4C4D456AFD1048A8569C1C /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC9E05B5F1E1E5EE099ED0AB4E37B8 /* ChaCha20+Foundation.swift */; };
-		43D10E1DE713D5191B628ABE1D4A77AE /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A6FAC0CDECBCBEBA68E666E380615 /* Array+Foundation.swift */; };
-		456546C7A1032E3B7F5350A510BAFB9C /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9175D1AA2034B9C9D3FA2F59D5587D3 /* MD5.swift */; };
-		487A5CE277D57A1FC8F5D74A190512CF /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4574FF87DBD47B2D51728AB9C4D61 /* ChaCha20.swift */; };
-		4B17272932740CC20636AC981A6F0CF8 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788556B91C996C59BBF8E8B760BDDA4 /* BatchedCollection.swift */; };
-		4C24B9E89D863034FBFFDBCDEC5A3821 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3EAF103BDD5F4C8EA5C4D10681DD4 /* ZeroPadding.swift */; };
-		4C37326A30FD3B5DD1238E9FD2D29DEC /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EBAE031C28218AB4D0C9064DD204C /* PBKDF2.swift */; };
-		4DB416EFF656876D603D3A8542AC7A14 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5459B83693A78616691D10C70AEB18CB /* DigestType.swift */; };
-		4FC9EB2CB7CFD7516B60E317A2069E27 /* Pods-HaventecAuthenticate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D22EBEC11469C6F82D3207371CD5FF /* Pods-HaventecAuthenticate_Example-dummy.m */; };
-		58892EE97BD43A0D7F1DBBAD38F7EE52 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D326AC2CF71B482C904D6C9AC8967F /* CompactMap.swift */; };
-		590D50DDD607C8EF4DE9F2E323B5CF0C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEEAF5CD7CAB72CD7988BF12382B67 /* KeychainWrapper.swift */; };
-		62D9C19601E5A59C631D9D2C1FE4EDDF /* StorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FEBD83A294441ADE3A592A8A70AEB /* StorageHelper.swift */; };
-		64965144AEF2FA6C555C8C56ACAC83DC /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B38616CBABA9E9CA03A6B09481F7A /* UInt128.swift */; };
-		653029DC21190B0D90117A106E59A758 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E0A09616B3086A3635DCF8EF35579 /* BlockMode.swift */; };
-		660859E1DB64C83EEEFBCF54805AE0E8 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCE2D88250A45C668999C429A60700 /* Utils+Foundation.swift */; };
-		67499270279E3D50FDF4D6A5BDF5A79A /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF59D4F367B3A15D49E178DD76E06 /* SHA1.swift */; };
-		689AD54B095F7EA6443D1EC2CBD29A87 /* Pods-HaventecAuthenticate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 188827D033C3335676A9443E74BB9306 /* Pods-HaventecAuthenticate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A4C74A4749481E426C609C96D5370DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */; };
-		6B36517B446D5005A7B1220413B30BBD /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8C52CA0468E06F72B1AC9A22A9ABE /* PKCS7.swift */; };
-		6CD1074DE49AA8A8C1185F8E5853752F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324A9E8D824E2B18D5BBDAFCA8A7DAF /* Utils.swift */; };
-		6E6828537E4A316B6103C9E0537E4B86 /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A2C124C520DA25AE4F012AC2638E24 /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EA671C3DE79BAFA647D4C52C0580384 /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FBBB6D483D72EF2C787A091FA486AD /* UInt64+Extension.swift */; };
-		6FA927927C72F87DB57321701C5410CB /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863A64B6968E5182B7C5382D1D2F5D7E /* ECB.swift */; };
-		71572764EE3F7D4929188CBD1D5E735A /* HaventecAuthenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4E563F669C36D94BE38AB6F3951D7 /* HaventecAuthenticate.swift */; };
-		72B394D9FFE1B04AE319EDFB8A481AA9 /* RandomBytesSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC8F097830D7409F49774C666F8A8D1 /* RandomBytesSequence.swift */; };
-		72E498E42035F7389DC43517B794ECDE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7E4CCE62B1400189B57C257294585 /* Token.swift */; };
-		7CC18AC2964AB21F14047D86B1813FBC /* HaventecAuthenticate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 408C91C0E4B79D03B0828B5172B93F17 /* HaventecAuthenticate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D1144332ACC24904DA08F13C32EA008 /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50DB86F7FEE153C0566A7869F419DED /* Blowfish+Foundation.swift */; };
-		7FD6257904BD8B5E0530C95C21E3BEC6 /* HaventecCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD96E5C752DEEBB2BC6F27AB95442198 /* HaventecCommon.framework */; };
-		8501871FCAE076C0BDE0BC3822C2C1D7 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D70824F386E77C6859EF905F20B5C7 /* UInt32+Extension.swift */; };
-		85814C5B10D1FCEC60F636D46423185D /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D114938C1729F3CA486E68F780F7E /* PBKDF1.swift */; };
-		88DA7363C2070B36DE3A2DF56B13A379 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59448EE28E5DCF4D0118B5CA9BF2360 /* UInt16+Extension.swift */; };
-		893F4B92DBE560D11666EAE791316C1F /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A277F42AB47B5CF9B70670520F83A11 /* Generics.swift */; };
-		895089F47C83AF422415F0D1702884F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */; };
+		263C6FB9CED2363BE9ADB3FB7320C71C /* HaventecCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F05936F775021F0D429BF95E2DAB8B0 /* HaventecCommon.framework */; };
+		2A752C2CA3F15E48E4BB08DF66D1AE53 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91CE9509CA6B5E73F3C5DC7B7C866E2 /* CCM.swift */; };
+		3008C3723630F52FC8A7E2D4709D8EFD /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F339A5455D81B2897560DC358E3201D /* Cipher.swift */; };
+		30DACCB74ACF5C78C69A2ED748D9ECB4 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A845BB588FD1285C5C2C0EC9CA64BD /* StreamEncryptor.swift */; };
+		31B72529D5E8A3B275261E945982B1E2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606F0B3B53FAFF6B0E15363AFF8768E /* Data+Extension.swift */; };
+		3219E89D38E5E933F1336361E22D81DD /* JWTDecode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5896005FC1EC8025F64AE69B22FDB37 /* JWTDecode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35B3838F0F8E692B99BCB6C2D0C7A6DC /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A050AD67B54BE0ED4C0A16975DF71 /* HMAC.swift */; };
+		3A18BC8FBCC6B54BEDD85FB20C6ABBBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
+		3E83AE1E8D4C4D456AFD1048A8569C1C /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E67B60F3B03A11B186240B7E32E985 /* ChaCha20+Foundation.swift */; };
+		43D10E1DE713D5191B628ABE1D4A77AE /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6B1DE98FB01658D68B958D2E717B2A /* Array+Foundation.swift */; };
+		456546C7A1032E3B7F5350A510BAFB9C /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED87861926B7BF3BC4614013AEE6687 /* MD5.swift */; };
+		487A5CE277D57A1FC8F5D74A190512CF /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312DAE006A0E57B45BEB9EFB199A67A /* ChaCha20.swift */; };
+		4B17272932740CC20636AC981A6F0CF8 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85AA0E2E5DFD6AEF5DBA321DE928B04 /* BatchedCollection.swift */; };
+		4C24B9E89D863034FBFFDBCDEC5A3821 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A34F04F1F97441FFE4FF92C29E1EB7 /* ZeroPadding.swift */; };
+		4C37326A30FD3B5DD1238E9FD2D29DEC /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F20F59EE8B5862924261495DFE60BB /* PBKDF2.swift */; };
+		4DB416EFF656876D603D3A8542AC7A14 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBACE738886000F8961FF55C4BD319F8 /* DigestType.swift */; };
+		4F19F620B4B20A2B22B2A8FC883950FE /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE73018960FFAE200C068878C03545 /* JWT.swift */; };
+		55DE01420D0A5DD9E3A7AC39F930B643 /* AuthenticateErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAEAE61EA896EC1364E2126F1B3D694 /* AuthenticateErrorCodes.swift */; };
+		57F8BBBF5905141C0F8DDE173C588DB7 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF014443FD7E24A8010476D9ECC6D1FE /* KeychainItemAccessibility.swift */; };
+		58892EE97BD43A0D7F1DBBAD38F7EE52 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543667D2C311EA1965E80B9714808B4 /* CompactMap.swift */; };
+		5CE8E83268B7CD3F13B7C31876FAB867 /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD015B433EDE304D971B33F9B008896D /* SwiftKeychainWrapper.framework */; };
+		62AE0333093F4FF3B58A5216831AFCC0 /* Pods-HaventecAuthenticate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 188827D033C3335676A9443E74BB9306 /* Pods-HaventecAuthenticate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64965144AEF2FA6C555C8C56ACAC83DC /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58731909235BC2C3C46EAEF2B7F1673B /* UInt128.swift */; };
+		653029DC21190B0D90117A106E59A758 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652A8A39D9426826A9CD32CDAD0621FB /* BlockMode.swift */; };
+		65A05B4EBADD5B0CBBF19BFEEED6BD67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65723FA04689BFE18A8687D8FCEDB74B /* Constants.swift */; };
+		660859E1DB64C83EEEFBCF54805AE0E8 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767925C340034FA670D1BFCE69A6A1F6 /* Utils+Foundation.swift */; };
+		670E474B647636192532A8FACEE0B1BE /* HashingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993B4D9C554B3AE730558EF6FF11BC2 /* HashingHelper.swift */; };
+		67499270279E3D50FDF4D6A5BDF5A79A /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7650DE53093A5D830077FFA8B96AB /* SHA1.swift */; };
+		6B36517B446D5005A7B1220413B30BBD /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04C6E462B2CBDAE1ED8B1A6C926B28 /* PKCS7.swift */; };
+		6CD1074DE49AA8A8C1185F8E5853752F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E06DD53E181622A575D6D2858F604 /* Utils.swift */; };
+		6E6828537E4A316B6103C9E0537E4B86 /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFA183BC712C40CA7D3B6111C325614 /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EA671C3DE79BAFA647D4C52C0580384 /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E066AD4EBF2717CEACA355FBE5288 /* UInt64+Extension.swift */; };
+		6F83ABD21C863A88D30B28F2F0E618BC /* HaventecCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B564956D121FF3CB5BD67D736DFB53E5 /* HaventecCommon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FA927927C72F87DB57321701C5410CB /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDA200394476534728B2A3C4DC69475 /* ECB.swift */; };
+		72B394D9FFE1B04AE319EDFB8A481AA9 /* RandomBytesSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA0EB4C665401926161CA191D46750 /* RandomBytesSequence.swift */; };
+		7D1144332ACC24904DA08F13C32EA008 /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D02B17666DEDF8A6260793C692AEFD /* Blowfish+Foundation.swift */; };
+		7F9A3C60A81E961FC772A83935E58C7F /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB7FE9EFADCAF3D51DD10FBDC7D653 /* ValidationError.swift */; };
+		83E6ACFCE66C62394AF8A6B0D6C735A0 /* HaventecData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07271D0BD9FECCBA15420397DE6BEDD /* HaventecData.swift */; };
+		8501871FCAE076C0BDE0BC3822C2C1D7 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70709A0D138C3339EC538365233B1252 /* UInt32+Extension.swift */; };
+		85814C5B10D1FCEC60F636D46423185D /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47957F72A45168E662FFC1B0B5F4129 /* PBKDF1.swift */; };
+		8612FEF504656FA7E5791D4315C4CE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
+		88DA7363C2070B36DE3A2DF56B13A379 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CD1C3127628C2C031D5C6157D688F4 /* UInt16+Extension.swift */; };
+		893F4B92DBE560D11666EAE791316C1F /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E3878058CDD89C4B5D5E145787ED0B /* Generics.swift */; };
 		89E1C2E9D5CE671D2F95DD0A100D7D94 /* Pods-HaventecAuthenticate_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CA06D75EC6846A42E6523D20E612A2 /* Pods-HaventecAuthenticate_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		916A48FDA968784D733FA30386F710E1 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2CF736CBE9366FD95BC83D8CF06B1 /* Updatable.swift */; };
-		9172848F971A2D9B79EF95DBC42916AA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE50DB5C7288231436AB915AD035303E /* Array+Extension.swift */; };
-		92D2BB2CB0A8C42C79988519D3ADBF44 /* HaventecCommon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF2823E02B36D66BE1437D8DC8D4C3 /* HaventecCommon-dummy.m */; };
-		93066313296340DCD72A20590B3C2CF9 /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584748C5A8F87875B684B81D5B0C5AA2 /* BlockEncryptor.swift */; };
-		955DA2EED6E94171E04EA6B696850181 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F9AD5067361A0E473AA6867276DD96 /* AES.Cryptors.swift */; };
-		95DC390E9285B93184E6DBFAF1E75047 /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A23503EFEBA8CB9EFAE9D30F32BF9 /* AES+Foundation.swift */; };
-		9A8A76F0EAB99330E8D5BA5BF9AE2916 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = C59788542722AB19459BEAEE6697FEBB /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DE1AE268429A31F17270FFC8F8A53FA /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817B8828A994A5FD9CF206439C2F2D16 /* Checksum.swift */; };
-		A77C6B8D1FD0F373A53B77E1CFFB77A6 /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2842E4A9E3720A9DD05D1F99EA2E4C /* Rabbit+Foundation.swift */; };
-		A7DFCBE6669A57B05A3FC929347B6B83 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1707A7929471D6EBE4D1F10FDD838 /* GCM.swift */; };
-		A8BA62C6BF0F73AC913220950756B6CF /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F63751C03765C6F23429DE860386198 /* CryptoSwift.framework */; };
-		AABFF98CBBC974565F2C6A5B4D5766C5 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5712C1674A0CB012518D3AE3AF24B595 /* PKCS5.swift */; };
-		ADD73FC71811AB8F17D2AACF178F276A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050829FA4C1C374A64188AE30253ABED /* Collection+Extension.swift */; };
-		AED27AA4A96C7AD1F6CEA7595BD22590 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6797F9BBD050C31310A1579508E7F95 /* BlockModeOptions.swift */; };
-		B0570254904DFA60F4B255F6EA5EDF2B /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D3D8F84D96DEEBF96F885A53D2F7A /* BlockCipher.swift */; };
-		B0908E9F999B163F9C5534B6E340C295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */; };
-		B2829AE1A1761879374C33691B00D512 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3645010D6B823E3B2A7575FEDB4FE6C1 /* Digest.swift */; };
-		B2A39DE1654F6E221D376F30AE8D6127 /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4F48828E38605DEADB17E697E19BEB0 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B79B6E7203CA266D7372CE1B685CB994 /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FB4D6EC62AC4856DA6F90A49BCBF7B /* HMAC+Foundation.swift */; };
-		B899D8B7BFA8906EB875AC9324EBD5EF /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057E2D23B80FF1F52892B40DB830DEC /* AEADChaCha20Poly1305.swift */; };
-		BEEA48123CB58237F69815498F7C6245 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8DE89AC41882675CEDB1DDCB1AE509 /* CTR.swift */; };
-		BF123F24A7CAD5977C78020EA23015D0 /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 393F0860D435FB53FFE4047887BA4385 /* CryptoSwift-dummy.m */; };
-		C107A2D2D323BB2C5701FEC32E814A18 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D3103453D3AEE55359B922F05FE032 /* Operators.swift */; };
-		C1B99AE36F792ED64B7FC966D3FE1EE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */; };
-		C1EB5E99D809309E6CBBA0F230D5D122 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA70B520FFCB1360AC29FE080B7DEA /* SwiftKeychainWrapper-dummy.m */; };
-		C378F1DCB4FB34F20A2BA0EBDB9B058F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3B8BC3FBCA86AD0E506FE1BB2F5F8 /* String+Extension.swift */; };
-		C8E8189521D2CBA9A5F1774950E363AF /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1833914E13DC2B9B6EF75E5AEC4509A /* Cryptors.swift */; };
-		CE079552F089217E19B684E760AB4D20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */; };
-		D11A66C7B942F58E89D872209D9F7F79 /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457BB2B7471199B60A5051042066BFA /* PKCS7Padding.swift */; };
-		D26E8DC5EBC0A16CFBCFDA14777C5F07 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837519C3E6943F0250F4920E345E5CE2 /* SecureBytes.swift */; };
-		D2EF2E145D68C285DDD05BC283CB651A /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B656F693E9CBE035F5DC34347266A /* Authenticator.swift */; };
-		D31B91C8329D1892C3F3A02654959B14 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335E862C706CFC0AA73FADBC3314A59 /* AEAD.swift */; };
-		D44C459A221D11B6001A94F0 /* strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D44C459C221D11B6001A94F0 /* strings.plist */; };
-		D44C45A0221D24E2001A94F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C459F221D24E2001A94F0 /* Constants.swift */; };
-		D804934ED06C8881FF57C437D0A25F9A /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953644B89EAA90C5E6B8100495D3AFF8 /* BlockDecryptor.swift */; };
-		D987EBEF0E3C85D0497FE37DB5132670 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5297FBC5DB20903C9FC3A63D9C5244D /* CBC.swift */; };
-		DA404BFC9F154B40A0330A461EE68551 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C078656479963A7194A079B8EF13B /* Padding.swift */; };
-		DE838222D7FD5889A94A21018ACBEA7C /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FCF4F1C5B37049485B32AF4A7886AB /* Poly1305.swift */; };
-		E0823C8AEF5C6E418797B95BD177DF6C /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91683AD3DF66FAA00A2BE4E322499519 /* OFB.swift */; };
-		E626A7325A3EF10B8D65691C87C7215C /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FA873D5D0674BB075B8804B394BC86 /* StreamDecryptor.swift */; };
-		E6BB0D7BC825EB5C0BE51F49DB64DA0D /* HaventecAuthenticate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92075C2639379BB7A50A07DAAF21D9AB /* HaventecAuthenticate-dummy.m */; };
-		E6F650E2D0FB462B09A71BF381745432 /* HashingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B6381DEEC449AF38B147238E0BF15 /* HashingHelper.swift */; };
-		F35A4F31FD9C2F2C987427CB9AE29A24 /* AutenticateErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8830D812F9D7D5FA8D18C09A8C1E56 /* AutenticateErrorCodes.swift */; };
-		F3C40A2B547171FE9C8781EFAA5DCD30 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA29C8B4E1BE334969E25E25992350 /* PCBC.swift */; };
-		F44D6746BB81221421DC948446E4572F /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC38D82C0A8A83351E1040F0C8C2DAF /* Blowfish.swift */; };
-		F5159A9977297388AAFF2EC140842553 /* HaventecCommon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 162F66659C56008CBB789E5579CA097D /* HaventecCommon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F580C3430994BD2B232F2BB84A4984EB /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDC4E76AFF72E93273D6A4564BCD4E /* Bit.swift */; };
-		FA044C5F8B4115E923664F9DFB40DDE0 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE864B4EFFE18A766A3E2410BA2647D /* CipherModeWorker.swift */; };
-		FE780733529895DD35AB5D41619641A1 /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C45FABDAED0F04B0DEBED103939E66 /* SHA2.swift */; };
+		916A48FDA968784D733FA30386F710E1 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3E4186DDDE95C212A50EEF8737321 /* Updatable.swift */; };
+		9172848F971A2D9B79EF95DBC42916AA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4D415726845CEC55347B56F8B9076 /* Array+Extension.swift */; };
+		93066313296340DCD72A20590B3C2CF9 /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBA90A36456CABB5069B28E3F22D2CC /* BlockEncryptor.swift */; };
+		955DA2EED6E94171E04EA6B696850181 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52D3134D4C27751C8F2C0229416BDBE /* AES.Cryptors.swift */; };
+		95DC390E9285B93184E6DBFAF1E75047 /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1FD72996D6A5890090FBEB83D2A557 /* AES+Foundation.swift */; };
+		9600552EAD7493342A7771FF57D29C34 /* JWTDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE9EA08FFCF50B58265100E5DCA61C /* JWTDecode.swift */; };
+		96CDA5798C5775F7B396CAE6217C2564 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DFA29CAB49088D17874DF7BBEFD93 /* KeychainWrapper.swift */; };
+		9DE1AE268429A31F17270FFC8F8A53FA /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E15FBEF6C499FAD58588627D78418 /* Checksum.swift */; };
+		9E7C2D1A8AD65A926563B0B01C2D20A2 /* Pods-HaventecAuthenticate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D22EBEC11469C6F82D3207371CD5FF /* Pods-HaventecAuthenticate_Example-dummy.m */; };
+		A065186B9B6B5418BDFEE4C34D459C92 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E1573F3184D34DB093CD08678B2329 /* TokenHelper.swift */; };
+		A201ECE1FEDC8DD6199BC6168503D329 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
+		A6B54A6E5599E25F17BDAB0F9696A651 /* ValidatorJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BF21C42AB3398A74E083DF0F4DB921 /* ValidatorJWT.swift */; };
+		A77C6B8D1FD0F373A53B77E1CFFB77A6 /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1029A01E65DB449EEDA3CFD444C9AE7 /* Rabbit+Foundation.swift */; };
+		A7DFCBE6669A57B05A3FC929347B6B83 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F562C7DDCFBE0123360272678FD5 /* GCM.swift */; };
+		AABFF98CBBC974565F2C6A5B4D5766C5 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC5A8EA637D483F822817F6389EC5A /* PKCS5.swift */; };
+		ADD73FC71811AB8F17D2AACF178F276A /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE5BA36763EAE86F876B1F6EAC00F2 /* Collection+Extension.swift */; };
+		ADF2F21FD440066BC4B217D55E8A7A23 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29ECA99FCA57A7B0CAEC07E98A7ADAA2 /* CryptoSwift.framework */; };
+		AED27AA4A96C7AD1F6CEA7595BD22590 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392C8E9789B100263087A71B6F42139 /* BlockModeOptions.swift */; };
+		B0570254904DFA60F4B255F6EA5EDF2B /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64956087209656732F93B3B275773D0 /* BlockCipher.swift */; };
+		B2829AE1A1761879374C33691B00D512 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD420CFF829DD03F4C510F8EFD636B38 /* Digest.swift */; };
+		B79B6E7203CA266D7372CE1B685CB994 /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1569474DDC96C8370EFD10C7D23468 /* HMAC+Foundation.swift */; };
+		B899D8B7BFA8906EB875AC9324EBD5EF /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C52DEDCB6D559ADA0094761B6C38BB /* AEADChaCha20Poly1305.swift */; };
+		B8F0FF81DB6A281FFD5DE78A2E1F168E /* HaventecAuthenticate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 805E7E70F7DD1A59D700BDDAFA2BBDFD /* HaventecAuthenticate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B96E6763D0ADE5B64D2C4F40F77C3421 /* HaventecAuthenticate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3D5790070FD2CB5947B0DEB34665A5 /* HaventecAuthenticate-dummy.m */; };
+		BEEA48123CB58237F69815498F7C6245 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D412FFE8875FCED43C4B67A80C1E0A /* CTR.swift */; };
+		BF123F24A7CAD5977C78020EA23015D0 /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9565A96108F9EA38F046AF59EC5B03C8 /* CryptoSwift-dummy.m */; };
+		C107A2D2D323BB2C5701FEC32E814A18 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75891D808CA6DF6EB39169DE01CD9A /* Operators.swift */; };
+		C1B99AE36F792ED64B7FC966D3FE1EE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */; };
+		C378F1DCB4FB34F20A2BA0EBDB9B058F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B697E52AC94B7D28F5819E4D8659 /* String+Extension.swift */; };
+		C8AA6A2C65A3AF5D3DCC1292D7B2D6B7 /* HaventecCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772913A104C8F20F0BE6193E3F0B770 /* HaventecCommon.swift */; };
+		C8E8189521D2CBA9A5F1774950E363AF /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E56F0F837107A207D0A2283A49E0C8 /* Cryptors.swift */; };
+		D11A66C7B942F58E89D872209D9F7F79 /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3263B8E8CE1101919D0E177EEBAB299F /* PKCS7Padding.swift */; };
+		D26E8DC5EBC0A16CFBCFDA14777C5F07 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8F5752096275FF76316FEBD806714 /* SecureBytes.swift */; };
+		D2EF2E145D68C285DDD05BC283CB651A /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E739D80F243556E2D659FD9551B99 /* Authenticator.swift */; };
+		D31B91C8329D1892C3F3A02654959B14 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E32290ABCDF31D3CF8034F7226548C /* AEAD.swift */; };
+		D5755C905B88720957F4671D138F3D29 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FDF8DFFF811A19C4B1CE2080B81C3 /* Token.swift */; };
+		D804934ED06C8881FF57C437D0A25F9A /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4682E8DB19E13B0C82BC642876AE640D /* BlockDecryptor.swift */; };
+		D987EBEF0E3C85D0497FE37DB5132670 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BA98E2926C984D6310B2168102DFE /* CBC.swift */; };
+		DA404BFC9F154B40A0330A461EE68551 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA29D313A51A311E3DF1690C26FF91 /* Padding.swift */; };
+		DAFAA560589CB293DBD38BDE4A851FDE /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81087844EB6FFA306A38136A8CFEF2B /* DeviceHelper.swift */; };
+		DC7CCE03B0A0212F923120FA8E4B344F /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9E90A8E94356A1B6A9E986B27AA7CD /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE838222D7FD5889A94A21018ACBEA7C /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC12669D2C3D48FE302FF40F58C0BA11 /* Poly1305.swift */; };
+		E0823C8AEF5C6E418797B95BD177DF6C /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BC0C5D8B803855609804D2D16396 /* OFB.swift */; };
+		E443BAAE3C230DF925172F3691E4AC20 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8D9D5429758939C4D4FDDEC19446C /* Errors.swift */; };
+		E626A7325A3EF10B8D65691C87C7215C /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E833354E770DB95A81493D7886A3959 /* StreamDecryptor.swift */; };
+		E7C78F9D6BE07EDAF5C50D8148882EDF /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 432CBBCFB6DEBDA886384C8857F5F2E0 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7D6C8F32E0E5CFD17FA09D31CE4579D /* JWTDecode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35710AA9703F1DAAD6ECE5AF24D3A786 /* JWTDecode-dummy.m */; };
+		ED6B2FE12F61E6CD2A0E390E6C6F349D /* HaventecAuthenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA8F4EF6CF3985E8F0F23EEE605A23 /* HaventecAuthenticate.swift */; };
+		F3C40A2B547171FE9C8781EFAA5DCD30 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81993FA55394832AA16636E6D450B9AA /* PCBC.swift */; };
+		F44D6746BB81221421DC948446E4572F /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2115D270CE34AF0EFBAC7B282B7A2E7C /* Blowfish.swift */; };
+		F580C3430994BD2B232F2BB84A4984EB /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DAB21A2DEE40D72521BF3BAF4CDF0A /* Bit.swift */; };
+		FA044C5F8B4115E923664F9DFB40DDE0 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E7D00FDD3310BAC0567112E6F5846 /* CipherModeWorker.swift */; };
+		FC73A7DC92B3D03627408F072B6E936B /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A65ABAD2013DDC640D61353B1E5FD128 /* SwiftKeychainWrapper-dummy.m */; };
+		FE780733529895DD35AB5D41619641A1 /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572A06E154B2A35A6C6BDA0333FE532 /* SHA2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A52A65C55DD65919598C17FF3612B43 /* PBXContainerItemProxy */ = {
+		0ED1CDDEDDB87A466360D58ECDF3DC9A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F5A734B293C85F5D6F606ADA550F16EA;
-			remoteInfo = HaventecCommon;
+			remoteGlobalIDString = 31E3E30F7D603521CB77964690D3BFA3;
+			remoteInfo = JWTDecode;
 		};
-		2AE2EA3D617BAEE0F3CC982BF77591AD /* PBXContainerItemProxy */ = {
+		2DA9794556C3A070C626795FCD20A973 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 829E2FD65DE512ED97B197CED45A9397;
+			remoteGlobalIDString = F9A2958DBD3BDCD6FFFA248E1792B8E8;
 			remoteInfo = SwiftKeychainWrapper;
 		};
 		3495AED96096C20C2E9C73FA0C13C787 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD7927AEFC79B4F99D27B89F707B9B12;
+			remoteGlobalIDString = F3792955AB36E93BF414A2602D3BD43E;
 			remoteInfo = "Pods-HaventecAuthenticate_Example";
 		};
-		53F81498D6113F6985D12A56CA509926 /* PBXContainerItemProxy */ = {
+		4EC7488A473AD8A83F49BBC59528B25D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D0ED5E1092E47604A19523A68240C8A;
+			remoteGlobalIDString = B922863A224FFA118353C389EEB91CB5;
 			remoteInfo = HaventecAuthenticate;
 		};
-		8F6FDDFBBF2F6A1B418FEA9BD29FF852 /* PBXContainerItemProxy */ = {
+		8AE0134474CD98E71F7736CCA69177B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F5A734B293C85F5D6F606ADA550F16EA;
+			remoteGlobalIDString = 95B526D94047234E44A8C35C90567BB3;
 			remoteInfo = HaventecCommon;
 		};
-		A1CC7941AC47B9D4B763343986C1EDBC /* PBXContainerItemProxy */ = {
+		B395EE42BDB0B3AE1D36D127CD2EA6F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 829E2FD65DE512ED97B197CED45A9397;
+			remoteGlobalIDString = 31E3E30F7D603521CB77964690D3BFA3;
+			remoteInfo = JWTDecode;
+		};
+		B4D1EB34CFC16FA633EBB34468698E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A2958DBD3BDCD6FFFA248E1792B8E8;
 			remoteInfo = SwiftKeychainWrapper;
 		};
-		BD17754D34B46C794CEAC2CB6FAC6FD8 /* PBXContainerItemProxy */ = {
+		BFB28A5D8DE3808AE090FE47E3330408 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95B526D94047234E44A8C35C90567BB3;
+			remoteInfo = HaventecCommon;
+		};
+		D858C6EA623317ED804A7AEB134E60BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5A6207CE7CDF2B3D0D0B75FC5DC9D16C;
 			remoteInfo = CryptoSwift;
 		};
-		BD833C489E7BAFA5F80135D6B07981C1 /* PBXContainerItemProxy */ = {
+		FAB44FBB90345861ECEC82F540F3BFA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -177,159 +203,179 @@
 
 /* Begin PBXFileReference section */
 		004F6A3B13DC019C56C8C413C2658C18 /* Pods-HaventecAuthenticate_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HaventecAuthenticate_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		02F1707A7929471D6EBE4D1F10FDD838 /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
-		050829FA4C1C374A64188AE30253ABED /* Collection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Extension.swift"; path = "Sources/CryptoSwift/Collection+Extension.swift"; sourceTree = "<group>"; };
+		0230481AA9B73EC2929D0B206164B1BC /* AES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.swift; path = Sources/CryptoSwift/AES.swift; sourceTree = "<group>"; };
+		029FDF8DFFF811A19C4B1CE2080B81C3 /* Token.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Token.swift; path = HaventecAuthenticate/Classes/Token.swift; sourceTree = "<group>"; };
+		03BB4D1F84A1E7E260160684953F317E /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
 		07FC6A32EEB92FA678EA6CF4974F9891 /* Pods-HaventecAuthenticate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HaventecAuthenticate_Example.release.xcconfig"; sourceTree = "<group>"; };
-		07FCF4F1C5B37049485B32AF4A7886AB /* Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poly1305.swift; path = Sources/CryptoSwift/Poly1305.swift; sourceTree = "<group>"; };
-		090E312240B02237FC80E91D46AD69A4 /* CryptoSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoSwift.xcconfig; sourceTree = "<group>"; };
-		09C45FABDAED0F04B0DEBED103939E66 /* SHA2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA2.swift; path = Sources/CryptoSwift/SHA2.swift; sourceTree = "<group>"; };
-		0BC8F097830D7409F49774C666F8A8D1 /* RandomBytesSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomBytesSequence.swift; path = Sources/CryptoSwift/RandomBytesSequence.swift; sourceTree = "<group>"; };
-		0D671AB525823D0D0A04CA78C38EFF8E /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D8DE89AC41882675CEDB1DDCB1AE509 /* CTR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTR.swift; path = Sources/CryptoSwift/BlockMode/CTR.swift; sourceTree = "<group>"; };
+		0CAE5BA36763EAE86F876B1F6EAC00F2 /* Collection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Extension.swift"; path = "Sources/CryptoSwift/Collection+Extension.swift"; sourceTree = "<group>"; };
+		0D7EBFBC4A860FDEC4931289BA73C53E /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
+		0DDA200394476534728B2A3C4DC69475 /* ECB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECB.swift; path = Sources/CryptoSwift/BlockMode/ECB.swift; sourceTree = "<group>"; };
+		0E833354E770DB95A81493D7886A3959 /* StreamDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamDecryptor.swift; path = Sources/CryptoSwift/StreamDecryptor.swift; sourceTree = "<group>"; };
 		0F6920CCA5F5B927136E9D748BB45ED1 /* Pods-HaventecAuthenticate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HaventecAuthenticate_Tests-dummy.m"; sourceTree = "<group>"; };
-		162F66659C56008CBB789E5579CA097D /* HaventecCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecCommon-umbrella.h"; sourceTree = "<group>"; };
-		16EF8C0A5FA80E07B3819B50140BD1BD /* HaventecAuthenticate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaventecAuthenticate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FAEAE61EA896EC1364E2126F1B3D694 /* AuthenticateErrorCodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticateErrorCodes.swift; path = HaventecAuthenticate/Classes/AuthenticateErrorCodes.swift; sourceTree = "<group>"; };
+		12C856569615894AD92E3C78470ACFE5 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		1543667D2C311EA1965E80B9714808B4 /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = Sources/CryptoSwift/CompactMap.swift; sourceTree = "<group>"; };
+		15A845BB588FD1285C5C2C0EC9CA64BD /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
+		1606F0B3B53FAFF6B0E15363AFF8768E /* Data+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Sources/CryptoSwift/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
 		188827D033C3335676A9443E74BB9306 /* Pods-HaventecAuthenticate_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HaventecAuthenticate_Example-umbrella.h"; sourceTree = "<group>"; };
 		18B974F2303513700542F19E4157B53A /* Pods-HaventecAuthenticate_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Example-Info.plist"; sourceTree = "<group>"; };
-		1F4A23503EFEBA8CB9EFAE9D30F32BF9 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
-		21F9AD5067361A0E473AA6867276DD96 /* AES.Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.Cryptors.swift; path = Sources/CryptoSwift/AES.Cryptors.swift; sourceTree = "<group>"; };
+		1EF7BC0C5D8B803855609804D2D16396 /* OFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OFB.swift; path = Sources/CryptoSwift/BlockMode/OFB.swift; sourceTree = "<group>"; };
+		2115D270CE34AF0EFBAC7B282B7A2E7C /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
 		23DD40492254F7EBFBFADCD0B1DC9BB0 /* Pods-HaventecAuthenticate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HaventecAuthenticate_Tests.modulemap"; sourceTree = "<group>"; };
-		25FA873D5D0674BB075B8804B394BC86 /* StreamDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamDecryptor.swift; path = Sources/CryptoSwift/StreamDecryptor.swift; sourceTree = "<group>"; };
-		25FB4D6EC62AC4856DA6F90A49BCBF7B /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
-		274967518BBF4070FA79B92BAE1F1D10 /* HaventecAuthenticate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HaventecAuthenticate.modulemap; sourceTree = "<group>"; };
+		24F16737CA5CDECAB3D09B11E135DEB7 /* CryptoSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CryptoSwift-Info.plist"; sourceTree = "<group>"; };
+		2553FF4E92193D8DE682A4128577D65D /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
+		27F20F59EE8B5862924261495DFE60BB /* PBKDF2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF2.swift; path = Sources/CryptoSwift/PKCS/PBKDF2.swift; sourceTree = "<group>"; };
+		2993B4D9C554B3AE730558EF6FF11BC2 /* HashingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashingHelper.swift; path = HaventecCommon/Classes/HashingHelper.swift; sourceTree = "<group>"; };
+		29ECA99FCA57A7B0CAEC07E98A7ADAA2 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F5CC77E9DCF3884B200B9894EA4DC1 /* HaventecCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HaventecCommon.framework; path = HaventecCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A44A41B2CA0C3C4F82B56BF8D2C4642 /* JWTDecode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWTDecode.xcconfig; sourceTree = "<group>"; };
+		2ACC5A8EA637D483F822817F6389EC5A /* PKCS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS5.swift; path = Sources/CryptoSwift/PKCS/PKCS5.swift; sourceTree = "<group>"; };
 		2E1A4FD98D438692905A6A3535013C23 /* Pods-HaventecAuthenticate_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HaventecAuthenticate_Example-frameworks.sh"; sourceTree = "<group>"; };
-		352DF59D4F367B3A15D49E178DD76E06 /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
-		3645010D6B823E3B2A7575FEDB4FE6C1 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
-		37B2CF736CBE9366FD95BC83D8CF06B1 /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/CryptoSwift/Updatable.swift; sourceTree = "<group>"; };
-		393F0860D435FB53FFE4047887BA4385 /* CryptoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoSwift-dummy.m"; sourceTree = "<group>"; };
-		3A3D3D8F84D96DEEBF96F885A53D2F7A /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
-		3AEAD84DA415DF4C605FA0E12AD769A5 /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
+		2F339A5455D81B2897560DC358E3201D /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
+		30DAB21A2DEE40D72521BF3BAF4CDF0A /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
+		30FCF0888C92D27AF6F38363D78186C5 /* CryptoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-prefix.pch"; sourceTree = "<group>"; };
+		3263B8E8CE1101919D0E177EEBAB299F /* PKCS7Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7Padding.swift; path = Sources/CryptoSwift/PKCS/PKCS7Padding.swift; sourceTree = "<group>"; };
+		33D1005A9B91E3213CA01E2081E0A14A /* Pods_HaventecAuthenticate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HaventecAuthenticate_Tests.framework; path = "Pods-HaventecAuthenticate_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		349A23A78F0B6928F92A614183605027 /* JWTDecode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JWTDecode.modulemap; sourceTree = "<group>"; };
+		35710AA9703F1DAAD6ECE5AF24D3A786 /* JWTDecode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWTDecode-dummy.m"; sourceTree = "<group>"; };
+		35C52DEDCB6D559ADA0094761B6C38BB /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEADChaCha20Poly1305.swift; path = Sources/CryptoSwift/AEAD/AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
+		368DFA29CAB49088D17874DF7BBEFD93 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
+		36CD1C3127628C2C031D5C6157D688F4 /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
+		3772913A104C8F20F0BE6193E3F0B770 /* HaventecCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecCommon.swift; path = HaventecCommon/Classes/HaventecCommon.swift; sourceTree = "<group>"; };
+		3A04C6E462B2CBDAE1ED8B1A6C926B28 /* PKCS7.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7.swift; path = Sources/CryptoSwift/PKCS/PKCS7.swift; sourceTree = "<group>"; };
 		3BC0AEB057074EC91B5C878C67DE7215 /* Pods-HaventecAuthenticate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3BD4E563F669C36D94BE38AB6F3951D7 /* HaventecAuthenticate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecAuthenticate.swift; path = HaventecAuthenticate/Classes/HaventecAuthenticate.swift; sourceTree = "<group>"; };
-		408C91C0E4B79D03B0828B5172B93F17 /* HaventecAuthenticate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecAuthenticate-umbrella.h"; sourceTree = "<group>"; };
-		47C3956DD21C663823DC8E138A4A9AD4 /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = Sources/CryptoSwift/Cryptor.swift; sourceTree = "<group>"; };
-		4A277F42AB47B5CF9B70670520F83A11 /* Generics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generics.swift; path = Sources/CryptoSwift/Generics.swift; sourceTree = "<group>"; };
-		4A8B8629B30F4D0A38A0036A0D18DAB6 /* HaventecData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecData.swift; path = HaventecAuthenticate/Classes/HaventecData.swift; sourceTree = "<group>"; };
-		4C01219B35B00084A1A195CD332C2D2D /* HaventecAuthenticate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HaventecAuthenticate.xcconfig; sourceTree = "<group>"; };
-		4EDF2823E02B36D66BE1437D8DC8D4C3 /* HaventecCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HaventecCommon-dummy.m"; sourceTree = "<group>"; };
-		5324A9E8D824E2B18D5BBDAFCA8A7DAF /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/CryptoSwift/Utils.swift; sourceTree = "<group>"; };
-		53A5715A416A8D0693B70353BAACD0B9 /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
-		5459B83693A78616691D10C70AEB18CB /* DigestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigestType.swift; path = Sources/CryptoSwift/DigestType.swift; sourceTree = "<group>"; };
-		5552ED1776889F1BBF80844B9DDC8BD4 /* CryptoSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CryptoSwift-Info.plist"; sourceTree = "<group>"; };
-		5712C1674A0CB012518D3AE3AF24B595 /* PKCS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS5.swift; path = Sources/CryptoSwift/PKCS/PKCS5.swift; sourceTree = "<group>"; };
-		584748C5A8F87875B684B81D5B0C5AA2 /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
-		58D7E4CCE62B1400189B57C257294585 /* Token.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Token.swift; path = HaventecAuthenticate/Classes/Token.swift; sourceTree = "<group>"; };
-		5A6338DE2B0899D06E468D25B84A7A4E /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
-		5BEEEAF5CD7CAB72CD7988BF12382B67 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
-		5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		60E45A50B9B2338FAB29FC54E107858F /* HaventecCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaventecCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		628EBAE031C28218AB4D0C9064DD204C /* PBKDF2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF2.swift; path = Sources/CryptoSwift/PKCS/PBKDF2.swift; sourceTree = "<group>"; };
-		62F635F8AB13FCC106EB1703B747AA21 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
-		633FEBD83A294441ADE3A592A8A70AEB /* StorageHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageHelper.swift; path = HaventecAuthenticate/Classes/StorageHelper.swift; sourceTree = "<group>"; };
+		3D75891D808CA6DF6EB39169DE01CD9A /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/CryptoSwift/Operators.swift; sourceTree = "<group>"; };
+		432CBBCFB6DEBDA886384C8857F5F2E0 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		43BF21C42AB3398A74E083DF0F4DB921 /* ValidatorJWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidatorJWT.swift; path = JWTDecode/ValidatorJWT.swift; sourceTree = "<group>"; };
+		4572A06E154B2A35A6C6BDA0333FE532 /* SHA2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA2.swift; path = Sources/CryptoSwift/SHA2.swift; sourceTree = "<group>"; };
+		4682E8DB19E13B0C82BC642876AE640D /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
+		46CCCC985F30F563281A34230D7F4F47 /* CBCMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBCMAC.swift; path = Sources/CryptoSwift/CBCMAC.swift; sourceTree = "<group>"; };
+		4B9E90A8E94356A1B6A9E986B27AA7CD /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
+		4BF8F5752096275FF76316FEBD806714 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
+		4E1E15FBEF6C499FAD58588627D78418 /* Checksum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checksum.swift; path = Sources/CryptoSwift/Checksum.swift; sourceTree = "<group>"; };
+		4F05936F775021F0D429BF95E2DAB8B0 /* HaventecCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaventecCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E9D18068C00A5BA89C98B7A8766954 /* CryptoSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoSwift.xcconfig; sourceTree = "<group>"; };
+		56E0C290739C2380DEF74C15E4011B1C /* HaventecAuthenticate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HaventecAuthenticate.xcconfig; sourceTree = "<group>"; };
+		56F5BEFBF7A605D7EBE52684E42E5D37 /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = Sources/CryptoSwift/Cryptor.swift; sourceTree = "<group>"; };
+		58731909235BC2C3C46EAEF2B7F1673B /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = Sources/CryptoSwift/UInt128.swift; sourceTree = "<group>"; };
+		5D1E7D00FDD3310BAC0567112E6F5846 /* CipherModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CipherModeWorker.swift; path = Sources/CryptoSwift/BlockMode/CipherModeWorker.swift; sourceTree = "<group>"; };
+		609656C7E9BFA91C17E89B8D05CBCA49 /* HaventecAuthenticate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HaventecAuthenticate.framework; path = HaventecAuthenticate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A0B697E52AC94B7D28F5819E4D8659 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Sources/CryptoSwift/String+Extension.swift"; sourceTree = "<group>"; };
 		646DD60037A566E37B69045054F8DE7F /* Pods-HaventecAuthenticate_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Tests-Info.plist"; sourceTree = "<group>"; };
-		66F3EAF103BDD5F4C8EA5C4D10681DD4 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
+		652A8A39D9426826A9CD32CDAD0621FB /* BlockMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockMode.swift; path = Sources/CryptoSwift/BlockMode/BlockMode.swift; sourceTree = "<group>"; };
+		65723FA04689BFE18A8687D8FCEDB74B /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = HaventecAuthenticate/Classes/Constants.swift; sourceTree = "<group>"; };
+		69B7650DE53093A5D830077FFA8B96AB /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
+		6C1FD545A426E8DB39D4AB4FCA2C147D /* JWTDecode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWTDecode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3E066AD4EBF2717CEACA355FBE5288 /* UInt64+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Extension.swift"; path = "Sources/CryptoSwift/UInt64+Extension.swift"; sourceTree = "<group>"; };
 		6F25CA7356E331CDC6979705ACAA1BFC /* Pods-HaventecAuthenticate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HaventecAuthenticate_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6F52E362DC5B6CA62626C8F0555268B7 /* HaventecAuthenticate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecAuthenticate-prefix.pch"; sourceTree = "<group>"; };
+		70709A0D138C3339EC538365233B1252 /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
+		71C283CF3B4E16CFE88789DFC54CE442 /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
 		71CA06D75EC6846A42E6523D20E612A2 /* Pods-HaventecAuthenticate_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HaventecAuthenticate_Tests-umbrella.h"; sourceTree = "<group>"; };
-		7FF4DD1F36617102C56DFD508CFF189B /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
-		817B8828A994A5FD9CF206439C2F2D16 /* Checksum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checksum.swift; path = Sources/CryptoSwift/Checksum.swift; sourceTree = "<group>"; };
-		8335E862C706CFC0AA73FADBC3314A59 /* AEAD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEAD.swift; path = Sources/CryptoSwift/AEAD/AEAD.swift; sourceTree = "<group>"; };
-		837519C3E6943F0250F4920E345E5CE2 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
-		83A2C124C520DA25AE4F012AC2638E24 /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
-		8457BB2B7471199B60A5051042066BFA /* PKCS7Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7Padding.swift; path = Sources/CryptoSwift/PKCS/PKCS7Padding.swift; sourceTree = "<group>"; };
-		863A64B6968E5182B7C5382D1D2F5D7E /* ECB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECB.swift; path = Sources/CryptoSwift/BlockMode/ECB.swift; sourceTree = "<group>"; };
-		8BCA70B520FFCB1360AC29FE080B7DEA /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
-		8DA645096F38A1D0693C808AC97F1920 /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
-		8DB12670ED33F17FA80C583B50117409 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
-		91683AD3DF66FAA00A2BE4E322499519 /* OFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OFB.swift; path = Sources/CryptoSwift/BlockMode/OFB.swift; sourceTree = "<group>"; };
-		92075C2639379BB7A50A07DAAF21D9AB /* HaventecAuthenticate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HaventecAuthenticate-dummy.m"; sourceTree = "<group>"; };
-		953644B89EAA90C5E6B8100495D3AFF8 /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
-		975C7D1A91AEE11826A21A3F69DA06A8 /* CCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CCM.swift; path = Sources/CryptoSwift/BlockMode/CCM.swift; sourceTree = "<group>"; };
-		999893A5D0D2DBDC17A4B963EDFA38D6 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
-		9AC38D82C0A8A83351E1040F0C8C2DAF /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F130E237AD3FC8E1C9E3C7558FE6BCA /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
-		9F63751C03765C6F23429DE860386198 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC1FB19034140253C498D9C99FFD17E /* HaventecAuthenticate-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HaventecAuthenticate-Info.plist"; sourceTree = "<group>"; };
-		9FD0D35BC11DC24EEB8FDE17CCC34FE8 /* SHA3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA3.swift; path = Sources/CryptoSwift/SHA3.swift; sourceTree = "<group>"; };
-		A057E2D23B80FF1F52892B40DB830DEC /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEADChaCha20Poly1305.swift; path = Sources/CryptoSwift/AEAD/AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
-		A1833914E13DC2B9B6EF75E5AEC4509A /* Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptors.swift; path = Sources/CryptoSwift/Cryptors.swift; sourceTree = "<group>"; };
-		A4F48828E38605DEADB17E697E19BEB0 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
-		A5297FBC5DB20903C9FC3A63D9C5244D /* CBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBC.swift; path = Sources/CryptoSwift/BlockMode/CBC.swift; sourceTree = "<group>"; };
-		A788556B91C996C59BBF8E8B760BDDA4 /* BatchedCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchedCollection.swift; path = Sources/CryptoSwift/BatchedCollection.swift; sourceTree = "<group>"; };
-		A84A6FAC0CDECBCBEBA68E666E380615 /* Array+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Array+Foundation.swift"; sourceTree = "<group>"; };
-		AA2842E4A9E3720A9DD05D1F99EA2E4C /* Rabbit+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Rabbit+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Rabbit+Foundation.swift"; sourceTree = "<group>"; };
+		71E0928BF31520D4FFD59A44FD019B44 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7602C325EE690B7C7EAA7FF49C492C68 /* HaventecCommon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HaventecCommon.modulemap; sourceTree = "<group>"; };
+		767925C340034FA670D1BFCE69A6A1F6 /* Utils+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Utils+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Utils+Foundation.swift"; sourceTree = "<group>"; };
+		77E51631C2713C13E723957D626EAB2B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		805E7E70F7DD1A59D700BDDAFA2BBDFD /* HaventecAuthenticate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecAuthenticate-umbrella.h"; sourceTree = "<group>"; };
+		80E67B60F3B03A11B186240B7E32E985 /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
+		81993FA55394832AA16636E6D450B9AA /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
+		8392C8E9789B100263087A71B6F42139 /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
+		83E1573F3184D34DB093CD08678B2329 /* TokenHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenHelper.swift; path = HaventecAuthenticate/Classes/TokenHelper.swift; sourceTree = "<group>"; };
+		84EADFB00C1460DDF505E5237BFDD421 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		872E511B589980BB1EB1F5DACC1A8317 /* SHA3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA3.swift; path = Sources/CryptoSwift/SHA3.swift; sourceTree = "<group>"; };
+		87A34F04F1F97441FFE4FF92C29E1EB7 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
+		896E06DD53E181622A575D6D2858F604 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/CryptoSwift/Utils.swift; sourceTree = "<group>"; };
+		899198AEF470BF7568F49057650337C7 /* JWTDecode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWTDecode-prefix.pch"; sourceTree = "<group>"; };
+		89DA0EB4C665401926161CA191D46750 /* RandomBytesSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomBytesSequence.swift; path = Sources/CryptoSwift/RandomBytesSequence.swift; sourceTree = "<group>"; };
+		8D3E739D80F243556E2D659FD9551B99 /* Authenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authenticator.swift; path = Sources/CryptoSwift/Authenticator.swift; sourceTree = "<group>"; };
+		8E2E08C64E0EE231C01BE2E69B9EA9FB /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Sources/CryptoSwift/Int+Extension.swift"; sourceTree = "<group>"; };
+		8E42EAA521A2639F81D1CB5426737B35 /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
+		8FA8D9D5429758939C4D4FDDEC19446C /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = JWTDecode/Errors.swift; sourceTree = "<group>"; };
+		90AA8F4EF6CF3985E8F0F23EEE605A23 /* HaventecAuthenticate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecAuthenticate.swift; path = HaventecAuthenticate/Classes/HaventecAuthenticate.swift; sourceTree = "<group>"; };
+		9565A96108F9EA38F046AF59EC5B03C8 /* CryptoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoSwift-dummy.m"; sourceTree = "<group>"; };
+		9628E4D29102ABFA93E0A4AE4FDB95A0 /* JWTDecode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JWTDecode.framework; path = JWTDecode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B49BCEBB8558BDE3898DD31723A3E9 /* UInt8+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt8+Extension.swift"; path = "Sources/CryptoSwift/UInt8+Extension.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9ED87861926B7BF3BC4614013AEE6687 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
+		A2D02B17666DEDF8A6260793C692AEFD /* Blowfish+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Blowfish+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Blowfish+Foundation.swift"; sourceTree = "<group>"; };
+		A47957F72A45168E662FFC1B0B5F4129 /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
+		A4D3E4186DDDE95C212A50EEF8737321 /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/CryptoSwift/Updatable.swift; sourceTree = "<group>"; };
+		A65ABAD2013DDC640D61353B1E5FD128 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
+		A714CA8E7FCB3A95EDCA302481D382AF /* JWTDecode-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JWTDecode-Info.plist"; sourceTree = "<group>"; };
 		AB4099333F9A136C759747896538CFFC /* Pods-HaventecAuthenticate_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HaventecAuthenticate_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		ADC3B8BC3FBCA86AD0E506FE1BB2F5F8 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Sources/CryptoSwift/String+Extension.swift"; sourceTree = "<group>"; };
-		B009588F3EA7C27BDF8F5FDBBB8B6CC5 /* Pods_HaventecAuthenticate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B028CE7DED67B1800A56E839187801BB /* UInt8+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt8+Extension.swift"; path = "Sources/CryptoSwift/UInt8+Extension.swift"; sourceTree = "<group>"; };
-		B0C8C52CA0468E06F72B1AC9A22A9ABE /* PKCS7.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7.swift; path = Sources/CryptoSwift/PKCS/PKCS7.swift; sourceTree = "<group>"; };
-		B3C840D55D9FEEBB0AF869053AA35569 /* HaventecCommon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HaventecCommon-Info.plist"; sourceTree = "<group>"; };
-		B49C078656479963A7194A079B8EF13B /* Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Padding.swift; path = Sources/CryptoSwift/Padding.swift; sourceTree = "<group>"; };
-		B4A8A671D0F99659D24337795AE91C44 /* CBCMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBCMAC.swift; path = Sources/CryptoSwift/CBCMAC.swift; sourceTree = "<group>"; };
-		B8D0E70A4C8EC6F6B336AA12B8245DC0 /* HaventecCommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecCommon-prefix.pch"; sourceTree = "<group>"; };
-		BB0B6381DEEC449AF38B147238E0BF15 /* HashingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashingHelper.swift; path = HaventecCommon/Classes/HashingHelper.swift; sourceTree = "<group>"; };
-		BC723F4DEDAE9C2F904F330008AD081D /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
-		BD96E5C752DEEBB2BC6F27AB95442198 /* HaventecCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaventecCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE50DB5C7288231436AB915AD035303E /* Array+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Sources/CryptoSwift/Array+Extension.swift"; sourceTree = "<group>"; };
-		BE841D80F0214A916A7D38D407813228 /* AES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.swift; path = Sources/CryptoSwift/AES.swift; sourceTree = "<group>"; };
-		C0BC9E05B5F1E1E5EE099ED0AB4E37B8 /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
-		C1DDC4E76AFF72E93273D6A4564BCD4E /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
-		C3FA29C8B4E1BE334969E25E25992350 /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
-		C43B4F86B3A0DE05A4D8242730987862 /* CryptoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-prefix.pch"; sourceTree = "<group>"; };
-		C50DB86F7FEE153C0566A7869F419DED /* Blowfish+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Blowfish+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Blowfish+Foundation.swift"; sourceTree = "<group>"; };
-		C59788542722AB19459BEAEE6697FEBB /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
-		C64CA7055E58F879B49A3DBC298BE475 /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
-		C8705B7DA9364F6BD9A51D8404DB73B1 /* Pods_HaventecAuthenticate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaventecAuthenticate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCC2707D8A09DE5F2D927DD2D59C86C5 /* HaventecCommon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HaventecCommon.xcconfig; sourceTree = "<group>"; };
-		CCDCE2D88250A45C668999C429A60700 /* Utils+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Utils+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Utils+Foundation.swift"; sourceTree = "<group>"; };
-		CD8B656F693E9CBE035F5DC34347266A /* Authenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authenticator.swift; path = Sources/CryptoSwift/Authenticator.swift; sourceTree = "<group>"; };
-		D22F1C556D1E2E7D548DD49B904BA3ED /* HaventecCommon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HaventecCommon.modulemap; sourceTree = "<group>"; };
-		D44C459B221D11B6001A94F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/strings.plist; sourceTree = "<group>"; };
-		D44C459F221D24E2001A94F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = HaventecAuthenticate/Classes/Constants.swift; sourceTree = "<group>"; };
-		D6797F9BBD050C31310A1579508E7F95 /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
-		D6FBBB6D483D72EF2C787A091FA486AD /* UInt64+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Extension.swift"; path = "Sources/CryptoSwift/UInt64+Extension.swift"; sourceTree = "<group>"; };
-		D704A07CCEB686DBA3F1FD9A9177B70E /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
-		D8D3103453D3AEE55359B922F05FE032 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/CryptoSwift/Operators.swift; sourceTree = "<group>"; };
-		DBE9C5C26FF838DD7D7CEED5F5ABB8D7 /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
-		DD05654BA341557BF56BDFFBA667C5C6 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD1D114938C1729F3CA486E68F780F7E /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
-		DD1E0A09616B3086A3635DCF8EF35579 /* BlockMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockMode.swift; path = Sources/CryptoSwift/BlockMode/BlockMode.swift; sourceTree = "<group>"; };
-		E0D70824F386E77C6859EF905F20B5C7 /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
-		E18CAD384BCD38832F594A9258770416 /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
-		E25A2F7CCFA3F3AD611F3A7C0622A224 /* Data+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Sources/CryptoSwift/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
+		AD015B433EDE304D971B33F9B008896D /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1FD72996D6A5890090FBEB83D2A557 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
+		AE1569474DDC96C8370EFD10C7D23468 /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
+		B1029A01E65DB449EEDA3CFD444C9AE7 /* Rabbit+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Rabbit+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Rabbit+Foundation.swift"; sourceTree = "<group>"; };
+		B2DDDBE5C6CBF8B0B906F6BFF939675A /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
+		B3D01C459F5DEC00140826BBC8AEA61D /* Pods_HaventecAuthenticate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HaventecAuthenticate_Example.framework; path = "Pods-HaventecAuthenticate_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52D3134D4C27751C8F2C0229416BDBE /* AES.Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.Cryptors.swift; path = Sources/CryptoSwift/AES.Cryptors.swift; sourceTree = "<group>"; };
+		B564956D121FF3CB5BD67D736DFB53E5 /* HaventecCommon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecCommon-umbrella.h"; sourceTree = "<group>"; };
+		B64956087209656732F93B3B275773D0 /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
+		B7FA29D313A51A311E3DF1690C26FF91 /* Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Padding.swift; path = Sources/CryptoSwift/Padding.swift; sourceTree = "<group>"; };
+		B85AA0E2E5DFD6AEF5DBA321DE928B04 /* BatchedCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchedCollection.swift; path = Sources/CryptoSwift/BatchedCollection.swift; sourceTree = "<group>"; };
+		BBACE738886000F8961FF55C4BD319F8 /* DigestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigestType.swift; path = Sources/CryptoSwift/DigestType.swift; sourceTree = "<group>"; };
+		BD420CFF829DD03F4C510F8EFD636B38 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
+		BDCE73018960FFAE200C068878C03545 /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = JWTDecode/JWT.swift; sourceTree = "<group>"; };
+		BEB78FAB924F7EFDAB80DBA7535736A4 /* StorageHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageHelper.swift; path = HaventecAuthenticate/Classes/StorageHelper.swift; sourceTree = "<group>"; };
+		C0E56F0F837107A207D0A2283A49E0C8 /* Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptors.swift; path = Sources/CryptoSwift/Cryptors.swift; sourceTree = "<group>"; };
+		C221C2BA8BFDB44E39288AF314DEC7D2 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
+		C52A050AD67B54BE0ED4C0A16975DF71 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
+		C81087844EB6FFA306A38136A8CFEF2B /* DeviceHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceHelper.swift; path = HaventecAuthenticate/Classes/DeviceHelper.swift; sourceTree = "<group>"; };
+		C847A4F3C3246F5A029EEC009CE9F2FF /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
+		C91CE9509CA6B5E73F3C5DC7B7C866E2 /* CCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CCM.swift; path = Sources/CryptoSwift/BlockMode/CCM.swift; sourceTree = "<group>"; };
+		C970996F97F75DDB61E72AC217B3F3C5 /* HaventecCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HaventecCommon-dummy.m"; sourceTree = "<group>"; };
+		CA4832FA90C1825B0795086EA03FFC30 /* HaventecAuthenticate-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HaventecAuthenticate-Info.plist"; sourceTree = "<group>"; };
+		CCEE9EA08FFCF50B58265100E5DCA61C /* JWTDecode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTDecode.swift; path = JWTDecode/JWTDecode.swift; sourceTree = "<group>"; };
+		D0E3878058CDD89C4B5D5E145787ED0B /* Generics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generics.swift; path = Sources/CryptoSwift/Generics.swift; sourceTree = "<group>"; };
+		D2DD74A9A4C8B579F777F33E37197B83 /* HaventecAuthenticate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecAuthenticate-prefix.pch"; sourceTree = "<group>"; };
+		D4A50A605AFAE9FB8C8C0440D9BD9EDB /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D6619A86431DEFE77CE64B2686F815 /* HaventecCommon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HaventecCommon-Info.plist"; sourceTree = "<group>"; };
+		D5896005FC1EC8025F64AE69B22FDB37 /* JWTDecode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWTDecode-umbrella.h"; sourceTree = "<group>"; };
+		D8A4D415726845CEC55347B56F8B9076 /* Array+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Sources/CryptoSwift/Array+Extension.swift"; sourceTree = "<group>"; };
+		DA3BA98E2926C984D6310B2168102DFE /* CBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBC.swift; path = Sources/CryptoSwift/BlockMode/CBC.swift; sourceTree = "<group>"; };
+		DF29F562C7DDCFBE0123360272678FD5 /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
+		E12F7548D41C0D924607930EE27A8C37 /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
+		E312DAE006A0E57B45BEB9EFB199A67A /* ChaCha20.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChaCha20.swift; path = Sources/CryptoSwift/ChaCha20.swift; sourceTree = "<group>"; };
+		E324FE792A5646AE0BA0BC009E77F1B2 /* HaventecCommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HaventecCommon-prefix.pch"; sourceTree = "<group>"; };
+		E43B80D82E333FC48F52B24DD64EE50C /* HaventecCommon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HaventecCommon.xcconfig; sourceTree = "<group>"; };
+		E49BFD323A8C345AA9EB24D5B93479E8 /* CFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFB.swift; path = Sources/CryptoSwift/BlockMode/CFB.swift; sourceTree = "<group>"; };
 		E4D22EBEC11469C6F82D3207371CD5FF /* Pods-HaventecAuthenticate_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HaventecAuthenticate_Example-dummy.m"; sourceTree = "<group>"; };
-		E59448EE28E5DCF4D0118B5CA9BF2360 /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
+		E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E7DE7BA3C969316B048BBEEC11CC73B4 /* HaventecAuthenticate.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HaventecAuthenticate.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E8199257604A2EFF154B2FFAA7E49F71 /* Pods-HaventecAuthenticate_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HaventecAuthenticate_Example.modulemap"; sourceTree = "<group>"; };
 		E903AAE54CFF70878E43C98D55A190B9 /* Pods-HaventecAuthenticate_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HaventecAuthenticate_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EDC619C5717BD16D9AD839D2134BC148 /* CFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFB.swift; path = Sources/CryptoSwift/BlockMode/CFB.swift; sourceTree = "<group>"; };
-		EF61FA530FEB03EF38BEDA4BDD1FC1A2 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Sources/CryptoSwift/Int+Extension.swift"; sourceTree = "<group>"; };
+		EAFA183BC712C40CA7D3B6111C325614 /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
+		EB3D5790070FD2CB5947B0DEB34665A5 /* HaventecAuthenticate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HaventecAuthenticate-dummy.m"; sourceTree = "<group>"; };
+		EC12669D2C3D48FE302FF40F58C0BA11 /* Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poly1305.swift; path = Sources/CryptoSwift/Poly1305.swift; sourceTree = "<group>"; };
+		F07271D0BD9FECCBA15420397DE6BEDD /* HaventecData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecData.swift; path = HaventecAuthenticate/Classes/HaventecData.swift; sourceTree = "<group>"; };
 		F1D19571168AE595F3244D82CACDF7E2 /* Pods-HaventecAuthenticate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HaventecAuthenticate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F20B38616CBABA9E9CA03A6B09481F7A /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = Sources/CryptoSwift/UInt128.swift; sourceTree = "<group>"; };
+		F2516FF89BA6479CD128BBA5F631CD6D /* HaventecAuthenticate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HaventecAuthenticate.modulemap; sourceTree = "<group>"; };
 		F3FF29822EDAC76E8B5A819CA85FF153 /* Pods-HaventecAuthenticate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HaventecAuthenticate_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F7D326AC2CF71B482C904D6C9AC8967F /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = Sources/CryptoSwift/CompactMap.swift; sourceTree = "<group>"; };
-		F9175D1AA2034B9C9D3FA2F59D5587D3 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
-		FA00C4BC5FC74568AB1CCBD618202FDB /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBF4574FF87DBD47B2D51728AB9C4D61 /* ChaCha20.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChaCha20.swift; path = Sources/CryptoSwift/ChaCha20.swift; sourceTree = "<group>"; };
-		FD0D424216CBABFAF7FA3D71C4766635 /* HaventecCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaventecCommon.swift; path = HaventecCommon/Classes/HaventecCommon.swift; sourceTree = "<group>"; };
-		FDE864B4EFFE18A766A3E2410BA2647D /* CipherModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CipherModeWorker.swift; path = Sources/CryptoSwift/BlockMode/CipherModeWorker.swift; sourceTree = "<group>"; };
-		FF8830D812F9D7D5FA8D18C09A8C1E56 /* AutenticateErrorCodes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutenticateErrorCodes.swift; path = HaventecAuthenticate/Classes/AutenticateErrorCodes.swift; sourceTree = "<group>"; };
+		F4E32290ABCDF31D3CF8034F7226548C /* AEAD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEAD.swift; path = Sources/CryptoSwift/AEAD/AEAD.swift; sourceTree = "<group>"; };
+		F60865C419AD34EE82E705E8B6D65317 /* A0JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = A0JWT.swift; path = JWTDecode/A0JWT.swift; sourceTree = "<group>"; };
+		F6D412FFE8875FCED43C4B67A80C1E0A /* CTR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTR.swift; path = Sources/CryptoSwift/BlockMode/CTR.swift; sourceTree = "<group>"; };
+		FCBA90A36456CABB5069B28E3F22D2CC /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
+		FCCB7FE9EFADCAF3D51DD10FBDC7D653 /* ValidationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationError.swift; path = JWTDecode/ValidationError.swift; sourceTree = "<group>"; };
+		FD9B1117F391B2C1B19FF793B172D8A3 /* TokenValidators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenValidators.swift; path = JWTDecode/TokenValidators.swift; sourceTree = "<group>"; };
+		FF014443FD7E24A8010476D9ECC6D1FE /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		FF6B1DE98FB01658D68B958D2E717B2A /* Array+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Array+Foundation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B3A4D33767C61E9F594C2D413FB01FA /* Frameworks */ = {
+		1E8530ABA6CD3430735E86B753457A67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A4C74A4749481E426C609C96D5370DF /* Foundation.framework in Frameworks */,
+				3A18BC8FBCC6B54BEDD85FB20C6ABBBE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35BCBF032AE8CCFAAE283E92826CFDB2 /* Frameworks */ = {
+		27D7D1712A66290F9A76E4A8A3B690A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE079552F089217E19B684E760AB4D20 /* Foundation.framework in Frameworks */,
+				ADF2F21FD440066BC4B217D55E8A7A23 /* CryptoSwift.framework in Frameworks */,
+				8612FEF504656FA7E5791D4315C4CE4E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,22 +387,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63063FA0AC090280F1AC2DB29BA4AF97 /* Frameworks */ = {
+		5B0A7C771BDB140CCDA5CD305C9F16F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				895089F47C83AF422415F0D1702884F8 /* Foundation.framework in Frameworks */,
-				7FD6257904BD8B5E0530C95C21E3BEC6 /* HaventecCommon.framework in Frameworks */,
-				387494F4526323036EB20484905A2182 /* SwiftKeychainWrapper.framework in Frameworks */,
+				A201ECE1FEDC8DD6199BC6168503D329 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AB15CD35D98F00C3B44E3C8AF58C429 /* Frameworks */ = {
+		67099E45FA603C689E83D7EF51222E44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8BA62C6BF0F73AC913220950756B6CF /* CryptoSwift.framework in Frameworks */,
-				B0908E9F999B163F9C5534B6E340C295 /* Foundation.framework in Frameworks */,
+				230DF1D475AD1F886E3CD8706AF0C45C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,29 +411,127 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CABB15B51F92F474A4E61FA40EFEB9B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3388D5630849170C4CCE54A3E2CA93 /* Foundation.framework in Frameworks */,
+				263C6FB9CED2363BE9ADB3FB7320C71C /* HaventecCommon.framework in Frameworks */,
+				196EDB0CE73094FDCB24F042A025B951 /* JWTDecode.framework in Frameworks */,
+				5CE8E83268B7CD3F13B7C31876FAB867 /* SwiftKeychainWrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08016CC44BABB9785D7746DE2EAB1CAC /* SwiftKeychainWrapper */ = {
+		0B6CAF768F735ACA05E56D8E39FAA80D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8DB12670ED33F17FA80C583B50117409 /* KeychainItemAccessibility.swift */,
-				5BEEEAF5CD7CAB72CD7988BF12382B67 /* KeychainWrapper.swift */,
-				C59788542722AB19459BEAEE6697FEBB /* SwiftKeychainWrapper.h */,
-				F6D3A09A2D5D0B10537B411C541740B8 /* Support Files */,
+				29ECA99FCA57A7B0CAEC07E98A7ADAA2 /* CryptoSwift.framework */,
+				4F05936F775021F0D429BF95E2DAB8B0 /* HaventecCommon.framework */,
+				6C1FD545A426E8DB39D4AB4FCA2C147D /* JWTDecode.framework */,
+				AD015B433EDE304D971B33F9B008896D /* SwiftKeychainWrapper.framework */,
+				82F469BDF40CF80A1DD844D36DC9B033 /* iOS */,
 			);
-			path = SwiftKeychainWrapper;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1BF144E1C73F5051A3D19E0C48316946 /* Pods */ = {
+		0D2A2B48E8F4369B7E69D1B01CC9208D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8AB9868513C23FF50B6C15D288C0A2DA /* CryptoSwift */,
-				EC805BF0A1DC3D503219AF7B5A20683F /* HaventecAuthenticate */,
-				985976008174C06F08FDAEAFCD61FDF8 /* HaventecCommon */,
-				08016CC44BABB9785D7746DE2EAB1CAC /* SwiftKeychainWrapper */,
+				F2516FF89BA6479CD128BBA5F631CD6D /* HaventecAuthenticate.modulemap */,
+				56E0C290739C2380DEF74C15E4011B1C /* HaventecAuthenticate.xcconfig */,
+				EB3D5790070FD2CB5947B0DEB34665A5 /* HaventecAuthenticate-dummy.m */,
+				CA4832FA90C1825B0795086EA03FFC30 /* HaventecAuthenticate-Info.plist */,
+				D2DD74A9A4C8B579F777F33E37197B83 /* HaventecAuthenticate-prefix.pch */,
+				805E7E70F7DD1A59D700BDDAFA2BBDFD /* HaventecAuthenticate-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HaventecAuthenticate";
+			sourceTree = "<group>";
+		};
+		1EDA9014CF25C7E94ED7444A7CE7DB82 /* CryptoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				F4E32290ABCDF31D3CF8034F7226548C /* AEAD.swift */,
+				35C52DEDCB6D559ADA0094761B6C38BB /* AEADChaCha20Poly1305.swift */,
+				0230481AA9B73EC2929D0B206164B1BC /* AES.swift */,
+				AD1FD72996D6A5890090FBEB83D2A557 /* AES+Foundation.swift */,
+				B52D3134D4C27751C8F2C0229416BDBE /* AES.Cryptors.swift */,
+				D8A4D415726845CEC55347B56F8B9076 /* Array+Extension.swift */,
+				FF6B1DE98FB01658D68B958D2E717B2A /* Array+Foundation.swift */,
+				8D3E739D80F243556E2D659FD9551B99 /* Authenticator.swift */,
+				B85AA0E2E5DFD6AEF5DBA321DE928B04 /* BatchedCollection.swift */,
+				30DAB21A2DEE40D72521BF3BAF4CDF0A /* Bit.swift */,
+				B64956087209656732F93B3B275773D0 /* BlockCipher.swift */,
+				4682E8DB19E13B0C82BC642876AE640D /* BlockDecryptor.swift */,
+				FCBA90A36456CABB5069B28E3F22D2CC /* BlockEncryptor.swift */,
+				652A8A39D9426826A9CD32CDAD0621FB /* BlockMode.swift */,
+				8392C8E9789B100263087A71B6F42139 /* BlockModeOptions.swift */,
+				2115D270CE34AF0EFBAC7B282B7A2E7C /* Blowfish.swift */,
+				A2D02B17666DEDF8A6260793C692AEFD /* Blowfish+Foundation.swift */,
+				DA3BA98E2926C984D6310B2168102DFE /* CBC.swift */,
+				46CCCC985F30F563281A34230D7F4F47 /* CBCMAC.swift */,
+				C91CE9509CA6B5E73F3C5DC7B7C866E2 /* CCM.swift */,
+				E49BFD323A8C345AA9EB24D5B93479E8 /* CFB.swift */,
+				E312DAE006A0E57B45BEB9EFB199A67A /* ChaCha20.swift */,
+				80E67B60F3B03A11B186240B7E32E985 /* ChaCha20+Foundation.swift */,
+				4E1E15FBEF6C499FAD58588627D78418 /* Checksum.swift */,
+				2F339A5455D81B2897560DC358E3201D /* Cipher.swift */,
+				5D1E7D00FDD3310BAC0567112E6F5846 /* CipherModeWorker.swift */,
+				71C283CF3B4E16CFE88789DFC54CE442 /* CMAC.swift */,
+				0CAE5BA36763EAE86F876B1F6EAC00F2 /* Collection+Extension.swift */,
+				1543667D2C311EA1965E80B9714808B4 /* CompactMap.swift */,
+				56F5BEFBF7A605D7EBE52684E42E5D37 /* Cryptor.swift */,
+				C0E56F0F837107A207D0A2283A49E0C8 /* Cryptors.swift */,
+				F6D412FFE8875FCED43C4B67A80C1E0A /* CTR.swift */,
+				1606F0B3B53FAFF6B0E15363AFF8768E /* Data+Extension.swift */,
+				BD420CFF829DD03F4C510F8EFD636B38 /* Digest.swift */,
+				BBACE738886000F8961FF55C4BD319F8 /* DigestType.swift */,
+				0DDA200394476534728B2A3C4DC69475 /* ECB.swift */,
+				DF29F562C7DDCFBE0123360272678FD5 /* GCM.swift */,
+				D0E3878058CDD89C4B5D5E145787ED0B /* Generics.swift */,
+				C847A4F3C3246F5A029EEC009CE9F2FF /* HKDF.swift */,
+				C52A050AD67B54BE0ED4C0A16975DF71 /* HMAC.swift */,
+				AE1569474DDC96C8370EFD10C7D23468 /* HMAC+Foundation.swift */,
+				8E2E08C64E0EE231C01BE2E69B9EA9FB /* Int+Extension.swift */,
+				9ED87861926B7BF3BC4614013AEE6687 /* MD5.swift */,
+				2553FF4E92193D8DE682A4128577D65D /* NoPadding.swift */,
+				1EF7BC0C5D8B803855609804D2D16396 /* OFB.swift */,
+				3D75891D808CA6DF6EB39169DE01CD9A /* Operators.swift */,
+				B7FA29D313A51A311E3DF1690C26FF91 /* Padding.swift */,
+				A47957F72A45168E662FFC1B0B5F4129 /* PBKDF1.swift */,
+				27F20F59EE8B5862924261495DFE60BB /* PBKDF2.swift */,
+				81993FA55394832AA16636E6D450B9AA /* PCBC.swift */,
+				2ACC5A8EA637D483F822817F6389EC5A /* PKCS5.swift */,
+				3A04C6E462B2CBDAE1ED8B1A6C926B28 /* PKCS7.swift */,
+				3263B8E8CE1101919D0E177EEBAB299F /* PKCS7Padding.swift */,
+				EC12669D2C3D48FE302FF40F58C0BA11 /* Poly1305.swift */,
+				8E42EAA521A2639F81D1CB5426737B35 /* Rabbit.swift */,
+				B1029A01E65DB449EEDA3CFD444C9AE7 /* Rabbit+Foundation.swift */,
+				89DA0EB4C665401926161CA191D46750 /* RandomBytesSequence.swift */,
+				4BF8F5752096275FF76316FEBD806714 /* SecureBytes.swift */,
+				69B7650DE53093A5D830077FFA8B96AB /* SHA1.swift */,
+				4572A06E154B2A35A6C6BDA0333FE532 /* SHA2.swift */,
+				872E511B589980BB1EB1F5DACC1A8317 /* SHA3.swift */,
+				0E833354E770DB95A81493D7886A3959 /* StreamDecryptor.swift */,
+				15A845BB588FD1285C5C2C0EC9CA64BD /* StreamEncryptor.swift */,
+				60A0B697E52AC94B7D28F5819E4D8659 /* String+Extension.swift */,
+				0D7EBFBC4A860FDEC4931289BA73C53E /* String+FoundationExtension.swift */,
+				58731909235BC2C3C46EAEF2B7F1673B /* UInt128.swift */,
+				36CD1C3127628C2C031D5C6157D688F4 /* UInt16+Extension.swift */,
+				70709A0D138C3339EC538365233B1252 /* UInt32+Extension.swift */,
+				6C3E066AD4EBF2717CEACA355FBE5288 /* UInt64+Extension.swift */,
+				97B49BCEBB8558BDE3898DD31723A3E9 /* UInt8+Extension.swift */,
+				A4D3E4186DDDE95C212A50EEF8737321 /* Updatable.swift */,
+				896E06DD53E181622A575D6D2858F604 /* Utils.swift */,
+				767925C340034FA670D1BFCE69A6A1F6 /* Utils+Foundation.swift */,
+				87A34F04F1F97441FFE4FF92C29E1EB7 /* ZeroPadding.swift */,
+				8A2D2021885786DB2D57EBB6DB14A2CE /* Support Files */,
+			);
+			name = CryptoSwift;
+			path = CryptoSwift;
 			sourceTree = "<group>";
 		};
 		1F2E7648629328D1D5988567546B0A9A /* Pods-HaventecAuthenticate_Example */ = {
@@ -410,58 +551,80 @@
 			path = "Target Support Files/Pods-HaventecAuthenticate_Example";
 			sourceTree = "<group>";
 		};
-		284DD948C5396AB4CFCFC4B0AE7AB4BA /* Support Files */ = {
+		2379A683E9FEFCE8D059D12DAE19A87E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D22F1C556D1E2E7D548DD49B904BA3ED /* HaventecCommon.modulemap */,
-				CCC2707D8A09DE5F2D927DD2D59C86C5 /* HaventecCommon.xcconfig */,
-				4EDF2823E02B36D66BE1437D8DC8D4C3 /* HaventecCommon-dummy.m */,
-				B3C840D55D9FEEBB0AF869053AA35569 /* HaventecCommon-Info.plist */,
-				B8D0E70A4C8EC6F6B336AA12B8245DC0 /* HaventecCommon-prefix.pch */,
-				162F66659C56008CBB789E5579CA097D /* HaventecCommon-umbrella.h */,
+				E7DE7BA3C969316B048BBEEC11CC73B4 /* HaventecAuthenticate.podspec */,
+				77E51631C2713C13E723957D626EAB2B /* LICENSE */,
+				71E0928BF31520D4FFD59A44FD019B44 /* README.md */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/HaventecCommon";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		3D3AF954CAC96C2266C165211799B5D7 /* Support Files */ = {
+		294F41295DBF471FDCE5CC8AC38C8402 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				274967518BBF4070FA79B92BAE1F1D10 /* HaventecAuthenticate.modulemap */,
-				4C01219B35B00084A1A195CD332C2D2D /* HaventecAuthenticate.xcconfig */,
-				92075C2639379BB7A50A07DAAF21D9AB /* HaventecAuthenticate-dummy.m */,
-				9FC1FB19034140253C498D9C99FFD17E /* HaventecAuthenticate-Info.plist */,
-				6F52E362DC5B6CA62626C8F0555268B7 /* HaventecAuthenticate-prefix.pch */,
-				408C91C0E4B79D03B0828B5172B93F17 /* HaventecAuthenticate-umbrella.h */,
-				D44C459C221D11B6001A94F0 /* strings.plist */,
+				E12F7548D41C0D924607930EE27A8C37 /* SwiftKeychainWrapper.modulemap */,
+				C221C2BA8BFDB44E39288AF314DEC7D2 /* SwiftKeychainWrapper.xcconfig */,
+				A65ABAD2013DDC640D61353B1E5FD128 /* SwiftKeychainWrapper-dummy.m */,
+				B2DDDBE5C6CBF8B0B906F6BFF939675A /* SwiftKeychainWrapper-Info.plist */,
+				12C856569615894AD92E3C78470ACFE5 /* SwiftKeychainWrapper-prefix.pch */,
+				4B9E90A8E94356A1B6A9E986B27AA7CD /* SwiftKeychainWrapper-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/HaventecAuthenticate";
+			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
-		50B5384A1FB4BD764BB23C172C77D079 /* Frameworks */ = {
+		2B5DF52E961760EB5099116A79A4DDCC /* JWTDecode */ = {
 			isa = PBXGroup;
 			children = (
-				9F63751C03765C6F23429DE860386198 /* CryptoSwift.framework */,
-				BD96E5C752DEEBB2BC6F27AB95442198 /* HaventecCommon.framework */,
-				0D671AB525823D0D0A04CA78C38EFF8E /* SwiftKeychainWrapper.framework */,
-				D4DD34B0CCA0491976425CF29B4A22CE /* iOS */,
+				F60865C419AD34EE82E705E8B6D65317 /* A0JWT.swift */,
+				8FA8D9D5429758939C4D4FDDEC19446C /* Errors.swift */,
+				BDCE73018960FFAE200C068878C03545 /* JWT.swift */,
+				CCEE9EA08FFCF50B58265100E5DCA61C /* JWTDecode.swift */,
+				FD9B1117F391B2C1B19FF793B172D8A3 /* TokenValidators.swift */,
+				FCCB7FE9EFADCAF3D51DD10FBDC7D653 /* ValidationError.swift */,
+				43BF21C42AB3398A74E083DF0F4DB921 /* ValidatorJWT.swift */,
+				BBC27883A4119C05249CB56507EB3397 /* Support Files */,
 			);
-			name = Frameworks;
+			name = JWTDecode;
+			path = JWTDecode;
 			sourceTree = "<group>";
 		};
-		537739B6AF5EE6321FE446E206973BAB /* Support Files */ = {
+		3B1BD62EDCBA78810A19F19CFF0B356F /* HaventecCommon */ = {
 			isa = PBXGroup;
 			children = (
-				7FF4DD1F36617102C56DFD508CFF189B /* CryptoSwift.modulemap */,
-				090E312240B02237FC80E91D46AD69A4 /* CryptoSwift.xcconfig */,
-				393F0860D435FB53FFE4047887BA4385 /* CryptoSwift-dummy.m */,
-				5552ED1776889F1BBF80844B9DDC8BD4 /* CryptoSwift-Info.plist */,
-				C43B4F86B3A0DE05A4D8242730987862 /* CryptoSwift-prefix.pch */,
-				83A2C124C520DA25AE4F012AC2638E24 /* CryptoSwift-umbrella.h */,
+				2993B4D9C554B3AE730558EF6FF11BC2 /* HashingHelper.swift */,
+				3772913A104C8F20F0BE6193E3F0B770 /* HaventecCommon.swift */,
+				95F895E7A692260D5C6920586431724F /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CryptoSwift";
+			name = HaventecCommon;
+			path = HaventecCommon;
+			sourceTree = "<group>";
+		};
+		3DDFA887D7139DBAA29AA329956F032C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EDA9014CF25C7E94ED7444A7CE7DB82 /* CryptoSwift */,
+				3B1BD62EDCBA78810A19F19CFF0B356F /* HaventecCommon */,
+				2B5DF52E961760EB5099116A79A4DDCC /* JWTDecode */,
+				8D6CA7ECF912C29957A8B6B5A98740DD /* SwiftKeychainWrapper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		43CE69738A56C0D3D80534142A0FCC09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4A50A605AFAE9FB8C8C0440D9BD9EDB /* CryptoSwift.framework */,
+				609656C7E9BFA91C17E89B8D05CBCA49 /* HaventecAuthenticate.framework */,
+				29F5CC77E9DCF3884B200B9894EA4DC1 /* HaventecCommon.framework */,
+				9628E4D29102ABFA93E0A4AE4FDB95A0 /* JWTDecode.framework */,
+				B3D01C459F5DEC00140826BBC8AEA61D /* Pods_HaventecAuthenticate_Example.framework */,
+				33D1005A9B91E3213CA01E2081E0A14A /* Pods_HaventecAuthenticate_Tests.framework */,
+				84EADFB00C1460DDF505E5237BFDD421 /* SwiftKeychainWrapper.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		632B063BC9BCC8E2162C9B1B6C2EB9AB /* Targets Support Files */ = {
@@ -473,86 +636,56 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8AB9868513C23FF50B6C15D288C0A2DA /* CryptoSwift */ = {
+		82F469BDF40CF80A1DD844D36DC9B033 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8335E862C706CFC0AA73FADBC3314A59 /* AEAD.swift */,
-				A057E2D23B80FF1F52892B40DB830DEC /* AEADChaCha20Poly1305.swift */,
-				BE841D80F0214A916A7D38D407813228 /* AES.swift */,
-				1F4A23503EFEBA8CB9EFAE9D30F32BF9 /* AES+Foundation.swift */,
-				21F9AD5067361A0E473AA6867276DD96 /* AES.Cryptors.swift */,
-				BE50DB5C7288231436AB915AD035303E /* Array+Extension.swift */,
-				A84A6FAC0CDECBCBEBA68E666E380615 /* Array+Foundation.swift */,
-				CD8B656F693E9CBE035F5DC34347266A /* Authenticator.swift */,
-				A788556B91C996C59BBF8E8B760BDDA4 /* BatchedCollection.swift */,
-				C1DDC4E76AFF72E93273D6A4564BCD4E /* Bit.swift */,
-				3A3D3D8F84D96DEEBF96F885A53D2F7A /* BlockCipher.swift */,
-				953644B89EAA90C5E6B8100495D3AFF8 /* BlockDecryptor.swift */,
-				584748C5A8F87875B684B81D5B0C5AA2 /* BlockEncryptor.swift */,
-				DD1E0A09616B3086A3635DCF8EF35579 /* BlockMode.swift */,
-				D6797F9BBD050C31310A1579508E7F95 /* BlockModeOptions.swift */,
-				9AC38D82C0A8A83351E1040F0C8C2DAF /* Blowfish.swift */,
-				C50DB86F7FEE153C0566A7869F419DED /* Blowfish+Foundation.swift */,
-				A5297FBC5DB20903C9FC3A63D9C5244D /* CBC.swift */,
-				B4A8A671D0F99659D24337795AE91C44 /* CBCMAC.swift */,
-				975C7D1A91AEE11826A21A3F69DA06A8 /* CCM.swift */,
-				EDC619C5717BD16D9AD839D2134BC148 /* CFB.swift */,
-				FBF4574FF87DBD47B2D51728AB9C4D61 /* ChaCha20.swift */,
-				C0BC9E05B5F1E1E5EE099ED0AB4E37B8 /* ChaCha20+Foundation.swift */,
-				817B8828A994A5FD9CF206439C2F2D16 /* Checksum.swift */,
-				3AEAD84DA415DF4C605FA0E12AD769A5 /* Cipher.swift */,
-				FDE864B4EFFE18A766A3E2410BA2647D /* CipherModeWorker.swift */,
-				BC723F4DEDAE9C2F904F330008AD081D /* CMAC.swift */,
-				050829FA4C1C374A64188AE30253ABED /* Collection+Extension.swift */,
-				F7D326AC2CF71B482C904D6C9AC8967F /* CompactMap.swift */,
-				47C3956DD21C663823DC8E138A4A9AD4 /* Cryptor.swift */,
-				A1833914E13DC2B9B6EF75E5AEC4509A /* Cryptors.swift */,
-				0D8DE89AC41882675CEDB1DDCB1AE509 /* CTR.swift */,
-				E25A2F7CCFA3F3AD611F3A7C0622A224 /* Data+Extension.swift */,
-				3645010D6B823E3B2A7575FEDB4FE6C1 /* Digest.swift */,
-				5459B83693A78616691D10C70AEB18CB /* DigestType.swift */,
-				863A64B6968E5182B7C5382D1D2F5D7E /* ECB.swift */,
-				02F1707A7929471D6EBE4D1F10FDD838 /* GCM.swift */,
-				4A277F42AB47B5CF9B70670520F83A11 /* Generics.swift */,
-				DBE9C5C26FF838DD7D7CEED5F5ABB8D7 /* HKDF.swift */,
-				D704A07CCEB686DBA3F1FD9A9177B70E /* HMAC.swift */,
-				25FB4D6EC62AC4856DA6F90A49BCBF7B /* HMAC+Foundation.swift */,
-				EF61FA530FEB03EF38BEDA4BDD1FC1A2 /* Int+Extension.swift */,
-				F9175D1AA2034B9C9D3FA2F59D5587D3 /* MD5.swift */,
-				5A6338DE2B0899D06E468D25B84A7A4E /* NoPadding.swift */,
-				91683AD3DF66FAA00A2BE4E322499519 /* OFB.swift */,
-				D8D3103453D3AEE55359B922F05FE032 /* Operators.swift */,
-				B49C078656479963A7194A079B8EF13B /* Padding.swift */,
-				DD1D114938C1729F3CA486E68F780F7E /* PBKDF1.swift */,
-				628EBAE031C28218AB4D0C9064DD204C /* PBKDF2.swift */,
-				C3FA29C8B4E1BE334969E25E25992350 /* PCBC.swift */,
-				5712C1674A0CB012518D3AE3AF24B595 /* PKCS5.swift */,
-				B0C8C52CA0468E06F72B1AC9A22A9ABE /* PKCS7.swift */,
-				8457BB2B7471199B60A5051042066BFA /* PKCS7Padding.swift */,
-				07FCF4F1C5B37049485B32AF4A7886AB /* Poly1305.swift */,
-				E18CAD384BCD38832F594A9258770416 /* Rabbit.swift */,
-				AA2842E4A9E3720A9DD05D1F99EA2E4C /* Rabbit+Foundation.swift */,
-				0BC8F097830D7409F49774C666F8A8D1 /* RandomBytesSequence.swift */,
-				837519C3E6943F0250F4920E345E5CE2 /* SecureBytes.swift */,
-				352DF59D4F367B3A15D49E178DD76E06 /* SHA1.swift */,
-				09C45FABDAED0F04B0DEBED103939E66 /* SHA2.swift */,
-				9FD0D35BC11DC24EEB8FDE17CCC34FE8 /* SHA3.swift */,
-				25FA873D5D0674BB075B8804B394BC86 /* StreamDecryptor.swift */,
-				C64CA7055E58F879B49A3DBC298BE475 /* StreamEncryptor.swift */,
-				ADC3B8BC3FBCA86AD0E506FE1BB2F5F8 /* String+Extension.swift */,
-				62F635F8AB13FCC106EB1703B747AA21 /* String+FoundationExtension.swift */,
-				F20B38616CBABA9E9CA03A6B09481F7A /* UInt128.swift */,
-				E59448EE28E5DCF4D0118B5CA9BF2360 /* UInt16+Extension.swift */,
-				E0D70824F386E77C6859EF905F20B5C7 /* UInt32+Extension.swift */,
-				D6FBBB6D483D72EF2C787A091FA486AD /* UInt64+Extension.swift */,
-				B028CE7DED67B1800A56E839187801BB /* UInt8+Extension.swift */,
-				37B2CF736CBE9366FD95BC83D8CF06B1 /* Updatable.swift */,
-				5324A9E8D824E2B18D5BBDAFCA8A7DAF /* Utils.swift */,
-				CCDCE2D88250A45C668999C429A60700 /* Utils+Foundation.swift */,
-				66F3EAF103BDD5F4C8EA5C4D10681DD4 /* ZeroPadding.swift */,
-				537739B6AF5EE6321FE446E206973BAB /* Support Files */,
+				E58AF5D3A2D00CFE8911953842A11D7F /* Foundation.framework */,
 			);
-			path = CryptoSwift;
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8A2D2021885786DB2D57EBB6DB14A2CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03BB4D1F84A1E7E260160684953F317E /* CryptoSwift.modulemap */,
+				53E9D18068C00A5BA89C98B7A8766954 /* CryptoSwift.xcconfig */,
+				9565A96108F9EA38F046AF59EC5B03C8 /* CryptoSwift-dummy.m */,
+				24F16737CA5CDECAB3D09B11E135DEB7 /* CryptoSwift-Info.plist */,
+				30FCF0888C92D27AF6F38363D78186C5 /* CryptoSwift-prefix.pch */,
+				EAFA183BC712C40CA7D3B6111C325614 /* CryptoSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CryptoSwift";
+			sourceTree = "<group>";
+		};
+		8D6CA7ECF912C29957A8B6B5A98740DD /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				FF014443FD7E24A8010476D9ECC6D1FE /* KeychainItemAccessibility.swift */,
+				368DFA29CAB49088D17874DF7BBEFD93 /* KeychainWrapper.swift */,
+				432CBBCFB6DEBDA886384C8857F5F2E0 /* SwiftKeychainWrapper.h */,
+				294F41295DBF471FDCE5CC8AC38C8402 /* Support Files */,
+			);
+			name = SwiftKeychainWrapper;
+			path = SwiftKeychainWrapper;
+			sourceTree = "<group>";
+		};
+		90201B784D5B05FC8F5DEB1A58143508 /* HaventecAuthenticate */ = {
+			isa = PBXGroup;
+			children = (
+				0FAEAE61EA896EC1364E2126F1B3D694 /* AuthenticateErrorCodes.swift */,
+				65723FA04689BFE18A8687D8FCEDB74B /* Constants.swift */,
+				C81087844EB6FFA306A38136A8CFEF2B /* DeviceHelper.swift */,
+				90AA8F4EF6CF3985E8F0F23EEE605A23 /* HaventecAuthenticate.swift */,
+				F07271D0BD9FECCBA15420397DE6BEDD /* HaventecData.swift */,
+				BEB78FAB924F7EFDAB80DBA7535736A4 /* StorageHelper.swift */,
+				029FDF8DFFF811A19C4B1CE2080B81C3 /* Token.swift */,
+				83E1573F3184D34DB093CD08678B2329 /* TokenHelper.swift */,
+				2379A683E9FEFCE8D059D12DAE19A87E /* Pod */,
+				0D2A2B48E8F4369B7E69D1B01CC9208D /* Support Files */,
+			);
+			name = HaventecAuthenticate;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		93A4DAA44D9AEBB24BE19A4A8B94C0A0 /* Pods-HaventecAuthenticate_Tests */ = {
@@ -571,74 +704,52 @@
 			path = "Target Support Files/Pods-HaventecAuthenticate_Tests";
 			sourceTree = "<group>";
 		};
-		985976008174C06F08FDAEAFCD61FDF8 /* HaventecCommon */ = {
+		95F895E7A692260D5C6920586431724F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BB0B6381DEEC449AF38B147238E0BF15 /* HashingHelper.swift */,
-				FD0D424216CBABFAF7FA3D71C4766635 /* HaventecCommon.swift */,
-				284DD948C5396AB4CFCFC4B0AE7AB4BA /* Support Files */,
+				7602C325EE690B7C7EAA7FF49C492C68 /* HaventecCommon.modulemap */,
+				E43B80D82E333FC48F52B24DD64EE50C /* HaventecCommon.xcconfig */,
+				C970996F97F75DDB61E72AC217B3F3C5 /* HaventecCommon-dummy.m */,
+				D4D6619A86431DEFE77CE64B2686F815 /* HaventecCommon-Info.plist */,
+				E324FE792A5646AE0BA0BC009E77F1B2 /* HaventecCommon-prefix.pch */,
+				B564956D121FF3CB5BD67D736DFB53E5 /* HaventecCommon-umbrella.h */,
 			);
-			path = HaventecCommon;
+			name = "Support Files";
+			path = "../Target Support Files/HaventecCommon";
+			sourceTree = "<group>";
+		};
+		BBC27883A4119C05249CB56507EB3397 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				349A23A78F0B6928F92A614183605027 /* JWTDecode.modulemap */,
+				2A44A41B2CA0C3C4F82B56BF8D2C4642 /* JWTDecode.xcconfig */,
+				35710AA9703F1DAAD6ECE5AF24D3A786 /* JWTDecode-dummy.m */,
+				A714CA8E7FCB3A95EDCA302481D382AF /* JWTDecode-Info.plist */,
+				899198AEF470BF7568F49057650337C7 /* JWTDecode-prefix.pch */,
+				D5896005FC1EC8025F64AE69B22FDB37 /* JWTDecode-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JWTDecode";
+			sourceTree = "<group>";
+		};
+		BD3B2A0AFD154FDB4E67E4F28FF9862A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90201B784D5B05FC8F5DEB1A58143508 /* HaventecAuthenticate */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				50B5384A1FB4BD764BB23C172C77D079 /* Frameworks */,
-				1BF144E1C73F5051A3D19E0C48316946 /* Pods */,
-				E397732A761F20FF642F5C58CD8F38DF /* Products */,
+				BD3B2A0AFD154FDB4E67E4F28FF9862A /* Development Pods */,
+				0B6CAF768F735ACA05E56D8E39FAA80D /* Frameworks */,
+				3DDFA887D7139DBAA29AA329956F032C /* Pods */,
+				43CE69738A56C0D3D80534142A0FCC09 /* Products */,
 				632B063BC9BCC8E2162C9B1B6C2EB9AB /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D4DD34B0CCA0491976425CF29B4A22CE /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5D2B2A707CA23D1720E77936E6101FCC /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E397732A761F20FF642F5C58CD8F38DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DD05654BA341557BF56BDFFBA667C5C6 /* CryptoSwift.framework */,
-				16EF8C0A5FA80E07B3819B50140BD1BD /* HaventecAuthenticate.framework */,
-				60E45A50B9B2338FAB29FC54E107858F /* HaventecCommon.framework */,
-				B009588F3EA7C27BDF8F5FDBBB8B6CC5 /* Pods_HaventecAuthenticate_Example.framework */,
-				C8705B7DA9364F6BD9A51D8404DB73B1 /* Pods_HaventecAuthenticate_Tests.framework */,
-				FA00C4BC5FC74568AB1CCBD618202FDB /* SwiftKeychainWrapper.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EC805BF0A1DC3D503219AF7B5A20683F /* HaventecAuthenticate */ = {
-			isa = PBXGroup;
-			children = (
-				FF8830D812F9D7D5FA8D18C09A8C1E56 /* AutenticateErrorCodes.swift */,
-				3BD4E563F669C36D94BE38AB6F3951D7 /* HaventecAuthenticate.swift */,
-				4A8B8629B30F4D0A38A0036A0D18DAB6 /* HaventecData.swift */,
-				633FEBD83A294441ADE3A592A8A70AEB /* StorageHelper.swift */,
-				58D7E4CCE62B1400189B57C257294585 /* Token.swift */,
-				3D3AF954CAC96C2266C165211799B5D7 /* Support Files */,
-				D44C459F221D24E2001A94F0 /* Constants.swift */,
-			);
-			path = HaventecAuthenticate;
-			sourceTree = "<group>";
-		};
-		F6D3A09A2D5D0B10537B411C541740B8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8DA645096F38A1D0693C808AC97F1920 /* SwiftKeychainWrapper.modulemap */,
-				999893A5D0D2DBDC17A4B963EDFA38D6 /* SwiftKeychainWrapper.xcconfig */,
-				8BCA70B520FFCB1360AC29FE080B7DEA /* SwiftKeychainWrapper-dummy.m */,
-				53A5715A416A8D0693B70353BAACD0B9 /* SwiftKeychainWrapper-Info.plist */,
-				9F130E237AD3FC8E1C9E3C7558FE6BCA /* SwiftKeychainWrapper-prefix.pch */,
-				A4F48828E38605DEADB17E697E19BEB0 /* SwiftKeychainWrapper-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -652,36 +763,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7171B28581044E6D6E6AFCF92CADC9C9 /* Headers */ = {
+		651DD4F49457E384CACBB7740F24EC98 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2A39DE1654F6E221D376F30AE8D6127 /* SwiftKeychainWrapper-umbrella.h in Headers */,
-				9A8A76F0EAB99330E8D5BA5BF9AE2916 /* SwiftKeychainWrapper.h in Headers */,
+				62AE0333093F4FF3B58A5216831AFCC0 /* Pods-HaventecAuthenticate_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7ABF018C076E7906AB7D8DF70031FBF5 /* Headers */ = {
+		74AF1F163B2FC6028367A80935981609 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				689AD54B095F7EA6443D1EC2CBD29A87 /* Pods-HaventecAuthenticate_Example-umbrella.h in Headers */,
+				3219E89D38E5E933F1336361E22D81DD /* JWTDecode-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87C2360B182313043DD929FD51B5972E /* Headers */ = {
+		BD7AE4DAD477A6611024DA9C27B93E68 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CC18AC2964AB21F14047D86B1813FBC /* HaventecAuthenticate-umbrella.h in Headers */,
+				6F83ABD21C863A88D30B28F2F0E618BC /* HaventecCommon-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF2ED9B4EA5BB13CEA397879663E57BA /* Headers */ = {
+		C231F1C9159183EFBCF0FB18F7DC3101 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5159A9977297388AAFF2EC140842553 /* HaventecCommon-umbrella.h in Headers */,
+				DC7CCE03B0A0212F923120FA8E4B344F /* SwiftKeychainWrapper-umbrella.h in Headers */,
+				E7C78F9D6BE07EDAF5C50D8148882EDF /* SwiftKeychainWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99AF39DDAEB34B32B695ACA6D6ACB81 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F0FF81DB6A281FFD5DE78A2E1F168E /* HaventecAuthenticate-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +815,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		31E3E30F7D603521CB77964690D3BFA3 /* JWTDecode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8815D38319AFD05EB36467A6021F2418 /* Build configuration list for PBXNativeTarget "JWTDecode" */;
+			buildPhases = (
+				74AF1F163B2FC6028367A80935981609 /* Headers */,
+				71E16A8ED58A2E5087ECD34F2BB55880 /* Sources */,
+				5B0A7C771BDB140CCDA5CD305C9F16F5 /* Frameworks */,
+				5D162CE9710E4ED37A223B65407FF787 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWTDecode;
+			productName = JWTDecode;
+			productReference = 9628E4D29102ABFA93E0A4AE4FDB95A0 /* JWTDecode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5A6207CE7CDF2B3D0D0B75FC5DC9D16C /* CryptoSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0828F912305D762EB8B3025D74AFF38D /* Build configuration list for PBXNativeTarget "CryptoSwift" */;
@@ -711,45 +848,7 @@
 			);
 			name = CryptoSwift;
 			productName = CryptoSwift;
-			productReference = DD05654BA341557BF56BDFFBA667C5C6 /* CryptoSwift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7D0ED5E1092E47604A19523A68240C8A /* HaventecAuthenticate */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69E47361A9334C92DA82C1A1D29107C7 /* Build configuration list for PBXNativeTarget "HaventecAuthenticate" */;
-			buildPhases = (
-				87C2360B182313043DD929FD51B5972E /* Headers */,
-				67FCC7BCF634313E0AFBA9295B85DDE2 /* Sources */,
-				63063FA0AC090280F1AC2DB29BA4AF97 /* Frameworks */,
-				736027493F4FF6B4D52757954493D4F3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				39E6F9F630447D6381BECCADDB047A99 /* PBXTargetDependency */,
-				C37EEF251737490D9E236448AA21657D /* PBXTargetDependency */,
-			);
-			name = HaventecAuthenticate;
-			productName = HaventecAuthenticate;
-			productReference = 16EF8C0A5FA80E07B3819B50140BD1BD /* HaventecAuthenticate.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		829E2FD65DE512ED97B197CED45A9397 /* SwiftKeychainWrapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B94569828189F48F9B8D99141F895952 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
-			buildPhases = (
-				7171B28581044E6D6E6AFCF92CADC9C9 /* Headers */,
-				C3E61FC424BDDF2AAA53136EB37C974D /* Sources */,
-				35BCBF032AE8CCFAAE283E92826CFDB2 /* Frameworks */,
-				FF2767900AF3DE67A8FF9445567B9A3F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftKeychainWrapper;
-			productName = SwiftKeychainWrapper;
-			productReference = FA00C4BC5FC74568AB1CCBD618202FDB /* SwiftKeychainWrapper.framework */;
+			productReference = D4A50A605AFAE9FB8C8C0440D9BD9EDB /* CryptoSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		92D08653C07C809016C874F9896CF37B /* Pods-HaventecAuthenticate_Tests */ = {
@@ -768,48 +867,88 @@
 			);
 			name = "Pods-HaventecAuthenticate_Tests";
 			productName = "Pods-HaventecAuthenticate_Tests";
-			productReference = C8705B7DA9364F6BD9A51D8404DB73B1 /* Pods_HaventecAuthenticate_Tests.framework */;
+			productReference = 33D1005A9B91E3213CA01E2081E0A14A /* Pods_HaventecAuthenticate_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AD7927AEFC79B4F99D27B89F707B9B12 /* Pods-HaventecAuthenticate_Example */ = {
+		95B526D94047234E44A8C35C90567BB3 /* HaventecCommon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D10AD41AEE9744CC416D98C92F7A68B7 /* Build configuration list for PBXNativeTarget "Pods-HaventecAuthenticate_Example" */;
+			buildConfigurationList = 490732CA17644470ABF4B540F97494EB /* Build configuration list for PBXNativeTarget "HaventecCommon" */;
 			buildPhases = (
-				7ABF018C076E7906AB7D8DF70031FBF5 /* Headers */,
-				89E5104C5688A2D2C5C093A9C29A1577 /* Sources */,
-				0B3A4D33767C61E9F594C2D413FB01FA /* Frameworks */,
-				A50CDCD8B977B099C37876C763604B71 /* Resources */,
+				BD7AE4DAD477A6611024DA9C27B93E68 /* Headers */,
+				92137986DDCAD60C0A6EAE79C3C30A8E /* Sources */,
+				27D7D1712A66290F9A76E4A8A3B690A6 /* Frameworks */,
+				C3295E827D569B76F9C6869CAD36EAE8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE4F21580955F4AC894E42DA090C4717 /* PBXTargetDependency */,
-				802D21DAC58771DC4DD424294981707C /* PBXTargetDependency */,
-				313986D5A9ED313BE0FB6C84C40E0F42 /* PBXTargetDependency */,
-				46387028514CB8EA0F709DF25B126409 /* PBXTargetDependency */,
-			);
-			name = "Pods-HaventecAuthenticate_Example";
-			productName = "Pods-HaventecAuthenticate_Example";
-			productReference = B009588F3EA7C27BDF8F5FDBBB8B6CC5 /* Pods_HaventecAuthenticate_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F5A734B293C85F5D6F606ADA550F16EA /* HaventecCommon */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0262A509FA07A126E8ECFCB06D90A9D5 /* Build configuration list for PBXNativeTarget "HaventecCommon" */;
-			buildPhases = (
-				BF2ED9B4EA5BB13CEA397879663E57BA /* Headers */,
-				93D43995C523E7653BAAF1A3090CBFEC /* Sources */,
-				7AB15CD35D98F00C3B44E3C8AF58C429 /* Frameworks */,
-				1BE513AA43FBE17577064A4218C8E4AC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E8675C9CBA2FE8AB69096F9FAB7D0A9 /* PBXTargetDependency */,
+				3264E4D8CE5968042D6668DE0C28D7A2 /* PBXTargetDependency */,
 			);
 			name = HaventecCommon;
 			productName = HaventecCommon;
-			productReference = 60E45A50B9B2338FAB29FC54E107858F /* HaventecCommon.framework */;
+			productReference = 29F5CC77E9DCF3884B200B9894EA4DC1 /* HaventecCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B922863A224FFA118353C389EEB91CB5 /* HaventecAuthenticate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A35E93325B1349FACC5FAE87CC500D5E /* Build configuration list for PBXNativeTarget "HaventecAuthenticate" */;
+			buildPhases = (
+				C99AF39DDAEB34B32B695ACA6D6ACB81 /* Headers */,
+				9B29B76C2EB797086B7110C81D55BB69 /* Sources */,
+				CABB15B51F92F474A4E61FA40EFEB9B8 /* Frameworks */,
+				D068DCD69B3B3E4341E98759E05F921A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8390E55747FE024C0447781BFE77AB3 /* PBXTargetDependency */,
+				8CAF973E99205DCD781E3B6A352748E9 /* PBXTargetDependency */,
+				C8D61D7AF9DE89B794B8642958728620 /* PBXTargetDependency */,
+			);
+			name = HaventecAuthenticate;
+			productName = HaventecAuthenticate;
+			productReference = 609656C7E9BFA91C17E89B8D05CBCA49 /* HaventecAuthenticate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3792955AB36E93BF414A2602D3BD43E /* Pods-HaventecAuthenticate_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCFABA4276071EEBF2B18F3B6A5D0DCA /* Build configuration list for PBXNativeTarget "Pods-HaventecAuthenticate_Example" */;
+			buildPhases = (
+				651DD4F49457E384CACBB7740F24EC98 /* Headers */,
+				42D08B622BF83DA6342A7EF45F6E0271 /* Sources */,
+				67099E45FA603C689E83D7EF51222E44 /* Frameworks */,
+				87C2D96FE796D09CD6A0420785F34C3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBD133513F3A62999CA35508023BB33E /* PBXTargetDependency */,
+				F517E815265790003AED9F8EFF06CB16 /* PBXTargetDependency */,
+				9645C174119B206A5EAA0A040211FBE5 /* PBXTargetDependency */,
+				67F30C00FAC2EBBCE01AD54AF4F06823 /* PBXTargetDependency */,
+				12B45905AE9A503F1CE5E9EE2CE2AE61 /* PBXTargetDependency */,
+			);
+			name = "Pods-HaventecAuthenticate_Example";
+			productName = "Pods-HaventecAuthenticate_Example";
+			productReference = B3D01C459F5DEC00140826BBC8AEA61D /* Pods_HaventecAuthenticate_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F9A2958DBD3BDCD6FFFA248E1792B8E8 /* SwiftKeychainWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713EDE0CAF76684B5A168833DB6F5CCD /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
+			buildPhases = (
+				C231F1C9159183EFBCF0FB18F7DC3101 /* Headers */,
+				06B52A7AEF40E92C151028F33BC84C2D /* Sources */,
+				1E8530ABA6CD3430735E86B753457A67 /* Frameworks */,
+				4C66F8AB4C4F01F272E128F4830B1C12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftKeychainWrapper;
+			productName = SwiftKeychainWrapper;
+			productReference = 84EADFB00C1460DDF505E5237BFDD421 /* SwiftKeychainWrapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -829,29 +968,37 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = E397732A761F20FF642F5C58CD8F38DF /* Products */;
+			productRefGroup = 43CE69738A56C0D3D80534142A0FCC09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5A6207CE7CDF2B3D0D0B75FC5DC9D16C /* CryptoSwift */,
-				7D0ED5E1092E47604A19523A68240C8A /* HaventecAuthenticate */,
-				F5A734B293C85F5D6F606ADA550F16EA /* HaventecCommon */,
-				AD7927AEFC79B4F99D27B89F707B9B12 /* Pods-HaventecAuthenticate_Example */,
+				B922863A224FFA118353C389EEB91CB5 /* HaventecAuthenticate */,
+				95B526D94047234E44A8C35C90567BB3 /* HaventecCommon */,
+				31E3E30F7D603521CB77964690D3BFA3 /* JWTDecode */,
+				F3792955AB36E93BF414A2602D3BD43E /* Pods-HaventecAuthenticate_Example */,
 				92D08653C07C809016C874F9896CF37B /* Pods-HaventecAuthenticate_Tests */,
-				829E2FD65DE512ED97B197CED45A9397 /* SwiftKeychainWrapper */,
+				F9A2958DBD3BDCD6FFFA248E1792B8E8 /* SwiftKeychainWrapper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1BE513AA43FBE17577064A4218C8E4AC /* Resources */ = {
+		4C66F8AB4C4F01F272E128F4830B1C12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		736027493F4FF6B4D52757954493D4F3 /* Resources */ = {
+		5D162CE9710E4ED37A223B65407FF787 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87C2D96FE796D09CD6A0420785F34C3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -862,11 +1009,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44C459A221D11B6001A94F0 /* strings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A50CDCD8B977B099C37876C763604B71 /* Resources */ = {
+		C3295E827D569B76F9C6869CAD36EAE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D068DCD69B3B3E4341E98759E05F921A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -880,16 +1033,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF2767900AF3DE67A8FF9445567B9A3F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		06B52A7AEF40E92C151028F33BC84C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F8BBBF5905141C0F8DDE173C588DB7 /* KeychainItemAccessibility.swift in Sources */,
+				96CDA5798C5775F7B396CAE6217C2564 /* KeychainWrapper.swift in Sources */,
+				FC73A7DC92B3D03627408F072B6E936B /* SwiftKeychainWrapper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42D08B622BF83DA6342A7EF45F6E0271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E7C2D1A8AD65A926563B0B01C2D20A2 /* Pods-HaventecAuthenticate_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DF05A82B68A383AA6EF0867A1125159 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -972,45 +1136,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67FCC7BCF634313E0AFBA9295B85DDE2 /* Sources */ = {
+		71E16A8ED58A2E5087ECD34F2BB55880 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35A4F31FD9C2F2C987427CB9AE29A24 /* AutenticateErrorCodes.swift in Sources */,
-				E6BB0D7BC825EB5C0BE51F49DB64DA0D /* HaventecAuthenticate-dummy.m in Sources */,
-				71572764EE3F7D4929188CBD1D5E735A /* HaventecAuthenticate.swift in Sources */,
-				0D4EABF3D2EEA627AE76701A351ED149 /* HaventecData.swift in Sources */,
-				D44C45A0221D24E2001A94F0 /* Constants.swift in Sources */,
-				62D9C19601E5A59C631D9D2C1FE4EDDF /* StorageHelper.swift in Sources */,
-				72E498E42035F7389DC43517B794ECDE /* Token.swift in Sources */,
+				1F4095AB5ABFD6791DF4179A2D2AA16E /* A0JWT.swift in Sources */,
+				E443BAAE3C230DF925172F3691E4AC20 /* Errors.swift in Sources */,
+				4F19F620B4B20A2B22B2A8FC883950FE /* JWT.swift in Sources */,
+				E7D6C8F32E0E5CFD17FA09D31CE4579D /* JWTDecode-dummy.m in Sources */,
+				9600552EAD7493342A7771FF57D29C34 /* JWTDecode.swift in Sources */,
+				075C542E2A21057E6087933F96EFD923 /* TokenValidators.swift in Sources */,
+				7F9A3C60A81E961FC772A83935E58C7F /* ValidationError.swift in Sources */,
+				A6B54A6E5599E25F17BDAB0F9696A651 /* ValidatorJWT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89E5104C5688A2D2C5C093A9C29A1577 /* Sources */ = {
+		92137986DDCAD60C0A6EAE79C3C30A8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC9EB2CB7CFD7516B60E317A2069E27 /* Pods-HaventecAuthenticate_Example-dummy.m in Sources */,
+				670E474B647636192532A8FACEE0B1BE /* HashingHelper.swift in Sources */,
+				0C92E6B5C241B2B4843A54E3F001F299 /* HaventecCommon-dummy.m in Sources */,
+				C8AA6A2C65A3AF5D3DCC1292D7B2D6B7 /* HaventecCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93D43995C523E7653BAAF1A3090CBFEC /* Sources */ = {
+		9B29B76C2EB797086B7110C81D55BB69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F650E2D0FB462B09A71BF381745432 /* HashingHelper.swift in Sources */,
-				92D2BB2CB0A8C42C79988519D3ADBF44 /* HaventecCommon-dummy.m in Sources */,
-				06713FF88455D723DE2980EB886C3301 /* HaventecCommon.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3E61FC424BDDF2AAA53136EB37C974D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2213063EBB5DCD096EC14292CBDB9953 /* KeychainItemAccessibility.swift in Sources */,
-				590D50DDD607C8EF4DE9F2E323B5CF0C /* KeychainWrapper.swift in Sources */,
-				C1EB5E99D809309E6CBBA0F230D5D122 /* SwiftKeychainWrapper-dummy.m in Sources */,
+				55DE01420D0A5DD9E3A7AC39F930B643 /* AuthenticateErrorCodes.swift in Sources */,
+				65A05B4EBADD5B0CBBF19BFEEED6BD67 /* Constants.swift in Sources */,
+				DAFAA560589CB293DBD38BDE4A851FDE /* DeviceHelper.swift in Sources */,
+				B96E6763D0ADE5B64D2C4F40F77C3421 /* HaventecAuthenticate-dummy.m in Sources */,
+				ED6B2FE12F61E6CD2A0E390E6C6F349D /* HaventecAuthenticate.swift in Sources */,
+				83E6ACFCE66C62394AF8A6B0D6C735A0 /* HaventecData.swift in Sources */,
+				140DBF75AD3964C7AD767BAD4E64F089 /* StorageHelper.swift in Sources */,
+				D5755C905B88720957F4671D138F3D29 /* Token.swift in Sources */,
+				A065186B9B6B5418BDFEE4C34D459C92 /* TokenHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,68 +1188,102 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E8675C9CBA2FE8AB69096F9FAB7D0A9 /* PBXTargetDependency */ = {
+		12B45905AE9A503F1CE5E9EE2CE2AE61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = F9A2958DBD3BDCD6FFFA248E1792B8E8 /* SwiftKeychainWrapper */;
+			targetProxy = B4D1EB34CFC16FA633EBB34468698E8C /* PBXContainerItemProxy */;
+		};
+		3264E4D8CE5968042D6668DE0C28D7A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CryptoSwift;
 			target = 5A6207CE7CDF2B3D0D0B75FC5DC9D16C /* CryptoSwift */;
-			targetProxy = BD833C489E7BAFA5F80135D6B07981C1 /* PBXContainerItemProxy */;
+			targetProxy = D858C6EA623317ED804A7AEB134E60BB /* PBXContainerItemProxy */;
 		};
-		313986D5A9ED313BE0FB6C84C40E0F42 /* PBXTargetDependency */ = {
+		67F30C00FAC2EBBCE01AD54AF4F06823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JWTDecode;
+			target = 31E3E30F7D603521CB77964690D3BFA3 /* JWTDecode */;
+			targetProxy = 0ED1CDDEDDB87A466360D58ECDF3DC9A /* PBXContainerItemProxy */;
+		};
+		8CAF973E99205DCD781E3B6A352748E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JWTDecode;
+			target = 31E3E30F7D603521CB77964690D3BFA3 /* JWTDecode */;
+			targetProxy = B395EE42BDB0B3AE1D36D127CD2EA6F1 /* PBXContainerItemProxy */;
+		};
+		9645C174119B206A5EAA0A040211FBE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HaventecCommon;
-			target = F5A734B293C85F5D6F606ADA550F16EA /* HaventecCommon */;
-			targetProxy = 1A52A65C55DD65919598C17FF3612B43 /* PBXContainerItemProxy */;
-		};
-		39E6F9F630447D6381BECCADDB047A99 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HaventecCommon;
-			target = F5A734B293C85F5D6F606ADA550F16EA /* HaventecCommon */;
-			targetProxy = 8F6FDDFBBF2F6A1B418FEA9BD29FF852 /* PBXContainerItemProxy */;
-		};
-		46387028514CB8EA0F709DF25B126409 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftKeychainWrapper;
-			target = 829E2FD65DE512ED97B197CED45A9397 /* SwiftKeychainWrapper */;
-			targetProxy = 2AE2EA3D617BAEE0F3CC982BF77591AD /* PBXContainerItemProxy */;
-		};
-		802D21DAC58771DC4DD424294981707C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HaventecAuthenticate;
-			target = 7D0ED5E1092E47604A19523A68240C8A /* HaventecAuthenticate */;
-			targetProxy = 53F81498D6113F6985D12A56CA509926 /* PBXContainerItemProxy */;
-		};
-		BE4F21580955F4AC894E42DA090C4717 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CryptoSwift;
-			target = 5A6207CE7CDF2B3D0D0B75FC5DC9D16C /* CryptoSwift */;
-			targetProxy = BD17754D34B46C794CEAC2CB6FAC6FD8 /* PBXContainerItemProxy */;
-		};
-		C37EEF251737490D9E236448AA21657D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftKeychainWrapper;
-			target = 829E2FD65DE512ED97B197CED45A9397 /* SwiftKeychainWrapper */;
-			targetProxy = A1CC7941AC47B9D4B763343986C1EDBC /* PBXContainerItemProxy */;
+			target = 95B526D94047234E44A8C35C90567BB3 /* HaventecCommon */;
+			targetProxy = BFB28A5D8DE3808AE090FE47E3330408 /* PBXContainerItemProxy */;
 		};
 		C3A50490B6EB74CA66E231B256916A8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HaventecAuthenticate_Example";
-			target = AD7927AEFC79B4F99D27B89F707B9B12 /* Pods-HaventecAuthenticate_Example */;
+			target = F3792955AB36E93BF414A2602D3BD43E /* Pods-HaventecAuthenticate_Example */;
 			targetProxy = 3495AED96096C20C2E9C73FA0C13C787 /* PBXContainerItemProxy */;
+		};
+		C8D61D7AF9DE89B794B8642958728620 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = F9A2958DBD3BDCD6FFFA248E1792B8E8 /* SwiftKeychainWrapper */;
+			targetProxy = 2DA9794556C3A070C626795FCD20A973 /* PBXContainerItemProxy */;
+		};
+		D8390E55747FE024C0447781BFE77AB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HaventecCommon;
+			target = 95B526D94047234E44A8C35C90567BB3 /* HaventecCommon */;
+			targetProxy = 8AE0134474CD98E71F7736CCA69177B7 /* PBXContainerItemProxy */;
+		};
+		EBD133513F3A62999CA35508023BB33E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 5A6207CE7CDF2B3D0D0B75FC5DC9D16C /* CryptoSwift */;
+			targetProxy = FAB44FBB90345861ECEC82F540F3BFA7 /* PBXContainerItemProxy */;
+		};
+		F517E815265790003AED9F8EFF06CB16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HaventecAuthenticate;
+			target = B922863A224FFA118353C389EEB91CB5 /* HaventecAuthenticate */;
+			targetProxy = 4EC7488A473AD8A83F49BBC59528B25D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		D44C459C221D11B6001A94F0 /* strings.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D44C459B221D11B6001A94F0 /* en */,
-			);
-			name = strings.plist;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		0E3CF282C53E560C4380231450A501E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F25CA7356E331CDC6979705ACAA1BFC /* Pods-HaventecAuthenticate_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1EFF52467E38460AFD5A5D8C2E4C6482 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3FF29822EDAC76E8B5A819CA85FF153 /* Pods-HaventecAuthenticate_Tests.release.xcconfig */;
@@ -1121,40 +1318,9 @@
 			};
 			name = Release;
 		};
-		2597D26AD647D5E8C905FA9C380FDDB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 999893A5D0D2DBDC17A4B963EDFA38D6 /* SwiftKeychainWrapper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
-				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
-				PRODUCT_NAME = SwiftKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		35493BA431670B82E4327089C6B93DEC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 090E312240B02237FC80E91D46AD69A4 /* CryptoSwift.xcconfig */;
+			baseConfigurationReference = 53E9D18068C00A5BA89C98B7A8766954 /* CryptoSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1184,9 +1350,40 @@
 			};
 			name = Release;
 		};
-		460C1FA39AD605A5E427AAEEE41675B6 /* Release */ = {
+		3B43BBA3A03E24781D7651ED264C3D97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C01219B35B00084A1A195CD332C2D2D /* HaventecAuthenticate.xcconfig */;
+			baseConfigurationReference = 56E0C290739C2380DEF74C15E4011B1C /* HaventecAuthenticate.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HaventecAuthenticate/HaventecAuthenticate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HaventecAuthenticate/HaventecAuthenticate-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HaventecAuthenticate/HaventecAuthenticate.modulemap";
+				PRODUCT_MODULE_NAME = HaventecAuthenticate;
+				PRODUCT_NAME = HaventecAuthenticate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5B5E36303B6B996806BFEDE72D009FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56E0C290739C2380DEF74C15E4011B1C /* HaventecAuthenticate.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1216,9 +1413,40 @@
 			};
 			name = Release;
 		};
-		69209DD55F32ADAF3B31386B2124892E /* Release */ = {
+		7325A2D8F2EF91F5CFDF74E3A5BEE06C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCC2707D8A09DE5F2D927DD2D59C86C5 /* HaventecCommon.xcconfig */;
+			baseConfigurationReference = 53E9D18068C00A5BA89C98B7A8766954 /* CryptoSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		910E92CE097770AECC1CC2B37F18F9C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E43B80D82E333FC48F52B24DD64EE50C /* HaventecCommon.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1241,167 +1469,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7251E3D653958E3F53108987CD4E11EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C01219B35B00084A1A195CD332C2D2D /* HaventecAuthenticate.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HaventecAuthenticate/HaventecAuthenticate-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HaventecAuthenticate/HaventecAuthenticate-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HaventecAuthenticate/HaventecAuthenticate.modulemap";
-				PRODUCT_MODULE_NAME = HaventecAuthenticate;
-				PRODUCT_NAME = HaventecAuthenticate;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7325A2D8F2EF91F5CFDF74E3A5BEE06C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 090E312240B02237FC80E91D46AD69A4 /* CryptoSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
-				PRODUCT_MODULE_NAME = CryptoSwift;
-				PRODUCT_NAME = CryptoSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		99A2744C06C7D831A243A460BD77B78B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 999893A5D0D2DBDC17A4B963EDFA38D6 /* SwiftKeychainWrapper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
-				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
-				PRODUCT_NAME = SwiftKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9B0A1D6B94E05F7C0C4A9DBD1904FAB1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F25CA7356E331CDC6979705ACAA1BFC /* Pods-HaventecAuthenticate_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9DE389E949EA0C9B1E8CD2FA7B4FD238 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07FC6A32EEB92FA678EA6CF4974F9891 /* Pods-HaventecAuthenticate_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1442,9 +1509,9 @@
 			};
 			name = Debug;
 		};
-		A8D41BBF908DDA11608792042E2B371E /* Debug */ = {
+		A6EAC4B8E3DE15F18D5B535E61200BEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCC2707D8A09DE5F2D927DD2D59C86C5 /* HaventecCommon.xcconfig */;
+			baseConfigurationReference = 2A44A41B2CA0C3C4F82B56BF8D2C4642 /* JWTDecode.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1455,18 +1522,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HaventecCommon/HaventecCommon-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HaventecCommon/HaventecCommon-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/JWTDecode/JWTDecode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JWTDecode/JWTDecode-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HaventecCommon/HaventecCommon.modulemap";
-				PRODUCT_MODULE_NAME = HaventecCommon;
-				PRODUCT_NAME = HaventecCommon;
+				MODULEMAP_FILE = "Target Support Files/JWTDecode/JWTDecode.modulemap";
+				PRODUCT_MODULE_NAME = JWTDecode;
+				PRODUCT_NAME = JWTDecode;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1537,6 +1604,103 @@
 			};
 			name = Debug;
 		};
+		AE67DBC060E807FAA9C622274CC65940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C221C2BA8BFDB44E39288AF314DEC7D2 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECAFDF6C7C0730363DFFB6E7C4CEFD71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FC6A32EEB92FA678EA6CF4974F9891 /* Pods-HaventecAuthenticate_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HaventecAuthenticate_Example/Pods-HaventecAuthenticate_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE168286B4664B4DAAAB00E594D80E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C221C2BA8BFDB44E39288AF314DEC7D2 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1590,24 +1754,79 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F7A370B8BBF20D487ADA5383DDF3D56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E43B80D82E333FC48F52B24DD64EE50C /* HaventecCommon.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HaventecCommon/HaventecCommon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HaventecCommon/HaventecCommon-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HaventecCommon/HaventecCommon.modulemap";
+				PRODUCT_MODULE_NAME = HaventecCommon;
+				PRODUCT_NAME = HaventecCommon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD47D3ACD17765930EED2CEA9C6C3E6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A44A41B2CA0C3C4F82B56BF8D2C4642 /* JWTDecode.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JWTDecode/JWTDecode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JWTDecode/JWTDecode-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JWTDecode/JWTDecode.modulemap";
+				PRODUCT_MODULE_NAME = JWTDecode;
+				PRODUCT_NAME = JWTDecode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0262A509FA07A126E8ECFCB06D90A9D5 /* Build configuration list for PBXNativeTarget "HaventecCommon" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A8D41BBF908DDA11608792042E2B371E /* Debug */,
-				69209DD55F32ADAF3B31386B2124892E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0828F912305D762EB8B3025D74AFF38D /* Build configuration list for PBXNativeTarget "CryptoSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1626,11 +1845,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69E47361A9334C92DA82C1A1D29107C7 /* Build configuration list for PBXNativeTarget "HaventecAuthenticate" */ = {
+		490732CA17644470ABF4B540F97494EB /* Build configuration list for PBXNativeTarget "HaventecCommon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7251E3D653958E3F53108987CD4E11EB /* Debug */,
-				460C1FA39AD605A5E427AAEEE41675B6 /* Release */,
+				F7A370B8BBF20D487ADA5383DDF3D56D /* Debug */,
+				910E92CE097770AECC1CC2B37F18F9C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		713EDE0CAF76684B5A168833DB6F5CCD /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE67DBC060E807FAA9C622274CC65940 /* Debug */,
+				EE168286B4664B4DAAAB00E594D80E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8815D38319AFD05EB36467A6021F2418 /* Build configuration list for PBXNativeTarget "JWTDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6EAC4B8E3DE15F18D5B535E61200BEF /* Debug */,
+				FD47D3ACD17765930EED2CEA9C6C3E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1644,20 +1881,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B94569828189F48F9B8D99141F895952 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+		A35E93325B1349FACC5FAE87CC500D5E /* Build configuration list for PBXNativeTarget "HaventecAuthenticate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2597D26AD647D5E8C905FA9C380FDDB5 /* Debug */,
-				99A2744C06C7D831A243A460BD77B78B /* Release */,
+				3B43BBA3A03E24781D7651ED264C3D97 /* Debug */,
+				5B5E36303B6B996806BFEDE72D009FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D10AD41AEE9744CC416D98C92F7A68B7 /* Build configuration list for PBXNativeTarget "Pods-HaventecAuthenticate_Example" */ = {
+		CCFABA4276071EEBF2B18F3B6A5D0DCA /* Build configuration list for PBXNativeTarget "Pods-HaventecAuthenticate_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B0A1D6B94E05F7C0C4A9DBD1904FAB1 /* Debug */,
-				9DE389E949EA0C9B1E8CD2FA7B4FD238 /* Release */,
+				0E3CF282C53E560C4380231450A501E6 /* Debug */,
+				ECAFDF6C7C0730363DFFB6E7C4CEFD71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
