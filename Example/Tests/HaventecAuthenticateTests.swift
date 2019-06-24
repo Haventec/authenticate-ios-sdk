@@ -20,6 +20,8 @@ class HaventecAuthenticateTest: XCTestCase {
     let userUuid2 = "eabbe40e-c45c-4b55-bb36-cd7d0fc0671c";
     let invalidJsonResponse = "uh-oh";
     
+    let validBase64Regex = "^[A-Za-z0-9+\\/=]{1,}$";
+    
     let exceptionThrown = "Haventec Exception was thrown from this call"
     
     let username1 = "testuser1"
@@ -80,6 +82,39 @@ class HaventecAuthenticateTest: XCTestCase {
         XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
     }
 
+    func testEdgeCases() throws {
+        
+        //
+        XCTAssertNil(try HaventecAuthenticate.getAccessToken());
+        XCTAssertNil(HaventecAuthenticate.getAuthKey());
+        XCTAssertNil(HaventecAuthenticate.getDeviceUuid());
+        XCTAssertEqual("", HaventecAuthenticate.getUsername());
+
+        let hashPIN1 = try HaventecAuthenticate.hashPin(pin: "1234")
+        XCTAssertNotNil(hashPIN1)
+        XCTAssertTrue(getBase64RegexValue(str: hashPIN1!) != nil)
+        XCTAssertTrue(hashPIN1!.count % 4 == 0)
+
+        try HaventecAuthenticate.initialiseStorage(username: username1)
+        
+        let hashPIN2 = try HaventecAuthenticate.hashPin(pin: "1234")
+
+        XCTAssertNotNil(hashPIN2)
+        XCTAssertTrue(getBase64RegexValue(str: hashPIN2!) != nil)
+        XCTAssertTrue(hashPIN2!.count % 4 == 0)
+
+        let hashPIN4 = try HaventecAuthenticate.hashPin(pin: "")
+
+        XCTAssertNotNil(hashPIN4)
+        XCTAssertTrue(getBase64RegexValue(str: hashPIN4!) != nil)
+        XCTAssertTrue(hashPIN4!.count % 4 == 0)
+    }
+    
+    func getBase64RegexValue(str: String) -> NSTextCheckingResult? {
+        let regex = try! NSRegularExpression(pattern: validBase64Regex)
+        return regex.firstMatch(in: str, options: [], range: NSRange(location: 0, length: str.utf16.count))
+    }
+    
     func testHashPin_sameHashWithSamePin() throws {
         try HaventecAuthenticate.initialiseStorage(username: username1)
 
