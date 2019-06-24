@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-<key>applicationUuid</key>
-<string>c09dd8ef-823b-44e5-aa55-e48c39f1b32d</string>
-<key>haventecEmail</key>
-<string>justin.crosbie@haventec.com</string>
-<key>haventecUsername</key>
-<string>jchapi18_2</string>
-<key>pinCode</key>
-<string>1234</string>
-<key>serverUrl</key>
-<string>https://api.haventec.com/authenticate/v1-2</string>
-<key>apiKey</key>
-<string>53517059-8785-4288-87ed-d2002ca0b937</string>
-</dict>
+    <dict>
+    	<key>applicationUuid</key>
+    	<string>e4c8380a-20db-4814-91e7-563b35a7381c</string>
+    	<key>haventecEmail</key>
+    	<string>clifford.phan@haventec.com</string>
+    	<key>haventecUsername</key>
+    	<string>foobar123</string>
+    	<key>pinCode</key>
+    	<string>1234</string>
+    	<key>serverUrl</key>
+    	<string>https://api.haventec.com/authenticate/v1-2</string>
+    	<key>apiKey</key>
+    	<string>d997872d-7b51-4953-b338-5980e7ec128f</string>
+    </dict>
 </plist>
-
