@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'HaventecAuthenticate/Classes/**/*'
   
-  s.dependency 'HaventecCommon', path => '/Users/justincrosbie/dev/haven/sdk/ios/common-ios-sdk'
+  s.dependency 'HaventecCommon'
   s.dependency 'SwiftKeychainWrapper'
   s.dependency 'JWTDecode', '~> 2.2'
   s.swift_version = '4.2'
