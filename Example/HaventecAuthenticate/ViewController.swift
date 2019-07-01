@@ -29,8 +29,15 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     var accessToken: AccessToken!
     
     // UIKit
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var addDeviceButton: UIButton!
     @IBOutlet weak var activateDeviceButton: UIButton!
+
+    @IBOutlet weak var currentUsername: UILabel!
+    @IBOutlet weak var currentDeviceUuid: UILabel!
+    @IBOutlet weak var currentAccessToken: UILabel!
+    @IBOutlet weak var currentAuthKey: UILabel!
+    @IBOutlet weak var loginMessage: UILabel!
     
     @IBOutlet weak var addDeviceStatus: UILabel!
     @IBOutlet weak var addDeviceMessage: UILabel!
@@ -44,7 +51,7 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBOutlet weak var activateDeviceAuthKey: UILabel!
     @IBOutlet weak var activateDeviceAccessTokenValue: UILabel!
     @IBOutlet weak var activateDeviceAccessTokenType: UILabel!
-    
+
     private func loadPropertyFile() {
         guard let fileUrl = Bundle.main.url(forResource: "App", withExtension: "plist") else { return }
         guard let properties = NSDictionary(contentsOf: fileUrl) as? [String:Any] else { return }
@@ -62,6 +69,12 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         
         loadPropertyFile()
         // Do any additional setup after loading the view, typically from a nib.
+        currentAccessToken.font = currentAccessToken.font.withSize(10)
+        currentAuthKey.font = currentAuthKey.font.withSize(10)
+        currentDeviceUuid.font = currentDeviceUuid.font.withSize(10)
+        currentUsername.font = currentUsername.font.withSize(10)
+        loginMessage.font = loginMessage.font.withSize(10)
+        
         addDeviceStatus.font = addDeviceStatus.font.withSize(10)
         addDeviceMessage.font = addDeviceStatus.font.withSize(10)
         addDeviceCode.font = addDeviceStatus.font.withSize(10)
@@ -77,6 +90,28 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         
         do {
             try HaventecAuthenticate.initialiseStorage(username: haventecUsername)
+            
+            if let currentUsername = HaventecAuthenticate.getUsername() {
+                self.currentUsername.text = "Current username: " + currentUsername
+            } else {
+                self.currentUsername.text = "No username: User not initialised"
+            }
+            if let currentDeviceUuid = HaventecAuthenticate.getDeviceUuid() {
+                self.currentDeviceUuid.text = "Current deviceUuid: " + currentDeviceUuid
+            } else {
+                self.currentDeviceUuid.text = "No deviceUuid: Device not Added"
+            }
+            if let currentAuthKey = HaventecAuthenticate.getAuthKey() {
+                self.currentAuthKey.text = "Current authKey: " + currentAuthKey
+            } else {
+                self.currentAuthKey.text = "No authKey: Device not Activated"
+            }
+            if let currentAccessToken = HaventecAuthenticate.getAccessToken() {
+                self.currentAccessToken.text = "Current accessToken: " + currentAccessToken
+            } else {
+                self.currentAccessToken.text = "No accessToken: Device not Logged in or Activated"
+            }
+            
         } catch {
             print("error=\(error)")
         }
@@ -85,6 +120,96 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func doLogin(_ sender: Any) {
+        
+        if let currentDeviceuuid = HaventecAuthenticate.getDeviceUuid() {
+            guard let hashedPinOptional = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
+            guard let hashedPinOptional2 = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
+            guard let hashedPin: String = hashedPinOptional else { return }
+            guard let hashedPin2: String = hashedPinOptional2 else { return }
+            
+            if ( hashedPin != hashedPin2 ) {
+                print("******* hashPin is broke")
+            }
+            let url = URL(string: serverUrl + "/authentication/login")!
+            
+            let jsonString: String = "{"
+                + "\"applicationUuid\": \"" + applicationUuid + "\","
+                + "\"username\": \"" + HaventecAuthenticate.getUsername()! + "\","
+                + "\"deviceUuid\": \"" + HaventecAuthenticate.getDeviceUuid()! + "\","
+                + "\"hashedPin\": \"" + hashedPin + "\","
+                + "\"authKey\": \"" + HaventecAuthenticate.getAuthKey()! + "\""
+                + "}";
+            
+            var request = URLRequest(url: url)
+            request.setValue("application/json", forHTTPHeaderField: "Content-type")
+            request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
+            request.httpMethod = "POST"
+            request.httpBody = jsonString.data(using: .utf8)
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                    DispatchQueue.main.async {
+                        self.loginMessage.text = "Response Status: UNSUCCESSFUL"
+                    }
+                    print("error=\(error!)")
+                    return
+                }
+                
+                do {
+                    try HaventecAuthenticate.updateStorage(data: data);
+                } catch {
+                    print("error=\(error)")
+                }
+                
+                let responseString = String(data: data, encoding: .utf8)
+                DispatchQueue.main.async {
+                    let jsonData = responseString!.data(using: .utf8)!
+                    let decoder = JSONDecoder()
+                    
+                    do {
+                        let response = try decoder.decode(ActivateDeviceResponse.self, from: jsonData)
+                        self.authKey = response.authKey
+                        self.accessToken = response.accessToken
+                        
+                        if let currentUsername = HaventecAuthenticate.getUsername() {
+                            self.currentUsername.text = "Current username: " + currentUsername
+                        } else {
+                            self.currentUsername.text = "No username: User not initialised"
+                        }
+                        if let currentDeviceUuid = HaventecAuthenticate.getDeviceUuid() {
+                            self.currentDeviceUuid.text = "Current deviceUuid: " + currentDeviceUuid
+                        } else {
+                            self.currentDeviceUuid.text = "No deviceUuid: Device not Added"
+                        }
+                        if let currentAuthKey = HaventecAuthenticate.getAuthKey() {
+                            self.currentAuthKey.text = "Current authKey: " + currentAuthKey
+                        } else {
+                            self.currentAuthKey.text = "No authKey: Something has gone wrong"
+                        }
+                        if let currentAccessToken = HaventecAuthenticate.getAccessToken() {
+                            self.currentAccessToken.text = "Current accessToken: " + currentAccessToken
+                        } else {
+                            self.currentAccessToken.text = "No accessToken: Something has gone wrong"
+                        }
+                        
+                        self.loginMessage.text = "Response Message: " + response.responseStatus.message
+                        
+                    } catch {
+                        print("Unexpected error: \(error)")
+                        return
+                    }
+                }
+                print("responseString = \(responseString!)")
+            }
+
+            task.resume()
+        } else {
+            self.loginMessage.text = "Device not Activated. Please Add and Activate the device first"
+        }
+        
     }
     
     @IBAction func addDevice() {
@@ -201,6 +326,17 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
                     self.activateDeviceAuthKey.text = try "Auth key: " + HaventecAuthenticate.getAuthKey()!
                     self.activateDeviceAccessTokenValue.text = try "Token: " + HaventecAuthenticate.getAccessToken()!
                     self.activateDeviceAccessTokenType.text = "Token Type: " + self.accessToken.type
+                    
+                    if let currentAuthKey = HaventecAuthenticate.getAuthKey() {
+                        self.currentAuthKey.text = "Current authKey: " + currentAuthKey
+                    } else {
+                        self.currentAuthKey.text = "Device not Activated"
+                    }
+                    if let currentAccessToken = HaventecAuthenticate.getAccessToken() {
+                        self.currentAccessToken.text = "Current accessToken: " + currentAccessToken
+                    } else {
+                        self.currentAccessToken.text = "Device not Logged in or Activated"
+                    }
                 } catch {
                     print("Unexpected error: \(error)")
                     return
