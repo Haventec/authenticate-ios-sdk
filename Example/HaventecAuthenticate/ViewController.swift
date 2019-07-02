@@ -132,9 +132,17 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     @IBAction func doLogin(_ sender: Any) {
         
         if let currentDeviceuuid = HaventecAuthenticate.getDeviceUuid() {
-            guard let hashedPinOptional = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
+            let hashedPinOptional: String?;
+            do {
+                try hashedPinOptional = HaventecAuthenticate.hashPin(pin: pinCode)
+            } catch {
+                print("******* hashPin is broke - BCKCOMPAT FAIL!!!")
+                print("error=\(error)")
+                self.loginMessage.text = "hashPin is broke - BCKCOMPAT FAIL!!!"
+            }
+            guard let hashedPinOptional1 = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
             guard let hashedPinOptional2 = try? HaventecAuthenticate.hashPin(pin: pinCode) else { return }
-            guard let hashedPin: String = hashedPinOptional else { return }
+            guard let hashedPin: String = hashedPinOptional1 else { return }
             guard let hashedPin2: String = hashedPinOptional2 else { return }
             
             if ( hashedPin != hashedPin2 ) {
