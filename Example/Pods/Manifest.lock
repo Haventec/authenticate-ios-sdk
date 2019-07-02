@@ -1,28 +1,35 @@
 PODS:
   - CryptoSwift (0.14.0)
-  - HaventecAuthenticate (0.0.3):
+  - HaventecAuthenticate (0.0.10):
     - HaventecCommon
+    - JWTDecode (~> 2.2)
     - SwiftKeychainWrapper
   - HaventecCommon (0.0.5):
     - CryptoSwift
+  - JWTDecode (2.2.0)
   - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
-  - HaventecAuthenticate
+  - HaventecAuthenticate (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CryptoSwift
-    - HaventecAuthenticate
     - HaventecCommon
+    - JWTDecode
     - SwiftKeychainWrapper
+
+EXTERNAL SOURCES:
+  HaventecAuthenticate:
+    :path: "../"
 
 SPEC CHECKSUMS:
   CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
-  HaventecAuthenticate: c19316c7e6f70207230b28d4d916c0321d0190c7
+  HaventecAuthenticate: 2637bee91c0715f1639213715070ff762393b196
   HaventecCommon: a2cbe6c66d052885c7bfbd777788702869e8c41d
+  JWTDecode: 85a405ab16d5473e99bd89ded1d535090ebd6a0e
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: c8bcd18b5264d624d99df159b603ef0cc6916991
+PODFILE CHECKSUM: 381d27e51f5ed41e4c31201bddec0b5a4a2bde0d
 
 COCOAPODS: 1.6.0

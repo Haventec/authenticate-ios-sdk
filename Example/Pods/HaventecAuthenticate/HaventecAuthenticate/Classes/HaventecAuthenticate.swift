@@ -73,8 +73,16 @@ public class HaventecAuthenticate {
     public static func getAccessToken() -> String? {
         return StorageHelper.getData().accessToken?.token;
     }
-
     
+    /**
+     It nulls the JWT accessToken data. This can be executed as part of a logout user flow,
+     to ensure no further transactions can be executed.
+     A subsequent updateStorage invocation on the response of a successful login will update the data.
+     */
+    public static func clearAccessToken() {
+        return StorageHelper.clearAccessToken();
+    }
+
     /**
      It retrieves the Haventec username
      
@@ -91,5 +99,14 @@ public class HaventecAuthenticate {
      */
     public static func getDeviceUuid() -> String? {
         return StorageHelper.getData().deviceUuid;
+    }
+    
+    /**
+     It retrieves the device name, as defined by the android.os.Build.MANUFACTURER/android.os.Build.MODEL value.
+     
+     - Returns: The deviceName of the current user
+     */
+    public static func getDeviceName() -> String {
+        return DeviceHelper.getDeviceName();
     }
 }
