@@ -1,10 +1,10 @@
 PODS:
   - CryptoSwift (0.14.0)
   - HaventecAuthenticate (0.0.10):
-    - HaventecCommon (~> 1.0.0)
+    - HaventecCommon
     - JWTDecode (~> 2.2)
     - SwiftKeychainWrapper
-  - HaventecCommon (1.0.1):
+  - HaventecCommon (1.0.6):
     - CryptoSwift
   - JWTDecode (2.2.0)
   - SwiftKeychainWrapper (3.2.0)
@@ -27,8 +27,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
-  HaventecAuthenticate: 223712964f4aca61d86df97039e8bbe529f286ce
-  HaventecCommon: a404eb16e53aacb0a1463ca23fe79fb1391f7de2
+  HaventecAuthenticate: 2637bee91c0715f1639213715070ff762393b196
+  HaventecCommon: a9f7ca3044545f24cb59af4d017a86697363eb1c
   JWTDecode: 85a405ab16d5473e99bd89ded1d535090ebd6a0e
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
