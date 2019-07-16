@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
   s.author           = { 'Haventec' => 'info@haventec.com' }
   s.source           = { :git => 'https://github.com/Haventec/authenticate-ios-sdk.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'HaventecAuthenticate/Classes/**/*'
   
   s.dependency 'HaventecCommon', '~> 1.0.0'
   s.dependency 'SwiftKeychainWrapper'
-  s.dependency 'JWTDecode', '~> 2.2'
+  s.dependency 'JWTDecode', '2.2'
   s.swift_version = '4.2'
 end

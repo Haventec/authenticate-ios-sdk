@@ -14,7 +14,6 @@ public class StorageHelper {
     static var haventecDataCache: HaventecData = HaventecData();
     
     public static func initialise(username: String) throws {
-        
         let normalisedUsername = username.lowercased()
         
         try setCurrentUser(normalisedUsername: normalisedUsername)
@@ -25,88 +24,113 @@ public class StorageHelper {
     }
     
     public static func updateStorage(data: Data) throws {
+        guard let jsonObject = try? JSONDecoder().decode(HaventecData.self, from: data) else {
+            throw HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.invalidJSONObject.rawValue)
+        }
+        
         do {
-            let decoder = JSONDecoder()
-            let thisData: HaventecData = try decoder.decode(HaventecData.self, from: data);
-            
-            if let thisDeviceUuid = thisData.deviceUuid {
-                if ( !thisDeviceUuid.isEmpty ) {
-                    haventecDataCache.deviceUuid = thisData.deviceUuid;
-                    try updateKeychainStorage(field: Constants.keyDeviceUuid, value: thisDeviceUuid)
-                }
+            if let deviceUuid = jsonObject.deviceUuid, !deviceUuid.isEmpty {
+                try updateKeychainStorage(field: Constants.keyDeviceUuid, value: deviceUuid)
+                haventecDataCache.deviceUuid = deviceUuid
             }
             
-            if let thisAuthKey = thisData.authKey {
-                if ( !thisAuthKey.isEmpty ) {
-                    haventecDataCache.authKey = thisData.authKey;
-                    try updateKeychainStorage(field: Constants.keyAuthKey, value: thisAuthKey)
-                }
+            if let authKey = jsonObject.authKey, !authKey.isEmpty {
+                try updateKeychainStorage(field: Constants.keyAuthKey, value: authKey)
+                haventecDataCache.authKey = authKey
             }
             
-            if let thisToken = thisData.accessToken {
-                if let thisHaventecDataCacheToken = haventecDataCache.accessToken {
-                    thisHaventecDataCacheToken.type = thisToken.type;
-                    thisHaventecDataCacheToken.token = thisToken.token;
-                    haventecDataCache.accessToken = thisHaventecDataCacheToken;
-                }
+            if let accessToken = jsonObject.accessToken {
+                haventecDataCache.accessToken = accessToken
             }
-            
         } catch {
-            throw HaventecAuthenticate.HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.jsonError.rawValue);
+            throw HaventecAuthenticateError.jsonError(AuthenticateErrorCodes.failedKeyChainUpdate.rawValue)
         }
     }
     
     public static func updateKeychainStorage(field: String, value: String) throws {
         if let username = KeychainWrapper.standard.string(forKey: Constants.keyLastUser) {
-            try persist(key: field + username, value: value);
+            try persist(key: field + username, value: value)
         } else {
-            throw HaventecAuthenticate.HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.notInitialisedError.rawValue);
+            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.uninitialisedSDK.rawValue)
         }
     }
     
     public static func getData() -> HaventecData {
-        return haventecDataCache;
+        return haventecDataCache
+    }
+    
+    public static func getSalt() throws -> [UInt8] {
+        if let salt = haventecDataCache.salt {
+            return salt
+        } else {
+            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.uninitialisedSDK.rawValue)
+        }
+    }
+    
+    public static func getAccessToken() throws -> String? {
+        if let accessToken = haventecDataCache.accessToken {
+            return accessToken.token
+        } else {
+            throw HaventecAuthenticateError.initialiseError(AuthenticateErrorCodes.noAccessTokenInKeyChain.rawValue)
+        }
     }
     
     public static func clearAccessToken() {
-         haventecDataCache.accessToken?.token = nil;
+        haventecDataCache.accessToken = nil
+    }
+    
+    public static func getCurrentUserUuid() throws -> String? {
+        if let accessToken = haventecDataCache.accessToken, let value = accessToken.token {
+            return try TokenHelper.getUserUuidFromJWT(jwtToken: value)
+        } else {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.noAccessTokenInKeyChain.rawValue)
+        }
+    }
+    
+    public static func getDeviceUuid() throws -> String {
+        if let deviceUuid = haventecDataCache.deviceUuid {
+            return deviceUuid
+        } else {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.uninitialisedSDK.rawValue)
+        }
     }
     
     private static func initialiseUserCacheData(normalisedUsername: String) throws {
+        guard let salt = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername) else {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.noSaltInKeyChain.rawValue)
+        }
+        
         haventecDataCache = HaventecData()
         haventecDataCache.username = normalisedUsername
         haventecDataCache.deviceUuid = KeychainWrapper.standard.string(forKey: Constants.keyDeviceUuid + normalisedUsername)
         haventecDataCache.authKey = KeychainWrapper.standard.string(forKey: Constants.keyAuthKey + normalisedUsername)
-
-        if let saltBase64Str = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername) {
-            if let saltData: Data = Data(base64Encoded: saltBase64Str) {
-                haventecDataCache.salt = [UInt8](saltData);
-            };
+        
+        let saltOpt = Data(base64Encoded: salt)
+        if let salt = saltOpt {
+            haventecDataCache.salt = salt.bytes
         }
     }
     
     private static func initialiseUserPersistedData(normalisedUsername: String) throws {
-
-        try persist(key: Constants.keyUserName + normalisedUsername, value: normalisedUsername);
+        try persist(key: Constants.keyUsername + normalisedUsername, value: normalisedUsername)
         
-        let saltOpt: String? = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername);
-
-        if let salt = saltOpt {
-            
-            if ( salt.isEmpty ) {
-                try persistNewSalt(normalisedUsername: normalisedUsername)
-            }
-        } else {
-            try persistNewSalt(normalisedUsername: normalisedUsername)
+        let saltOpt: String? = KeychainWrapper.standard.string(forKey: Constants.keySalt + normalisedUsername)
+        
+        guard let salt = saltOpt else { try persistNewSalt(normalisedUsername: normalisedUsername); return }
+        
+        if (!salt.isEmpty) {
+            return
         }
+        
+        try persistNewSalt(normalisedUsername: normalisedUsername)
     }
     
     private static func persistNewSalt(normalisedUsername: String) throws {
-        let salt: [UInt8] = try HaventecCommon.generateSalt();
+        let salt: [UInt8] = try HaventecCommon.generateSalt()
         
-        let saltBase64String = Data(salt).base64EncodedString();
+        let saltBase64String = Data(salt).base64EncodedString()
         
-        try persist(key: Constants.keySalt + normalisedUsername, value: saltBase64String);
+        try persist(key: Constants.keySalt + normalisedUsername, value: saltBase64String)
     }
     
     private static func setCurrentUser(normalisedUsername: String) throws {
@@ -114,12 +138,12 @@ public class StorageHelper {
     }
     
     private static func persist(key: String, value: String?) throws {
-        if let value = value {
-            let saveSuccessful: Bool = KeychainWrapper.standard.set(value, forKey: key);
-            
-            if ( !saveSuccessful ) {
-                throw HaventecAuthenticate.HaventecAuthenticateError.storageError(AuthenticateErrorCodes.notInitialisedError.rawValue);
-            }
+        guard let value = value else {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.uninitialisedSDK.rawValue)
+        }
+        
+        if !KeychainWrapper.standard.set(value, forKey: key) {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.failedKeyChainUpdate.rawValue)
         }
     }
 }
