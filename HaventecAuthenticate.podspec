@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HaventecAuthenticate'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'SDK providing functions for interacting with the Authenticate API.'
 
   s.description      = <<-DESC
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   
   s.dependency 'HaventecCommon', '~> 1.0.0'
   s.dependency 'SwiftKeychainWrapper'
-  s.dependency 'JWTDecode', '2.2'
+  s.dependency 'JWTDecode', '~> 2.2'
   s.swift_version = '4.2'
 end
