@@ -42,6 +42,12 @@ This class has the following methods:
 
 * **getDeviceUuid:** It returns the deviceUuid of the current user from the Android Storage
 
+* **getUserUuid:** If the user is logged in, this method returns the user UUID stated at the session JWT.
+
+* **getDeviceName:** It returns a friendly name of the user's mobile device.
+
+* **clearAccessToken:** It nulls the JWT session.
+
 To initialise, call the initialiseStorage method. This provisions the device persisted storage for the username.
 
 Whenever you invoke a method that changes the authentication state of the device - add user, add device, activate user,
