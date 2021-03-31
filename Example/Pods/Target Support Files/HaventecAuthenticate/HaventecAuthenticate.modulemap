@@ -1,6 +1,0 @@
-framework module HaventecAuthenticate {
-  umbrella header "HaventecAuthenticate-umbrella.h"
-
-  export *
-  module * { export * }
-}

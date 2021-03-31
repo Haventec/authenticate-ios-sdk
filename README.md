@@ -32,6 +32,8 @@ This class has the following methods:
 
 * **updateStorage:** It updates the Android Storage with the new user details. Whenever your app invokes a method that changes the authentication state (add user, add device, activate user, activate device, or login), your app must update the Haventec SDK storage using this method.
 
+* **regenerateSalt:** It allows the salt to be regenerated post-initialisation. This should be done whenever a new hashed PIN is created, e.g.on PIN reset or add new device
+
 * **hashPin:** It returns a SHA-512 Hashing of the PIN passed as argument. 
 
 * **getAccessToken:** It returns the session access token of the current authenticated user from the Android Storage
@@ -41,6 +43,12 @@ This class has the following methods:
 * **getUsername:** It returns the username of the current user from the Android Storage.
 
 * **getDeviceUuid:** It returns the deviceUuid of the current user from the Android Storage
+
+* **getUserUuid:** If the user is logged in, this method returns the user UUID stated at the session JWT.
+
+* **getDeviceName:** It returns a friendly name of the user's mobile device.
+
+* **clearAccessToken:** It nulls the JWT session.
 
 To initialise, call the initialiseStorage method. This provisions the device persisted storage for the username.
 
