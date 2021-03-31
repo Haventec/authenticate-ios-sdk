@@ -47,6 +47,12 @@ public class StorageHelper {
         }
     }
     
+    public static func regenerateSalt(username: String) throws {
+        let normalisedUsername = username.lowercased()
+        
+        try persistNewSalt(normalisedUsername: normalisedUsername)
+    }
+    
     public static func updateKeychainStorage(field: String, value: String) throws {
         if let username = KeychainWrapper.standard.string(forKey: Constants.keyLastUser) {
             try persist(key: field + username, value: value)
@@ -60,6 +66,9 @@ public class StorageHelper {
     }
     
     public static func getSalt() throws -> [UInt8] {
+        
+        print(self);
+        
         if let salt = haventecDataCache.salt {
             return salt
         } else {
@@ -128,6 +137,8 @@ public class StorageHelper {
     private static func persistNewSalt(normalisedUsername: String) throws {
         let salt: [UInt8] = try HaventecCommon.generateSalt()
         
+        haventecDataCache.salt = salt
+
         let saltBase64String = Data(salt).base64EncodedString()
         
         try persist(key: Constants.keySalt + normalisedUsername, value: saltBase64String)

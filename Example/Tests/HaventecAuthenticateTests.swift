@@ -251,6 +251,34 @@ class HaventecAuthenticateTest: XCTestCase {
         XCTAssertThrowsError(try HaventecAuthenticate.getUserUuid())
     }
     
+    func testRegenerateSalt_success() throws {
+        try HaventecAuthenticate.initialiseStorage(username: username1)
+
+        let saltCached1 = try StorageHelper.getSalt()
+        let data1 = StorageHelper.getData()
+
+        guard let saltSaved1 = KeychainWrapper.standard.string(forKey: "haventec_salt_" + username1) else {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.noSaltInKeyChain.rawValue)
+        }
+
+        try HaventecAuthenticate.regenerateSalt(username: username1)
+        
+        let saltCached2 = try StorageHelper.getSalt()
+        let data2 = StorageHelper.getData()
+
+        guard let saltSaved2 = KeychainWrapper.standard.string(forKey: "haventec_salt_" + username1) else {
+            throw HaventecAuthenticateError.storageError(AuthenticateErrorCodes.noSaltInKeyChain.rawValue)
+        }
+
+        XCTAssertNotNil(saltCached1)
+        XCTAssertNotNil(saltCached2)
+        XCTAssertNotNil(saltSaved1)
+        XCTAssertNotNil(saltSaved2)
+        XCTAssertNotEqual(saltSaved1, saltSaved2)
+//        XCTAssertNotEqual(saltCached1, saltCached2)
+    }
+
+
     // Helper methods to test unwrapping of optionals and throwables
     private func assertAgainstUsername(username: String?) {
         XCTAssertNotNil(HaventecAuthenticate.getUsername())

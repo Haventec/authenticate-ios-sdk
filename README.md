@@ -32,6 +32,8 @@ This class has the following methods:
 
 * **updateStorage:** It updates the Android Storage with the new user details. Whenever your app invokes a method that changes the authentication state (add user, add device, activate user, activate device, or login), your app must update the Haventec SDK storage using this method.
 
+* **regenerateSalt:** It allows the salt to be regenerated post-initialisation. This should be done whenever a new hashed PIN is created, e.g.on PIN reset or add new device
+
 * **hashPin:** It returns a SHA-512 Hashing of the PIN passed as argument. 
 
 * **getAccessToken:** It returns the session access token of the current authenticated user from the Android Storage

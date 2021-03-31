@@ -70,6 +70,14 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Model: \(UIDevice().model)")
+        print("UUID: \(UIDevice().identifierForVendor!)")
+        print("Name: \(UIDevice().name)")
+        print("SysName: \(UIDevice().systemName)")
+        print("SysVer: \(UIDevice().systemVersion)")
+        print("Description: \(UIDevice().description)")
+        print("LModel: \(UIDevice().localizedModel)")
+
         loadPropertyFile()
         // Do any additional setup after loading the view, typically from a nib.
 
@@ -150,12 +158,16 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
             }
             let url = URL(string: serverUrl + "/authentication/login")!
             
+            let username = try HaventecAuthenticate.getUsername()!
+            let deviceUuid = try HaventecAuthenticate.getDeviceUuid()!
+            let authKey = try HaventecAuthenticate.getAuthKey()!
+            
             let jsonString: String = "{"
-                + "\"applicationUuid\": \"" + applicationUuid + "\","
-                + "\"username\": \"" + HaventecAuthenticate.getUsername()! + "\","
-                + "\"deviceUuid\": \"" + HaventecAuthenticate.getDeviceUuid()! + "\","
-                + "\"hashedPin\": \"" + hashedPin + "\","
-                + "\"authKey\": \"" + HaventecAuthenticate.getAuthKey()! + "\""
+                + "\"applicationUuid\": \"\(applicationUuid)\","
+                + "\"username\": \"\(username)\","
+                + "\"deviceUuid\": \"\(deviceUuid)\","
+                + "\"hashedPin\": \"\(hashedPin)\","
+                + "\"authKey\": \"\(authKey)\""
                 + "}";
             
             var request = URLRequest(url: url)
@@ -231,9 +243,9 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         let url = URL(string: serverUrl + "/self-service/device")!
         
         let jsonString: String = "{"
-            + "\"applicationUuid\": \"" + applicationUuid + "\","
-            + "\"username\": \"" + haventecUsername + "\","
-            + "\"email\": \"" + haventecEmail + "\","
+            + "\"applicationUuid\": \"\(applicationUuid)\","
+            + "\"username\": \"\(haventecUsername)\","
+            + "\"email\": \"\(haventecEmail)\","
             + "\"deviceName\": \"iOS Device\""
             + "}";
         
@@ -297,11 +309,11 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         let url = URL(string: serverUrl + "/authentication/activate/device")!
         
         let jsonString: String = "{"
-            + "\"applicationUuid\": \"" + applicationUuid + "\","
-            + "\"username\": \"" + haventecUsername + "\","
-            + "\"deviceUuid\": \"" + deviceUuid + "\","
-            + "\"hashedPin\": \"" + hashedPin + "\","
-            + "\"activationToken\": \"" + activationToken + "\""
+            + "\"applicationUuid\": \"\(applicationUuid)\","
+            + "\"username\": \"\(haventecUsername)\","
+            + "\"deviceUuid\": \"\(deviceUuid)\","
+            + "\"hashedPin\": \"\(hashedPin)\","
+            + "\"activationToken\": \"\(activationToken)\""
             + "}";
         
         var request = URLRequest(url: url)
@@ -384,4 +396,13 @@ class ViewController: UIViewController, NSURLConnectionDataDelegate {
         }
     }
 
+    @IBAction func regenerateSaltAction() {
+        
+        do {
+            try HaventecAuthenticate.regenerateSalt(username: haventecUsername);
+        } catch {
+            print("Unexpected error: \(error)")
+            return
+        }
+    }
 }
