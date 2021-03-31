@@ -48,20 +48,6 @@ public class HaventecAuthenticate {
     }
     
     /**
-     It updates Haventec data storage for the username with the JSON data
-     
-     - Parameter username
-     
-     - Throws: `HaventecAuthenticateError.jsonError`
-     if there was an error parsing the Data as JSON.
-     - Throws: `HaventecAuthenticateError.storageError`
-     if there was an error persisting to storage.
-    */
-    public static func regenerateSalt(username: String) throws {
-        try StorageHelper.regenerateSalt(username: username);
-    }
-    
-    /**
      It retrieves the Haventec authKey
      
      - Returns: String Haventec authKey
