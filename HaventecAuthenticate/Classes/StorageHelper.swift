@@ -67,8 +67,6 @@ public class StorageHelper {
     
     public static func getSalt() throws -> [UInt8] {
         
-        print(self);
-        
         if let salt = haventecDataCache.salt {
             return salt
         } else {
